@@ -1,3 +1,19 @@
-body {
-  background-color: red;
+$green: #708A34;
+$orange: #E78C14;
+$gray: #E3E3E5;
+$beige: #FADDBC;
+$dark: #383838;
+
+@mixin removeMB {
+  & > :last-child {
+    margin-bottom: 0;
+  }
 }
+
+/* ----- reset */
+@import "./fonts";
+/* reset ----- */
+
+/* ----- reset */
+@import "./reset";
+/* reset ----- */

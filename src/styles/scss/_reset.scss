@@ -1,51 +1,29 @@
-/* ----- reset */
-@font-face {
-  font-family: "UbuntuBold";
-  src: url(../../assets/fonts/UbuntuBold.ttf);
-}
-
-@font-face {
-  font-family: "UbuntuMedium";
-  src: url(../../assets/fonts/UbuntuMedium.ttf);
-}
-
-@font-face {
-  font-family: "UbuntuRegular";
-  src: url(../../assets/fonts/UbuntuBold.ttf);
-}
-
-/* reset ----- */
-/* ----- reset */
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
-
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 :focus,
 :active {
   outline: none;
 }
-
 a:focus,
 a:active {
   outline: none;
 }
-
 nav,
 footer,
 header,
 aside {
   display: block;
 }
-
 html,
 body {
   height: 100%;
@@ -58,48 +36,36 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-@media screen and (max-width: 320px) {
-  html,
-  body {
+  @media screen and (max-width: 320px) {
     font-size: calc(5px + 5 * (100vw / 320));
   }
 }
-
 input,
 button,
 textarea {
   font-family: inherit;
 }
-
 input::-ms-clear {
   display: none;
 }
-
 button {
   cursor: pointer;
 }
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-
 a,
 a:visited {
   text-decoration: none;
 }
-
 ul,
 li {
   list-style: none;
 }
-
 img {
   vertical-align: top;
 }
-
 h1,
 h2,
 h3,
@@ -109,6 +75,3 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
-
-/* reset ----- */
-/*# sourceMappingURL=main.css.map */
