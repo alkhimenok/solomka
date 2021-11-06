@@ -1,8 +1,16 @@
-$green: #708A34;
-$orange: #E78C14;
-$gray: #E3E3E5;
-$beige: #FADDBC;
+$white: #ffffff;
+$gray: #e3e3e5;
+$beigeD: #927e66;
+$beigeL: #faddbc;
+$orangeD: #e78c14;
+$orangeL: #fddcb0;
+$greenD: #708a34;
+$greenl: #e9f8db;
 $dark: #383838;
+$blackD: #1d2310;
+$blackL: #292b27;
+$black: #000000;
+$delay: 0.2s ease-in-out;
 
 @mixin removeMB {
   & > :last-child {
@@ -11,9 +19,29 @@ $dark: #383838;
 }
 
 /* ----- reset */
-@import "./fonts";
-/* reset ----- */
-
-/* ----- reset */
 @import "./reset";
 /* reset ----- */
+
+/* ----- fonts */
+@import "./fonts";
+/* fonts ----- */
+
+/* ----- common */
+@import "./common";
+/* common ----- */
+
+// @media screen and (hover: hover) {}
+// @media screen and (hover: none) {}
+// @media screen and (max-width: 320px) {}
+// @media screen and (min-width: 320px) {}
+// @media screen and (max-width: 480px) {}
+// @media screen and (min-width: 480px) {}
+// @media screen and (max-width: 768px) {}
+// @media screen and (min-width: 768px) {}
+// @media screen and (max-width: 992px) {}
+// @media screen and (min-width: 992px) {}
+// @media screen and (max-width: 1024px) {}
+// @media screen and (min-width: 1024px) {}
+// @media screen and (max-width: 1280px) {}
+// @media screen and (min-width: 1280px) {}
+// @media screen and (min-width: 1800px) {}

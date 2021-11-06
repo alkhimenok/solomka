@@ -1,21 +1,4 @@
 /* ----- reset */
-@font-face {
-  font-family: "UbuntuBold";
-  src: url(../../assets/fonts/UbuntuBold.ttf);
-}
-
-@font-face {
-  font-family: "UbuntuMedium";
-  src: url(../../assets/fonts/UbuntuMedium.ttf);
-}
-
-@font-face {
-  font-family: "UbuntuRegular";
-  src: url(../../assets/fonts/UbuntuBold.ttf);
-}
-
-/* reset ----- */
-/* ----- reset */
 * {
   padding: 0;
   margin: 0;
@@ -50,21 +33,14 @@ html,
 body {
   height: 100%;
   width: 100%;
-  line-height: 1;
   font-size: 100%;
-  font-family: "Verdana", sans-serif;
+  font-family: "ubuntuRegular";
   font-display: swap;
-  font-size: calc(10px + 5 * ((100vw - 320px) / (1280 - 320)));
+  font-size: 16px;
+  line-height: 21px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-@media screen and (max-width: 320px) {
-  html,
-  body {
-    font-size: calc(5px + 5 * (100vw / 320));
-  }
 }
 
 input,
@@ -111,4 +87,125 @@ h6 {
 }
 
 /* reset ----- */
+/* ----- fonts */
+@font-face {
+  font-family: "ubuntuBold";
+  src: url(../../assets/fonts/ubuntuBold.ttf);
+}
+
+@font-face {
+  font-family: "ubuntuMedium";
+  src: url(../../assets/fonts/ubuntuMedium.ttf);
+}
+
+@font-face {
+  font-family: "ubuntuRegular";
+  src: url(../../assets/fonts/ubuntuRegular.ttf);
+}
+
+/* fonts ----- */
+/* ----- common */
+._container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+._body {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 480px) {
+  ._body {
+    padding: 0 5px;
+  }
+}
+
+._text {
+  font-family: "ubuntuRegular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #292B27;
+}
+
+._text span {
+  font-family: "ubuntuMedium";
+  font-size: 18px;
+  color: #1D2310;
+}
+
+._heading {
+  text-align: start;
+}
+
+._heading > :last-child {
+  margin-bottom: 0;
+}
+
+._title {
+  margin-bottom: 24px;
+  font-family: "ubuntuBold";
+  font-size: 36px;
+  line-height: 1;
+  color: #1D2310;
+}
+
+._subtitle {
+  font-family: "ubuntuMedium";
+  font-size: 24px;
+  line-height: 1;
+  color: #292B27;
+}
+
+._btn {
+  padding: 14px;
+  font-family: "ubuntuMedium";
+  font-size: 18px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #e78c14;
+  border-radius: 40px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+._btn._shadow {
+  padding: 19px;
+  border-radius: 60px;
+  -webkit-box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
+          box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
+}
+
+._btn._green {
+  padding: 12px;
+  font-size: 14px;
+  background-color: #708a34;
+}
+
+@media screen and (hover: hover) {
+  ._btn:hover {
+    background-color: #383838;
+  }
+}
+
+._btn:active {
+  background-color: #383838;
+}
+
+._input {
+  padding: 16px 22px;
+  font-family: "ubuntuRegular";
+  font-size: 16px;
+  color: #292B27;
+  background-color: #ffffff;
+  border: 2px solid #FDDCB0;
+  border-radius: 40px;
+}
+
+._label {
+  font-family: "ubuntuRegular";
+  font-size: 16px;
+  color: #927E66;
+}
+
+/* common ----- */
 /*# sourceMappingURL=main.css.map */
