@@ -1,17 +1,17 @@
 /* ----- fonts */
 @font-face {
   font-family: "ubuntuBold";
-  src: url(../../assets/fonts/ubuntuBold.ttf);
+  src: url(../../assets/fonts/UbuntuBold.ttf);
 }
 
 @font-face {
   font-family: "ubuntuMedium";
-  src: url(../../assets/fonts/ubuntuMedium.ttf);
+  src: url(../../assets/fonts/UbuntuMedium.ttf);
 }
 
 @font-face {
   font-family: "ubuntuRegular";
-  src: url(../../assets/fonts/ubuntuRegular.ttf);
+  src: url(../../assets/fonts/UbuntuRegular.ttf);
 }
 
 /* fonts ----- */
