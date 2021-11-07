@@ -4,8 +4,9 @@ $beigeD: #927e66;
 $beigeL: #faddbc;
 $orangeD: #e78c14;
 $orangeL: #fddcb0;
+$red: #e42121;
 $greenD: #708a34;
-$greenl: #e9f8db;
+$greenL: #e9f8db;
 $dark: #383838;
 $blackD: #1d2310;
 $blackL: #292b27;
@@ -17,31 +18,71 @@ $delay: 0.2s ease-in-out;
     margin-bottom: 0;
   }
 }
-
-/* ----- reset */
-@import "./reset";
-/* reset ----- */
+@mixin dFC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin dFB {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin dFE {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 /* ----- fonts */
 @import "./fonts";
 /* fonts ----- */
 
+/* ----- reset */
+@import "./reset";
+/* reset ----- */
+
 /* ----- common */
 @import "./common";
 /* common ----- */
 
+/* ----- logo */
+@import "./components/logo";
+/* logo ----- */
+
+/* ----- nav */
+@import "./components/nav";
+/* nav ----- */
+
+/* ----- phones */
+@import "./components/phones"; 
+/* phones ----- */
+
+/* ----- burger */
+@import "./components/burger"; 
+/* burger ----- */
+
+/* ----- header */
+@import "./blocks/header"; 
+/* header ----- */
+
+.wrapper {
+  overflow-y: hidden;
+  min-height: 100vh;
+}
+
 // @media screen and (hover: hover) {}
 // @media screen and (hover: none) {}
 // @media screen and (max-width: 320px) {}
-// @media screen and (min-width: 320px) {}
+// @media screen and (min-width: 321px) {}
 // @media screen and (max-width: 480px) {}
-// @media screen and (min-width: 480px) {}
+// @media screen and (min-width: 481px) {}
 // @media screen and (max-width: 768px) {}
 // @media screen and (min-width: 768px) {}
 // @media screen and (max-width: 992px) {}
-// @media screen and (min-width: 992px) {}
+// @media screen and (min-width: 993px) {}
 // @media screen and (max-width: 1024px) {}
-// @media screen and (min-width: 1024px) {}
+// @media screen and (min-width: 1025px) {}
 // @media screen and (max-width: 1280px) {}
-// @media screen and (min-width: 1280px) {}
+// @media screen and (min-width: 1281px) {}
 // @media screen and (min-width: 1800px) {}

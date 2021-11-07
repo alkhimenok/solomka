@@ -1,0 +1,71 @@
+.burger {
+  @include dFE;
+  .burger__icon {
+    position: relative;
+    left: 0;
+    width: 25px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    .burger-icon__line,
+      &::before,
+      &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: 3px;
+      display: block;
+      background-color: $blackD;
+      border-radius: 4px;
+      transition: $delay;
+      user-select: none;
+    }
+    .burger-icon__line {
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 75%;
+    }
+    &::before {
+      top: 0;
+      width: 100%;
+    }
+    &::after {
+      bottom: 0;
+      width: 50%;
+    }
+    @media screen and (hover: hover) {
+      &:hover {
+        .burger-icon__line,
+        &::before,
+        &::after {
+          background-color: $dark;
+        }
+      }
+    }
+    &:active {
+      .burger-icon__line,
+      &::before,
+      &::after {
+        background-color: $dark;
+      }
+    }
+    &._active {
+      .burger-icon__line {
+        top: 50%;
+        transform: scale(0);
+      }
+      &::after {
+        width: 100%;
+        bottom: 43%;
+        transform: rotate(-45deg);
+        background-color: $red;
+      }
+      &::before {
+        top: 43%;
+        transform: rotate(45deg);
+        background-color: $red;
+      }
+    }
+  }
+}
+

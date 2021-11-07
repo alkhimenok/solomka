@@ -4,9 +4,6 @@
 }
 ._body {
   padding: 0 10px;
-  @media screen and (max-width: 480px) {
-    padding: 0 5px;
-  }
 }
 ._text {
   font-family: "ubuntuRegular";
@@ -53,7 +50,7 @@
   &._green {
     padding: 12px;
     font-size: 14px;
-    background-color: $green;
+    background-color: $greenD;
   }
   @media screen and (hover: hover) {
     &:hover {

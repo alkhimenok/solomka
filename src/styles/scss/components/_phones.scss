@@ -1,0 +1,54 @@
+.phones {
+  // .phones__list {
+  // }
+  // .phones__item {
+  // }
+  .phones__link {
+    @include dFC;
+    padding: 5px 0;
+    @media screen and (hover: hover) {
+      &:hover {
+        .phones__number {
+          color: $greenD;
+        }
+        .phones__icon {
+          margin: 0 5px 0 10px;
+          svg {
+            path {
+              stroke: $greenL;
+            }
+          }
+        }
+      }
+    }
+    &:active {
+      .phones__number {
+        color: $greenD;
+      }
+      .phones__icon {
+        margin: 0 5px 0 10px;
+        svg {
+          path {
+            stroke: $greenL;
+          }
+        }
+      }
+    }
+  }
+  .phones__number {
+    padding: 5px 0;
+    color: $blackL;
+    border-bottom: 1px solid transparent;
+    transition: $delay;
+  }
+  .phones__icon {
+    margin: 0 15px 0 0;
+    transition: $delay;
+    svg {
+      path {
+        stroke: $greenD;
+        transition: $delay;
+      }
+    }
+  }
+}
