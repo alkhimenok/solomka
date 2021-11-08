@@ -1,4 +1,4 @@
-import { $header, $body } from './setIndent.js'
+import { $header, $body } from './setIndent'
 
 export const $burgerIcon = document.querySelector('.burger__icon')
 
