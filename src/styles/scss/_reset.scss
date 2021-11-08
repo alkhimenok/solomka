@@ -32,10 +32,14 @@ body {
   font-family: "ubuntuRegular";
   font-display: swap;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 18px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  @media screen and (max-width: 370px) {
+    font-size: calc(0px + 16 * (100vw / 370));
+    line-height: calc(0px + 18 * (100vw / 370));
+  }
 }
 input,
 button,

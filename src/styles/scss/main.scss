@@ -55,32 +55,43 @@ $delay: 0.2s ease-in-out;
 /* nav ----- */
 
 /* ----- phones */
-@import "./components/phones"; 
+@import "./components/phones";
 /* phones ----- */
 
 /* ----- burger */
-@import "./components/burger"; 
+@import "./components/burger";
 /* burger ----- */
 
 /* ----- header */
-@import "./blocks/header"; 
+@import "./blocks/header";
 /* header ----- */
 
+/* ----- home */
+@import "./blocks/home";
+/* home ----- */
+
 body {
-  ._overflow-hidden {
+  &._overflow-hidden {
     overflow: hidden;
   }
 }
-
 .wrapper {
   overflow: hidden;
   min-height: 100vh;
 }
+// .main {
+//   .main__container {
+//   }
+//   .main__body {
+//   }
+//   .main__home {
+//   }
+// }
 
 // @media screen and (hover: hover) {}
 // @media screen and (hover: none) {}
-// @media screen and (max-width: 320px) {}
-// @media screen and (min-width: 321px) {}
+// @media screen and (max-width: 370px) {}
+// @media screen and (min-width: 371px) {}
 // @media screen and (max-width: 480px) {}
 // @media screen and (min-width: 481px) {}
 // @media screen and (max-width: 768px) {}

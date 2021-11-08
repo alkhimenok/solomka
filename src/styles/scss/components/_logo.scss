@@ -5,5 +5,8 @@
     color: $black;
     background-color: $greenL;
     border-radius: 40px;
+    @media screen and (max-width: 370px) {
+      padding: calc(0px + 10 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
+    }
   }
 }

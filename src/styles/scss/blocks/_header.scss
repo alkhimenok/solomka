@@ -1,11 +1,14 @@
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fffffff5;
   // .header__container {
   // }
   .header__body {
     position: relative;
     @include dFB;
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
   // .header__logo {
   // }
@@ -13,7 +16,7 @@
     flex: auto;
     @include dFB;
     @media screen and (max-width: 992px) {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: -320px;
       flex-direction: column;
@@ -31,12 +34,12 @@
   }
   .header__nav {
     flex: auto;
-    margin: 0 105px 0 35px; // no margin at nav__item
-    @media screen and (max-width: 1024px) {
-      margin: 0 80px 0 35px;
+    margin: 0 115px 0 45px; // no margin at nav__item
+    @media screen and (max-width: 1280px) {
+      margin: 0 calc(40px + 75 * ((100vw - 993px) / (1280 - 993))) 0 calc(20px + 25 * ((100vw - 993px) / (1280 - 993))); // no margin at nav__item
     }
-    @media screen and (max-width: 992px) { // for burger
-      margin: 0 0 40px 0;
+    @media screen and (max-width: 992px) {
+      margin: 0 0 40px 0; // for burger
     }
   }
   .header__call {
@@ -46,9 +49,8 @@
     }
   }
   .header__phones {
-    margin: 0 30px 0 0;
-    @media screen and (max-width: 992px) { // for burger
-      margin: 0;
+    @media screen and (min-width: 993px) {
+      margin: 0 30px 0 0; // for burger
     }
   }
   // .header__btn_request-call {
@@ -60,7 +62,7 @@
   }
   &._show-menu {
     .header__menu {
-      right: 0; 
+      right: 0;
     }
   }
 }

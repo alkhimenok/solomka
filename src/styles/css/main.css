@@ -54,10 +54,18 @@ body {
   font-family: "ubuntuRegular";
   font-display: swap;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 18px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+@media screen and (max-width: 370px) {
+  html,
+  body {
+    font-size: calc(0px + 16 * (100vw / 370));
+    line-height: calc(0px + 18 * (100vw / 370));
+  }
 }
 
 input,
@@ -105,19 +113,38 @@ h6 {
 
 /* reset ----- */
 /* ----- common */
+._indent {
+  padding: 50px 0;
+}
+
+@media screen and (max-width: 1280px) {
+  ._indent {
+    padding: calc(15px + 35 * ((100vw - 370px) / (1280 - 370))) 0;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ._indent {
+    padding: calc(0px + 15 * (100vw / 370)) 0;
+  }
+}
+
 ._container {
-  max-width: 1200px;
+  max-width: 1210px;
   margin: 0 auto;
 }
 
 ._body {
-  padding: 0 10px;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 370px) {
+  ._body {
+    padding: 0 calc(0px + 15 * (100vw / 370));
+  }
 }
 
 ._text {
-  font-family: "ubuntuRegular";
-  font-size: 16px;
-  line-height: 28px;
   color: #292b27;
 }
 
@@ -139,22 +166,50 @@ h6 {
   margin-bottom: 24px;
   font-family: "ubuntuBold";
   font-size: 36px;
-  line-height: 1;
+  line-height: 41px;
   color: #1d2310;
+}
+
+@media screen and (max-width: 1280px) {
+  ._heading ._heading__title {
+    font-size: calc(24px + 12 * ((100vw - 370px) / (1280 - 370)));
+    line-height: calc(28px + 13 * ((100vw - 370px) / (1280 - 370)));
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ._heading ._heading__title {
+    font-size: calc(0px + 24 * (100vw / 370));
+    line-height: calc(0px + 28 * (100vw / 370));
+  }
 }
 
 ._heading ._heading__subtitle {
   font-family: "ubuntuMedium";
   font-size: 24px;
-  line-height: 1;
+  line-height: 28px;
   color: #292b27;
+}
+
+@media screen and (max-width: 1280px) {
+  ._heading ._heading__subtitle {
+    font-size: calc(18px + 6 * ((100vw - 370px) / (1280 - 370)));
+    line-height: calc(24px + 4 * ((100vw - 370px) / (1280 - 370)));
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ._heading ._heading__subtitle {
+    font-size: calc(0px + 18 * (100vw / 370));
+    line-height: calc(0px + 24 * (100vw / 370));
+  }
 }
 
 ._btn {
   padding: 14px;
   font-family: "ubuntuMedium";
   font-size: 18px;
-  line-height: 1;
+  line-height: 21px;
   color: #ffffff;
   background-color: #e78c14;
   border-radius: 40px;
@@ -169,10 +224,30 @@ h6 {
           box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
 }
 
+@media screen and (max-width: 480px) {
+  ._btn._shadow {
+    width: 90%;
+    margin: 0 5% 0;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ._btn._shadow {
+    padding: calc(0px + 19 * (100vw / 370));
+  }
+}
+
 ._btn._green {
   padding: 12px;
   font-size: 14px;
   background-color: #708a34;
+}
+
+@media screen and (max-width: 370px) {
+  ._btn._green {
+    padding: calc(0px + 12 * (100vw / 370));
+    font-size: calc(0px + 14 * (100vw / 370));
+  }
 }
 
 @media screen and (hover: hover) {
@@ -185,10 +260,22 @@ h6 {
   background-color: #383838;
 }
 
+@media screen and (max-width: 480px) {
+  ._btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ._btn {
+    padding: calc(0px + 14 * (100vw / 370));
+    font-size: calc(0px + 18 * (100vw / 370));
+    line-height: calc(0px + 21 * (100vw / 370));
+  }
+}
+
 ._input {
   padding: 16px 22px;
-  font-family: "ubuntuRegular";
-  font-size: 16px;
   color: #292b27;
   background-color: #ffffff;
   border: 2px solid #fddcb0;
@@ -196,8 +283,6 @@ h6 {
 }
 
 ._label {
-  font-family: "ubuntuRegular";
-  font-size: 16px;
   color: #927e66;
 }
 
@@ -209,6 +294,12 @@ h6 {
   color: #000000;
   background-color: #e9f8db;
   border-radius: 40px;
+}
+
+@media screen and (max-width: 370px) {
+  .logo .logo__icon {
+    padding: calc(0px + 10 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
+  }
 }
 
 /* logo ----- */
@@ -248,7 +339,6 @@ h6 {
 .nav .nav__link {
   position: relative;
   padding: 5px 10px;
-  font-size: 16px;
   color: #1d2310;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -295,6 +385,12 @@ h6 {
 .nav .nav__link:active::before, .nav .nav__link:active::after {
   left: 0;
   background-color: #708a34;
+}
+
+@media screen and (max-width: 992px) {
+  .nav .nav__link {
+    font-size: 24px;
+  }
 }
 
 /* nav ----- */
@@ -445,6 +541,14 @@ h6 {
 
 /* burger ----- */
 /* ----- header */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fffffff5;
+}
+
 .header .header__body {
   position: relative;
   display: -webkit-box;
@@ -456,8 +560,6 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .header .header__menu {
@@ -477,7 +579,7 @@ h6 {
 
 @media screen and (max-width: 992px) {
   .header .header__menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -320px;
     -webkit-box-orient: vertical;
@@ -505,12 +607,12 @@ h6 {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
-  margin: 0 105px 0 35px;
+  margin: 0 115px 0 45px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .header .header__nav {
-    margin: 0 80px 0 35px;
+    margin: 0 calc(40px + 75 * ((100vw - 993px) / (1280 - 993))) 0 calc(20px + 25 * ((100vw - 993px) / (1280 - 993)));
   }
 }
 
@@ -541,13 +643,9 @@ h6 {
   }
 }
 
-.header .header__phones {
-  margin: 0 30px 0 0;
-}
-
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 993px) {
   .header .header__phones {
-    margin: 0;
+    margin: 0 30px 0 0;
   }
 }
 
@@ -562,7 +660,109 @@ h6 {
 }
 
 /* header ----- */
-body ._overflow-hidden {
+/* ----- home */
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+  .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.home__content {
+  margin: 0 65px 0 0;
+}
+
+@media screen and (max-width: 992px) {
+  .home__content {
+    margin: 0;
+  }
+}
+
+.home__title {
+  margin: 0 0 24px 0;
+  font-family: "ubuntuBold";
+  font-size: 45px;
+  line-height: 52px;
+  color: #1d2310;
+}
+
+.home__title span {
+  color: #708a34;
+}
+
+@media screen and (max-width: 1280px) {
+  .home__title {
+    margin: 0 0 calc(16px + 6 * ((100vw - 370px) / (1280 - 370))) 0;
+    font-size: calc(36px + 9 * ((100vw - 370px) / (1280 - 370)));
+    line-height: calc(44px + 8 * ((100vw - 370px) / (1280 - 370)));
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .home__title {
+    margin: 0 0 calc(0px + 16 * (100vw / 370)) 0;
+    font-size: calc(0px + 36 * (100vw / 370));
+    line-height: calc(0px + 44 * (100vw / 370));
+  }
+}
+
+.home__description {
+  margin: 0 0 60px 0;
+  line-height: 24px;
+  color: #292b27;
+}
+
+@media screen and (max-width: 1280px) {
+  .home__description {
+    margin: 0 0 calc(30px + 30 * ((100vw - 370px) / (1280 - 370))) 0;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .home__description {
+    margin: 0 0 calc(0px + 30 * (100vw / 370)) 0;
+    line-height: calc(0px + 24 * (100vw / 370));
+  }
+}
+
+.home__picture {
+  min-width: 445px;
+  min-height: 450px;
+}
+
+@media screen and (max-width: 992px) {
+  .home__picture {
+    min-width: 60%;
+    min-height: 60%;
+    margin: 30px auto 0;
+  }
+}
+
+.home__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* home ----- */
+body._overflow-hidden {
   overflow: hidden;
 }
 

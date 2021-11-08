@@ -1,7 +1,6 @@
-export const $burgerIcon = document.querySelector('.burger__icon')
+import { $header, $body } from './setIndent.js'
 
-const $header = document.querySelector('.header')
-const $body = document.body
+export const $burgerIcon = document.querySelector('.burger__icon')
 
 export const showMenu = () => {
 	$body.classList.toggle('_overflow-hidden')
