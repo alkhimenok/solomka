@@ -1,10 +1,10 @@
 import { rewriteNumber } from './src/setNumber.js'
-import { burgerIcon, showNav } from './src/burger.js'
+import { $burgerIcon, showMenu } from './src/burger.js'
 
 const start = () => {
-  rewriteNumber()
+	rewriteNumber()
 
-  burgerIcon.addEventListener('click', showNav)
+	$burgerIcon.addEventListener('click', showMenu)
 }
 
 window.addEventListener('load', start)

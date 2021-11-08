@@ -38,7 +38,7 @@
         .burger-icon__line,
         &::before,
         &::after {
-          background-color: $dark;
+          background-color: $greenD;
         }
       }
     }
@@ -46,7 +46,7 @@
       .burger-icon__line,
       &::before,
       &::after {
-        background-color: $dark;
+        background-color: $greenD;
       }
     }
     &._active {

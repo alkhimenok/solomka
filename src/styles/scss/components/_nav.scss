@@ -2,24 +2,19 @@
   .nav__list {
     @include dFB;
     flex-wrap: nowrap;
-    @media screen and (max-width: 992px) {
-      padding: 40px 0;
-      align-items: flex-start;
-      flex-direction: column;
-    }
-    @media screen and (max-width: 480px) {
-      padding: 20px 0;
+    @media screen and (max-width: 992px) { // for burger
       align-items: center;
+      flex-direction: column;
     }
   }
   .nav__item {
-    @media screen and (max-width: 992px) {
-      margin: 20px;
+    @media screen and (max-width: 992px) { // for burger
+      margin: 20px 10px;
     }
   }
   .nav__link {
     position: relative;
-    padding: 5px 0 5px 15px;
+    padding: 5px 10px;
     font-size: 16px;
     color: $blackD;
     transition: $delay;
@@ -62,9 +57,6 @@
         left: 0;
         background-color: $greenD;
       }
-    }
-    @media screen and (max-width: 992px) {
-      font-size: 24px;
     }
   }
 }

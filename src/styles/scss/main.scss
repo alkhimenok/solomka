@@ -66,8 +66,14 @@ $delay: 0.2s ease-in-out;
 @import "./blocks/header"; 
 /* header ----- */
 
+body {
+  ._overflow-hidden {
+    overflow: hidden;
+  }
+}
+
 .wrapper {
-  overflow-y: hidden;
+  overflow: hidden;
   min-height: 100vh;
 }
 
@@ -78,11 +84,11 @@ $delay: 0.2s ease-in-out;
 // @media screen and (max-width: 480px) {}
 // @media screen and (min-width: 481px) {}
 // @media screen and (max-width: 768px) {}
-// @media screen and (min-width: 768px) {}
+// @media screen and (min-width: 769px) {}
 // @media screen and (max-width: 992px) {}
 // @media screen and (min-width: 993px) {}
 // @media screen and (max-width: 1024px) {}
 // @media screen and (min-width: 1025px) {}
 // @media screen and (max-width: 1280px) {}
 // @media screen and (min-width: 1281px) {}
-// @media screen and (min-width: 1800px) {}
+// @media screen and (min-width: 1801px) {}

@@ -1,11 +1,10 @@
-export const burgerIcon = document.querySelector('.burger__icon')
+export const $burgerIcon = document.querySelector('.burger__icon')
 
-const menu = document.querySelector('.header__menu')
+const $header = document.querySelector('.header')
+const $body = document.body
 
-export const showNav = e => {
-	const { currentTarget } = e
-
-  document.body.style.overflow = 'hidden'
-  currentTarget.classList.toggle('_active')
-  menu.classList.toggle('_show-menu')
+export const showMenu = () => {
+	$body.classList.toggle('_overflow-hidden')
+	$burgerIcon.classList.toggle('_active')
+	$header.classList.toggle('_show-menu')
 }

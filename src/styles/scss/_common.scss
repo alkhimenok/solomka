@@ -19,19 +19,19 @@
 ._heading {
   text-align: start;
   @include removeMB;
-}
-._title {
-  margin-bottom: 24px;
-  font-family: "ubuntuBold";
-  font-size: 36px;
-  line-height: 1;
-  color: $blackD;
-}
-._subtitle {
-  font-family: "ubuntuMedium";
-  font-size: 24px;
-  line-height: 1;
-  color: $blackL;
+  ._heading__title {
+    margin-bottom: 24px;
+    font-family: "ubuntuBold";
+    font-size: 36px;
+    line-height: 1;
+    color: $blackD;
+  }
+  ._heading__subtitle {
+    font-family: "ubuntuMedium";
+    font-size: 24px;
+    line-height: 1;
+    color: $blackL;
+  }
 }
 ._btn {
   padding: 14px;
