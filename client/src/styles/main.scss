@@ -78,6 +78,10 @@ $delay: 0.2s ease-in-out;
 @import "./blocks/about";
 /* about ----- */
 
+/* ----- for */
+@import "./blocks/for";
+/* for ----- */
+
 body {
   &._overflow-hidden {
     overflow: hidden;
@@ -95,6 +99,8 @@ body {
 //     }
 //     .main__about {
 //     }
+// .main__for {
+// }
 //   }
 // }
 
