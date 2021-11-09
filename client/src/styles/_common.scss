@@ -28,48 +28,6 @@
     }
   }
 }
-._heading {
-  padding: 0 0 40px 0;
-  text-align: start;
-  @include removeMB;
-  @media screen and (max-width: 1280px) {
-    padding: 0 0 calc(15px + 25 * ((100vw - 370px) / (1280 - 370))) 0;
-  }
-  @media screen and (max-width: 370px) {
-    padding: 0 0 calc(0px + 15 * (100vw / 370)) 0;
-  }
-}
-._heading__title {
-  margin: 0 0 25px 0;
-  font-family: "ubuntuBold";
-  font-size: 36px;
-  line-height: 41px;
-  color: $blackD;
-  @media screen and (max-width: 1280px) {
-    margin-bottom: 0 0 calc(10px + 15 * ((100vw - 370px) / (1280 - 370))) 0;
-    font-size: calc(24px + 12 * ((100vw - 370px) / (1280 - 370)));
-    line-height: calc(28px + 13 * ((100vw - 370px) / (1280 - 370)));
-  }
-  @media screen and (max-width: 370px) {
-    margin-bottom: 0 0 calc(0px + 10 * (100vw / 370)) 0;
-    font-size: calc(0px + 24 * (100vw / 370));
-    line-height: calc(0px + 28 * (100vw / 370));
-  }
-}
-._heading__subtitle {
-  font-family: "ubuntuMedium";
-  font-size: 24px;
-  line-height: 28px;
-  color: $blackL;
-  @media screen and (max-width: 1280px) {
-    font-size: calc(18px + 6 * ((100vw - 370px) / (1280 - 370)));
-    line-height: calc(24px + 4 * ((100vw - 370px) / (1280 - 370)));
-  }
-  @media screen and (max-width: 370px) {
-    font-size: calc(0px + 18 * (100vw / 370));
-    line-height: calc(0px + 24 * (100vw / 370));
-  }
-}
 ._btn {
   padding: 14px;
   font-family: "ubuntuMedium";
@@ -83,12 +41,13 @@
     padding: 19px;
     border-radius: 60px;
     box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
-    @media screen and (max-width: 480px) {
-      width: 90%;
-      margin: 0 5% 0;
-    }
+    // @media screen and (max-width: 480px) {
+    //   width: 90%;
+    //   margin: 0 5%;
+    // }
     @media screen and (max-width: 370px) {
       padding: calc(0px + 19 * (100vw / 370));
+      box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
     }
   }
   &._green {
@@ -108,12 +67,12 @@
   &:active {
     background-color: $dark;
   }
-  @media screen and (max-width: 768px) {
-    width: 70%;
-  }
-  @media screen and (max-width: 480px) {
-    width: 100%;
-  }
+  // @media screen and (max-width: 768px) {
+  //   width: 70%;
+  // }
+  // @media screen and (max-width: 480px) {
+  //   width: 100%;
+  // }
   @media screen and (max-width: 370px) {
     padding: calc(0px + 14 * (100vw / 370));
     font-size: calc(0px + 18 * (100vw / 370));
@@ -123,21 +82,22 @@
 ._input {
   padding: 16px 22px;
   color: $blackL;
+  font-size: 16px;
   background-color: $white;
   border: 2px solid $orangeL;
   border-radius: 40px;
   transition: $delay;
   &:focus {
-  border: 2px solid $greenD;
-    
+    border: 2px solid $greenD;
   }
-  @media screen and (max-width: 768px) {
-    width: 70%;
-  }
-  @media screen and (max-width: 480px) {
-    width: 100%;
-  }
+  // @media screen and (max-width: 768px) {
+  //   width: 70%;
+  // }
+  // @media screen and (max-width: 480px) {
+  //   width: 100%;
+  // }
   @media screen and (max-width: 370px) {
+    font-size: calc(0px + 16 * (100vw / 370));
     padding: calc(0px + 16 * (100vw / 370)) calc(0px + 22 * (100vw / 370));
   }
 }

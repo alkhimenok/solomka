@@ -53,8 +53,11 @@
       margin: 0 30px 0 0; // for burger
     }
   }
-  // .header__btn_request-call {
-  // }
+  .header__btn_request-call {
+    @media screen and (min-width: 371px) {
+      width: 170px;
+    }
+  }
   .header__burger {
     @media screen and (min-width: 993px) {
       display: none;

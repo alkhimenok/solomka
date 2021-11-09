@@ -62,6 +62,10 @@ $delay: 0.2s ease-in-out;
 @import "./components/burger";
 /* burger ----- */
 
+/* ----- heading */
+@import "./components/heading";
+/* heading ----- */
+
 /* ----- header */
 @import "./blocks/header";
 /* header ----- */
@@ -87,15 +91,17 @@ body {
 //   .main__container {
 //   }
 //   .main__body {
-//   .main__home {
-//   }
-//   .main__about {
-//   }
+//     .main__home {
+//     }
+//     .main__about {
+//     }
 //   }
 // }
 
 // @media screen and (hover: hover) {}
 // @media screen and (hover: none) {}
+// @media screen and (max-width: 320px) {}
+// @media screen and (min-width: 321px) {}
 // @media screen and (max-width: 370px) {}
 // @media screen and (min-width: 371px) {}
 // @media screen and (max-width: 480px) {}

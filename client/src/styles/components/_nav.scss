@@ -11,6 +11,9 @@
     @media screen and (max-width: 992px) { // for burger
       margin: 20px 10px;
     }
+    @media screen and (max-width: 370px) {
+      margin: calc(0px + 20 * (100vw / 370)) calc(0px + 10 * (100vw / 370));
+    }
   }
   .nav__link {
     position: relative;
@@ -59,6 +62,9 @@
     }
     @media screen and (max-width: 992px) { // for burger
       font-size: 24px;
+    }
+    @media screen and (max-width: 370px) {
+      font-size: calc(0px + 24 * (100vw / 370));
     }
   }
 }
