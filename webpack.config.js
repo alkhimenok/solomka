@@ -1,19 +1,18 @@
-const HTMLWebpakPlugin = require('html-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+const path = require('path')
+const config = require('config')
 const autoprefixer = require('autoprefixer')
 const cssMQParcker = require('css-mqpacker')
 
-const path = require('path')
-const config = require('config')
-
 const PORT = config.get('port')
-
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
+
 const getMode = () => (isDev ? 'development' : 'production')
 
 const getOptiomization = () => {
@@ -30,18 +29,37 @@ const getOptiomization = () => {
 	return config
 }
 
+const getStyleLoader = loader => {
+	const defaultLoader = [
+		MiniCssExtractPlugin.loader,
+		'css-loader',
+		{
+			loader: 'postcss-loader',
+			options: {
+				postcssOptions: {
+					plugins: [autoprefixer(), cssMQParcker()],
+				},
+			},
+		},
+	]
+	if (loader) defaultLoader.push(loader)
+
+	return defaultLoader
+}
+
 module.exports = {
-	context: path.resolve(__dirname, 'client'),
+	context: path.resolve(__dirname, 'client', 'src'),
 	mode: getMode(),
 	entry: {
-		main: ['@babel/polyfill', './src/index.js'],
+		main: ['@babel/polyfill', './index.js'],
 	},
 	output: {
 		filename: '[name].[contenthash].js',
 		path: path.resolve(__dirname, 'client', 'dist'),
 	},
 	plugins: [
-		new HTMLWebpakPlugin({
+		new HTMLWebpackPlugin({
+			filename: 'index.html',
 			template: './index.html',
 		}),
 		new CleanWebpackPlugin(),
@@ -49,6 +67,10 @@ module.exports = {
 			filename: '[name].[contenthash].css',
 		}),
 	],
+	performance: {
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000,
+	},
 	devtool: isDev ? 'source-map' : 'nosources-source-map',
 	optimization: getOptiomization(),
 	devServer: {
@@ -59,26 +81,11 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader'],
+				use: getStyleLoader(),
 			},
 			{
 				test: /\.s[ca]ss$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					'css-loader',
-					{
-						loader: 'postcss-loader',
-						options: {
-							postcssOptions: {
-								plugins: [
-									autoprefixer(),
-									cssMQParcker()
-								],
-							},
-						},
-					},
-					'sass-loader',
-				],
+				use: getStyleLoader('sass-loader'),
 			},
 			{
 				test: /\.html$/i,
