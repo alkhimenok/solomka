@@ -70,6 +70,10 @@ $delay: 0.2s ease-in-out;
 @import "./blocks/home";
 /* home ----- */
 
+/* ----- about */
+@import "./blocks/about";
+/* about ----- */
+
 body {
   &._overflow-hidden {
     overflow: hidden;
@@ -83,8 +87,10 @@ body {
 //   .main__container {
 //   }
 //   .main__body {
-//   }
 //   .main__home {
+//   }
+//   .main__about {
+//   }
 //   }
 // }
 

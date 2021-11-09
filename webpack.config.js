@@ -7,7 +7,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require('path')
 const config = require('config')
 const autoprefixer = require('autoprefixer')
-const cssMQParcker = require('css-mqpacker')
 
 const PORT = config.get('port')
 const isDev = process.env.NODE_ENV === 'development'
@@ -37,7 +36,7 @@ const getStyleLoader = loader => {
 			loader: 'postcss-loader',
 			options: {
 				postcssOptions: {
-					plugins: [autoprefixer(), cssMQParcker()],
+					plugins: [autoprefixer()],
 				},
 			},
 		},

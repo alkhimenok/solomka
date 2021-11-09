@@ -52,7 +52,7 @@
               <section class="header__phones phones">
                 <ul class="phones__list">
                   <li class="phones__item">
-                    <a class="phones__link phone" href="#">
+                    <a class="phones__link" href="#" data-tel="phone">
                       <span class="phones__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -60,7 +60,7 @@
                             stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                       </span>
-                      <span class="phones__number number">
+                      <span class="phones__number" data-tel="number">
                         +375 (25) 686-44-40
                       </span>
                     </a>
@@ -85,9 +85,9 @@
         <div class="main__body _body">
           <section class="main__home home _indent">
             <section class="home__content">
-              <h2 class="home__title">
+              <h1 class="home__title">
                 <span>Экологические</span> бумажные трубочки для напитков, которые не вредят природе
-              </h2>
+              </h1>
               <p class="home__description">
                 Трубочки подходят для холодных и горячих напитков и не размокают за 2 <br> часа. Качество подтверждается
                 заключением Центра гигиены <br> и эпидемиологии г. Витебска.
@@ -97,7 +97,43 @@
               </button>
             </section>
             <section class="home__picture">
-              <img class="home__img" src="./assets/home/planet.jpg" alt="planet">
+              <img class="home__img _img" src="./assets/home/planet.jpg" alt="planet">
+            </section>
+          </section>
+          <section class="main__about about _indent">
+            <div class="about__header _heading">
+              <h2 class="about__title _heading__title">
+                О компании
+              </h2>
+              <h3 class="about__subtitle _heading__subtitle">
+                VitEcoPro - Производитель экологических трубочек в Беларуси
+              </h3>
+            </div>
+            <section class="about__content">
+              <section class="about__picture">
+                <img class="about__img _img" src="./assets/about/picture.jpg" alt="cocktails">
+              </section>
+              <section class="about__form">
+                <div class="about__description">
+                  <p class="about__text _text">
+                    <span>VitEcoPro</span> – производитель безопасных для человека и окружающей среды бумажных трубочек
+                    для напитков из
+                    эко-материалов без использования химических веществ. Оформить заказ можно оптом и в розницу с
+                    доставкой от одной упаковки по всей Беларуси.
+                  </p>
+                  <p class="about__text _text">
+                    Для того, чтобы оформить заказ на набор столовых приборов оптом, Вам нужно лишь связаться с
+                    менеджером
+                    нашей компании по телефону, указанному на сайте, либо же оформить онлайн-заказ.
+                  </p>
+                </div>
+                <fieldset class="about__call">
+                  <input class="about__leave-number _input" data-tel="mask" type="tel">
+                  <button class="about__btn_request-call _btn">
+                    Заказать звонок
+                  </button>
+                </fieldset>
+              </section>
             </section>
           </section>
         </div>
