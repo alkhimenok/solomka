@@ -46,17 +46,16 @@
   }
   .for__picture {
     position: relative;
-    margin-bottom: 25px;
+    width: 70%;
+    height: 70%;
+    margin: 0 auto 25px auto;
   }
   .for__background {
-    transition: $delay;
-    @media screen and (max-width: 370px) {
       svg {
-        width: 65%;
-        height: auto;
-        transition: $delay;
+        path {
+          transition: $delay;
+        }
       }
-    }
   }
   .for__icon {
     position: absolute;
@@ -67,12 +66,6 @@
       path {
         fill: $greenD;
         transition: $delay;
-      }
-    }
-    @media screen and (max-width: 370px) {
-      svg {
-        width: 70%;
-        height: auto;
       }
     }
   }

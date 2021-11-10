@@ -1,0 +1,203 @@
+.advantage {
+  // .advantage__heading {
+  // }
+  .advantage__content {
+    @include dFC;
+    @media screen and (max-width: 992px) {
+      position: relative;
+      padding: 260px 0;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 250px 0 250px;
+    }
+    @media screen and (max-width: 370px) {
+      padding: 200px 0 220px;
+    }
+  }
+  .advantage__wrapper {
+    @include dFC;
+    width: calc(100vw / 100 * 40);
+    height: calc(100vw / 100 * 40);
+    border: 1px dashed $orangeD;
+    border-radius: 50%;
+    @media screen and (min-width: 993px) {
+      position: relative;
+    }
+    @media screen and (max-width: 992px) {
+      width: calc(100vw / 100 * 60);
+      height: calc(100vw / 100 * 60);
+    }
+    @media screen and (max-width: 480px) {
+      width: calc(100vw / 100 * 80);
+      height: calc(100vw / 100 * 80);
+    }
+  }
+  .advantage__card {
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
+    background-color: $greenD;
+    border-radius: 10px;
+    @media screen and (min-width: 993px) {
+      &._right-top {
+        top: 20px;
+        left: 80%;
+      }
+      &._right-center {
+        left: 95%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &._right-bottom {
+        bottom: 20px;
+        left: 80%;
+      }
+      &._left-bottom {
+        right: 80%;
+        bottom: 20px;
+      }
+      &._left-center {
+        right: 95%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &._left-top {
+        top: 20px;
+        right: 80%;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      &._right-top {
+        top: 0;
+        left: 15%;
+      }
+      &._right-center {
+        top: 100px;
+        right: 15%;
+      }
+      &._right-bottom {
+        top: 200px;
+        left: 15%;
+      }
+      &._left-bottom {
+        right: 15%;
+        bottom: 0;
+      }
+      &._left-center {
+        left: 15%;
+        bottom: 100px;
+      }
+      &._left-top {
+        right: 15%;
+        bottom: 220px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      &._right-top {
+        top: 0;
+        left: 0;
+      }
+      &._right-center {
+        top: 10%;
+        right: 0;
+      }
+      &._right-bottom {
+        top: 20%;
+        left: 0;
+      }
+      &._left-bottom {
+        right: 0;
+        bottom: 0;
+      }
+      &._left-center {
+        left: 0;
+        bottom: 10%;
+      }
+      &._left-top {
+        right: 0;
+        bottom: 23%;
+      }
+    }
+  }
+  .advantage__text {
+    color: $white;
+    white-space: nowrap;
+    @media screen and (max-width: 1280px) {
+      font-size: calc(14px + 2 * ((100vw - 370px) / (1280 - 370)));
+    }
+    @media screen and (max-width: 370px) {
+      font-size: calc(0px + 14 * (100vw / 370));
+    }
+  }
+  .advantage__body {
+    position: relative;
+    @include dFC;
+    width: calc(100vw / 100 * 25);
+    height: calc(100vw / 100 * 25);
+    border: 1px dashed $orangeD;
+    border-radius: 50%;
+    @media screen and (max-width: 992px) {
+      width: calc(100vw / 100 * 40);
+      height: calc(100vw / 100 * 40);
+    }
+    @media screen and (max-width: 480px) {
+      width: calc(100vw / 100 * 60);
+      height: calc(100vw / 100 * 60);
+    }
+  }
+  .advantage__picture {
+    position: absolute;
+    @include dFC;
+    width: 15%;
+    height: 15%;
+    background-color: $white;
+    border: 1px dashed $orangeD;
+    border-radius: 50%;
+    &._right-top {
+      top: 7%;
+      right: 7%;
+    }
+    &._right-center {
+      right: -7%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    &._right-bottom {
+      bottom: 7%;
+      right: 7%;
+    }
+    &._left-bottom {
+      left: 7%;
+      bottom: 7%;
+    }
+    &._left-center {
+      left: -7%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    &._left-top {
+      top: 7%;
+      left: 7%;
+    }
+  }
+  .advantage__icon {
+    @include dFC;
+    width: 50%;
+    height: 50%;
+    &._trees-right {
+      position: absolute;
+      right: 15%;
+      top: 20%;
+    }
+    &._trees-left {
+      position: absolute;
+      left: 15%;
+    }
+  }
+  .advantage__main-picture {
+    width: 50%;
+    height: 50%;
+  }
+  // .advantage__img {
+  // }
+}
