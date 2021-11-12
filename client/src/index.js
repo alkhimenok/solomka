@@ -3,6 +3,8 @@ import { $burgerIcon, showMenu } from './scripts/header/burger'
 import { rewriteNumber } from './scripts/numbers/phoneLink'
 import { setMask } from './scripts/numbers/inputMask'
 
+import { } from './scripts/advantegeEfects'
+
 import './styles/main.scss'
 
 const start = () => {

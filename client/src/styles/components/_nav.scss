@@ -1,6 +1,6 @@
 .nav {
   .nav__list {
-    @include dFB;
+    @include dFCB;
     flex-wrap: nowrap;
     @media screen and (max-width: 992px) { // for burger
       align-items: center;

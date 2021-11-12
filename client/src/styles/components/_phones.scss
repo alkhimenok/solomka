@@ -4,7 +4,7 @@
   // .phones__item {
   // }
   .phones__link {
-    @include dFC;
+    @include dFCC;
     padding: 5px 0;
     @media screen and (hover: hover) {
       &:hover {

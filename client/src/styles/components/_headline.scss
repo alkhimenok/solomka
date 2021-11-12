@@ -1,4 +1,4 @@
-.heading {
+.headline {
   padding: 0 0 40px 0;
   text-align: start;
   @include removeMB;
@@ -9,7 +9,7 @@
     padding: 0 0 calc(0px + 15 * (100vw / 370)) 0;
   }
 }
-.heading__title {
+.headline__title {
   margin: 0 0 25px 0;
   font-family: "ubuntuBold";
   font-size: 36px;
@@ -26,7 +26,7 @@
     line-height: calc(0px + 28 * (100vw / 370));
   }
 }
-.heading__subtitle {
+.headline__subtitle {
   font-family: "ubuntuMedium";
   font-size: 24px;
   line-height: 28px;

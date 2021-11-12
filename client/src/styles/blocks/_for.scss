@@ -1,14 +1,16 @@
 .for {
-  // .for__heading {
+  // .for__headline {
+  // }
+  // .for__content {
   // }
   .for__list {
-    @include dFB;
+    @include dFCB;
     flex-wrap: wrap;
   }
   .for__item {
     width: calc(25% - 10px);
     margin: 5px;
-    padding: 25px 20px;
+    padding: 25px 50px;
     text-align: center;
     transition: $delay;
     @media screen and (max-width: 992px) {
@@ -24,7 +26,21 @@
     @media screen and (hover: hover) {
       &:hover {
         background-color: $gray;
-        .for__background {
+        .for__picture {
+          .for__icon {
+            svg {
+              path {
+                fill: $orangeD;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:active {
+      background-color: $gray;
+      .for__picture {
+        .for__icon {
           svg {
             path {
               fill: $greenL;
@@ -33,35 +49,28 @@
         }
       }
     }
-    &:active {
-      background-color: $gray;
-      .for__background {
-        svg {
-          path {
-            fill: $greenL;
-          }
-        }
+  }
+  .for__wrapper {
+    position: relative;
+    margin: 0 auto 25px auto;
+  }
+  // .for__background {
+  // }
+  .for__img {
+    svg {
+      path {
+        transition: $delay;
       }
     }
   }
   .for__picture {
-    position: relative;
-    width: 70%;
-    height: 70%;
-    margin: 0 auto 25px auto;
-  }
-  .for__background {
-      svg {
-        path {
-          transition: $delay;
-        }
-      }
-  }
-  .for__icon {
+    width: 55%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .for__icon {
     svg {
       path {
         fill: $greenD;

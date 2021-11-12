@@ -1,5 +1,6 @@
 $white: #ffffff;
 $gray: #e3e3e5;
+$blue: #F5F8FE;
 $beigeD: #927e66;
 $beigeL: #faddbc;
 $orangeD: #e78c14;
@@ -18,20 +19,35 @@ $delay: 0.2s ease-in-out;
     margin-bottom: 0;
   }
 }
-@mixin dFC {
+@mixin removeMR {
+  & > :last-child {
+    margin-right: 0;
+  }
+}
+@mixin dFCC {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@mixin dFB {
+@mixin dFCB {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-@mixin dFE {
+@mixin dFCE {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+@mixin dFCS {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin dFSB {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 /* ----- fonts */
@@ -62,9 +78,13 @@ $delay: 0.2s ease-in-out;
 @import "./components/burger";
 /* burger ----- */
 
-/* ----- heading */
-@import "./components/heading";
-/* heading ----- */
+/* ----- headline */
+@import "./components/headline";
+/* headline ----- */
+
+/* ----- card */
+@import "./components/card-contacts";
+/* card ----- */
 
 /* ----- header */
 @import "./blocks/header";
@@ -86,6 +106,22 @@ $delay: 0.2s ease-in-out;
 @import "./blocks/for";
 /* for ----- */
 
+/* ----- products */
+@import "./blocks/products";
+/* products ----- */
+
+/* ----- send */
+@import "./blocks/send";
+/* send ----- */
+
+/* ----- maps */
+@import "./blocks/maps";
+/* maps ----- */
+
+/* ----- footer */
+@import "./blocks/footer";
+/* footer ----- */
+
 body {
   &._overflow-hidden {
     overflow: hidden;
@@ -103,10 +139,16 @@ body {
 //     }
 //     .main__about {
 //     }
-// .main__advantage {
-// }
-// .main__for {
-// }
+//     .main__advantage {
+//     }
+//     .main__for {
+//     }
+//     .main__products {
+//     }
+//     .main__send {
+//     }
+//     .main__maps {
+//     }
 //   }
 // }
 

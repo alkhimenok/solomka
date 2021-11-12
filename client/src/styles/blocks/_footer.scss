@@ -1,0 +1,57 @@
+.footer {
+  background-color: $blue;
+  // .footer__container {
+  // }
+  .footer__body {
+    @include dFSB;
+    @media screen and (max-width: 992px) {
+      align-items: center;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      & > * {
+        margin: 0 0 30px 0; 
+        @media screen and (max-width: 370px) {
+          margin: 0 0 calc(0px + 20 * (100vw / 370)) 0;
+        }
+      }
+    }
+  }
+  // .footer__contacts {
+  // }
+  .footer__card {
+    a {
+      color: $blackL;
+      transition: $delay;
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
+    }
+    svg {
+      path {
+        stroke: $blackL;
+        transition: $delay;
+      }
+    }
+  }
+  // .footer__nav {
+  // }
+  .footer__form {
+    @include dFCC;
+    flex-direction: column;
+    & > * {
+      width: 100%;
+    }
+  }
+  .footer__input {
+    margin: 0 0 14px 0;
+    @media screen and (max-width: 1280px) {
+      margin: 0 0 calc(12px + 2 * ((100vw - 370px) / (1280 - 370))) 0;
+    }
+    @media screen and (max-width: 370px) {
+      margin: 0 0 calc(0px + 12 * (100vw / 370)) 0;
+    }
+  }
+  // .footer__btn {
+  // }
+}

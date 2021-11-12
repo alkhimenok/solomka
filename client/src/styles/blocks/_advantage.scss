@@ -1,25 +1,23 @@
 .advantage {
-  // .advantage__heading {
+  // .advantage__headline {
   // }
   .advantage__content {
-    @include dFC;
+    @include dFCC;
     @media screen and (max-width: 992px) {
       position: relative;
-      padding: 260px 0;
-    }
-    @media screen and (max-width: 768px) {
-      padding: 200px 0 240px;
-    }
-    @media screen and (max-width: 370px) {
-      padding: 200px 0 220px;
+      padding: 180px 0 200px;
     }
   }
   .advantage__wrapper {
-    @include dFC;
-    width: calc(100vw / 100 * 40);
-    height: calc(100vw / 100 * 40);
+    @include dFCC;
+    width: 570px;
+    height: 570px;
     border: 1px dashed $orangeD;
     border-radius: 50%;
+    @media screen and (max-width: 1280px) {
+      width: calc(100vw / 100 * 40);
+      height: calc(100vw / 100 * 40);
+    }
     @media screen and (min-width: 993px) {
       position: relative;
     }
@@ -28,8 +26,8 @@
       height: calc(100vw / 100 * 60);
     }
     @media screen and (max-width: 480px) {
-      width: calc(100vw / 100 * 80);
-      height: calc(100vw / 100 * 80);
+      width: calc(100vw / 100 * 75);
+      height: calc(100vw / 100 * 75);
     }
   }
   .advantage__card {
@@ -38,27 +36,32 @@
     padding: 10px;
     background-color: $greenD;
     border-radius: 10px;
+    transition: $delay;
+    cursor: pointer;
+    &._hovered {
+      background-color: $orangeD;
+    }
     @media screen and (min-width: 993px) {
       &._right-top {
         top: 20px;
         left: 80%;
       }
       &._right-center {
-        left: 95%;
         top: 50%;
+        left: 95%;
         transform: translate(0, -50%);
       }
       &._right-bottom {
-        bottom: 20px;
         left: 80%;
+        bottom: 20px;
       }
       &._left-bottom {
         right: 80%;
         bottom: 20px;
       }
       &._left-center {
-        right: 95%;
         top: 50%;
+        right: 95%;
         transform: translate(0, -50%);
       }
       &._left-top {
@@ -72,11 +75,11 @@
         left: 15%;
       }
       &._right-center {
-        top: 100px;
+        top: 12%;
         right: 15%;
       }
       &._right-bottom {
-        top: 200px;
+        top: 24%;
         left: 15%;
       }
       &._left-bottom {
@@ -85,43 +88,38 @@
       }
       &._left-center {
         left: 15%;
-        bottom: 100px;
+        bottom: 12%;
       }
       &._left-top {
         right: 15%;
-        bottom: 220px;
+        bottom: 27%;
       }
     }
     @media screen and (max-width: 768px) {
       &._right-top {
-        top: 0;
         left: 0;
       }
       &._right-center {
-        top: 10%;
         right: 0;
       }
       &._right-bottom {
-        top: 20%;
         left: 0;
       }
       &._left-bottom {
         right: 0;
-        bottom: 0;
       }
       &._left-center {
         left: 0;
-        bottom: 10%;
       }
       &._left-top {
         right: 0;
-        bottom: 23%;
       }
     }
   }
   .advantage__text {
     color: $white;
     white-space: nowrap;
+    pointer-events: none;
     @media screen and (max-width: 1280px) {
       font-size: calc(14px + 2 * ((100vw - 370px) / (1280 - 370)));
     }
@@ -131,28 +129,47 @@
   }
   .advantage__body {
     position: relative;
-    @include dFC;
-    width: calc(100vw / 100 * 25);
-    height: calc(100vw / 100 * 25);
+    @include dFCC;
+    width: 385px;
+    height: 385px;
     border: 1px dashed $orangeD;
     border-radius: 50%;
+    @media screen and (max-width: 1280px) {
+      width: calc(100vw / 100 * 25);
+      height: calc(100vw / 100 * 25);
+    }
     @media screen and (max-width: 992px) {
       width: calc(100vw / 100 * 40);
       height: calc(100vw / 100 * 40);
     }
     @media screen and (max-width: 480px) {
-      width: calc(100vw / 100 * 60);
-      height: calc(100vw / 100 * 60);
+      width: calc(100vw / 100 * 50);
+      height: calc(100vw / 100 * 50);
     }
   }
   .advantage__picture {
     position: absolute;
-    @include dFC;
+    @include dFCC;
     width: 15%;
     height: 15%;
     background-color: $white;
     border: 1px dashed $orangeD;
     border-radius: 50%;
+    transition: $delay;
+    cursor: pointer;
+    svg {
+      path {
+        transition: $delay;
+      }
+    }
+    &._hovered {
+      border: 1px dashed $greenD;
+      svg {
+        path {
+          fill: $greenD;
+        }
+      }
+    }
     &._right-top {
       top: 7%;
       right: 7%;
@@ -181,9 +198,10 @@
     }
   }
   .advantage__icon {
-    @include dFC;
+    @include dFCC;
     width: 50%;
     height: 50%;
+    pointer-events: none;
     &._trees-right {
       position: absolute;
       right: 15%;

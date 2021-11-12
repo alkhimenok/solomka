@@ -1,8 +1,8 @@
 .about {
-  // .about__heading {
+  // .about__headline {
   // }
   .about__content {
-    @include dFB;
+    @include dFCB;
     @media screen and (min-width: 769px) {
       & > * {
         flex: 50%;
@@ -56,7 +56,7 @@
     }
   }
   .about__call {
-    @include dFB;
+    @include dFCB;
     @media screen and (max-width: 992px) {
       flex-direction: column;
       & > * {
