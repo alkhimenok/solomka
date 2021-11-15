@@ -22,27 +22,27 @@
             <nav class="header__nav nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="/">
+                  <a class="nav__link" href="#home" data-href="#home">
                     Главная
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="/about">
+                  <a class="nav__link" href="#about" data-href="#about">
                     О компании
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="/products">
+                  <a class="nav__link" href="#products" data-href="#products">
                     Продукция
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="/for">
+                  <a class="nav__link" href="#for" data-href="#for">
                     Для кого
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="/contacts">
+                  <a class="nav__link" href="#maps" data-href="#maps">
                     Контакты
                   </a>
                 </li>
@@ -67,9 +67,9 @@
                   </li>
                 </ul>
               </section>
-              <button class="header__btn_request-call _btn _green">
+              <a class="header__btn_request-call _btn _green" href="#about" data-href="#about">
                 Заказать звонок
-              </button>
+              </a>
             </section>
           </section>
           <section class="header__burger burger">
@@ -83,7 +83,7 @@
     <main class="main">
       <div class="main__container _container">
         <div class="main__body _body">
-          <section class="main__home home _indent">
+          <section class="main__home home _indent" id="home">
             <section class="home__baner">
               <h1 class="home__title">
                 <span>Экологические</span> бумажные трубочки для напитков, которые не вредят природе
@@ -92,9 +92,9 @@
                 Трубочки подходят для холодных и горячих напитков и не размокают за 2 <br> часа. Качество подтверждается
                 заключением Центра гигиены <br> и эпидемиологии г. Витебска.
               </p>
-              <button class="home__button _btn _shadow">
+              <a class="home__button _btn _shadow" href="#send" data-href="#send">
                 Заказать консультацию
-              </button>
+              </a>
             </section>
             <div class="home__picture">
               <div class="home__img _img">
@@ -516,7 +516,7 @@
               </div>
             </div>
           </section>
-          <section class="main__about about _indent">
+          <section class="main__about about _indent" id="about">
             <section class="about__headline headline">
               <h2 class="headline__title">
                 О компании
@@ -552,7 +552,7 @@
               </section>
             </section>
           </section>
-          <section class="main__advantage advantage _indent">
+          <section class="main__advantage advantage _indent" id="advantahe">
             <section class="advantage__headline headline">
               <h2 class="headline__title">
                 Преимущества использования экологических трубочек от VitEcoPro
@@ -727,7 +727,7 @@
               </div>
             </section>
           </section>
-          <section class="main__for for _indent">
+          <section class="main__for for _indent" id="for">
             <section class="for__headline headline">
               <h2 class="headline__title">
                 Для кого
@@ -867,7 +867,7 @@
               </ul>
             </section>
           </section>
-          <section class="main__products products _indent">
+          <section class="main__products products _indent" id="products">
             <section class="products__header">
               <section class="products__headline headline">
                 <h2 class="headline__title">
@@ -992,9 +992,9 @@
                       украшением Вашего напитка и подчеркнет Вашу индивидуальность.
                     </p>
                   </div>
-                  <button class="card-products__btn _btn">
+                  <a class="card-products__btn _btn" href="#send" data-href="#send">
                     Сделать заказ
-                  </button>
+                  </a>
                 </div>
                 <div class="products__pogination pogination">
                   <div class="pogination__track">
@@ -1014,7 +1014,7 @@
               </div>
             </section>
           </section>
-          <section class="main__send send _indent">
+          <section class="main__send send _indent" id="send">
             <div class="send__container">
               <div class="send__wrapper">
                 <section class="send__baner">
@@ -1339,7 +1339,7 @@
               </div>
             </div>
           </section>
-          <section class="main__maps maps _indent">
+          <section class="main__maps maps _indent" id="maps">
             <section class="maps__headline headline">
               <h2 class="headline__title">
                 Контакты
@@ -1490,37 +1490,55 @@
           <nav class="footer__nav nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="/">
+                <a class="nav__link" href="#home" data-href="#home">
                   Главная
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="/about">
+                <a class="nav__link" href="#about" data-href="#about">
                   О компании
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="/products">
+                <a class="nav__link" href="#products" data-href="#products">
                   Продукция
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="/for">
+                <a class="nav__link" href="#for" data-href="#for">
                   Для кого
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="/contacts">
+                <a class="nav__link" href="#maps" data-href="#maps">
                   Контакты
                 </a>
               </li>
             </ul>
           </nav>
           <section class="footer__form">
-            <input class="footer__input _input _green" type="tel" placeholder="Телефон">
-            <button class="footer__btn _btn _green">
+            <section class="footer__phones phones">
+              <ul class="phones__list">
+                <li class="phones__item">
+                  <a class="phones__link" href="#" data-tel="phone">
+                    <span class="phones__icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20.9994 16.4767V19.1864C21.0036 20.2223 20.0722 21.0873 19.0264 20.9929C10 21 3 13.935 3.00706 4.96919C2.91287 3.92895 3.77358 3.00106 4.80811 3.00009H7.52325C7.96247 2.99577 8.38828 3.151 8.72131 3.43684C9.66813 4.24949 10.2771 7.00777 10.0428 8.10428C9.85987 8.96036 8.9969 9.55929 8.41019 10.1448C9.69858 12.4062 11.5746 14.2785 13.8405 15.5644C14.4272 14.9788 15.0273 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.8579 15.6021 21.0104 16.0337 20.9994 16.4767Z"
+                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="phones__number" data-tel="number">
+                      +375 (25) 686-44-40
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <!-- <input class="footer__input _input _green" type="tel" placeholder="Телефон"> -->
+            <a class="footer__btn _btn _green" href="#about" data-href="#about">
               Заказать звонок
-            </button>
+            </a>
           </section>
         </div>
       </div>

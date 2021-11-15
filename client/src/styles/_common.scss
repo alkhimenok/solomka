@@ -29,14 +29,18 @@
   }
 }
 ._btn {
+  display: block;
   padding: 14px;
   font-family: "ubuntuMedium";
   font-size: 18px;
   line-height: 21px;
+  text-align: center;
   color: $white;
   background-color: $orangeD;
   border-radius: 40px;
   transition: $delay;
+  user-select: none;
+  cursor: pointer;
   &._shadow {
     padding: 19px;
     border-radius: 60px;

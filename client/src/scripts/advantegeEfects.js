@@ -1,8 +1,6 @@
-const $advantage = document.querySelector('.advantage')
-const icons = document.querySelectorAll('[data-advantage-icon]')
-const messages = document.querySelectorAll('[data-advantage-message]')
+export const $advantage = document.querySelector('.advantage')
 
-$advantage.addEventListener('mouseover', e => {
+export const startEfect = (e) => {
   const {target} = e
   
   if (target.dataset.advantageIcon) {
@@ -30,4 +28,4 @@ $advantage.addEventListener('mouseover', e => {
   } else {
     return
   }
-})
+}

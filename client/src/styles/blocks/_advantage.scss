@@ -166,6 +166,8 @@
       }
     }
     &._hovered {
+        width: 18%;
+        height: 18%;
       border: 1px dashed $greenD;
       svg {
         path {
