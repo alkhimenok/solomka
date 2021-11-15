@@ -4,6 +4,7 @@ import { rewriteNumber } from './scripts/numbers/phoneLink'
 import { setMask } from './scripts/numbers/inputMask'
 
 import { } from './scripts/advantegeEfects'
+import { } from './scripts/slider/sliderNav'
 
 import './styles/main.scss'
 
