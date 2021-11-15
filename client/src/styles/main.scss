@@ -82,9 +82,21 @@ $delay: 0.2s ease-in-out;
 @import "./components/headline";
 /* headline ----- */
 
-/* ----- card */
+/* ----- card-contacts */
 @import "./components/card-contacts";
-/* card ----- */
+/* card-contacts ----- */
+
+/* ----- slider */
+@import "./components/slider"; 
+/* slider ----- */
+
+/* ----- card-products */
+@import "./components/card-products";
+/* card-products ----- */
+
+/* ----- pogination */
+@import "./components/pogination"; 
+/* pogination ----- */
 
 /* ----- header */
 @import "./blocks/header";

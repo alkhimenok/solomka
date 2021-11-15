@@ -73,8 +73,8 @@
             </section>
           </section>
           <section class="header__burger burger">
-            <div class="burger-icon">
-              <span class="burger-icon__line"></span>
+            <div class="burger__icon">
+              <span class="burger__line"></span>
             </div>
           </section>
         </div>
@@ -84,7 +84,7 @@
       <div class="main__container _container">
         <div class="main__body _body">
           <section class="main__home home _indent">
-            <section class="home__content">
+            <section class="home__baner">
               <h1 class="home__title">
                 <span>Экологические</span> бумажные трубочки для напитков, которые не вредят природе
               </h1>
@@ -526,7 +526,7 @@
               </h3>
             </section>
             <section class="about__content">
-              <div class="about__picture">
+              <div class="about__image">
                 <img class="about__img _img" src="./assets/about/picture.jpg" alt="cocktails">
               </div>
               <section class="about__form">
@@ -659,7 +659,7 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="advantage__main-picture">
+                  <div class="advantage__image">
                     <div class="advantage__img _img">
                       <svg width="100%" height="100%" viewBox="0 0 222 215" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -736,7 +736,7 @@
             <section class="for__content">
               <ul class="for__list">
                 <li class="for__item">
-                  <section class="for__wrapper">
+                  <section class="for__item-wrapper">
                     <div class="for__background">
                       <div class="for__img _img">
                         <svg width="100%" height="100%" viewBox="0 0 189 147" fill="none"
@@ -763,7 +763,7 @@
                   </h4>
                 </li>
                 <li class="for__item">
-                  <section class="for__wrapper">
+                  <section class="for__item-wrapper">
                     <div class="for__background">
                       <div class="for__img _img">
                         <svg width="100%" height="100%" viewBox="0 0 189 147" fill="none"
@@ -796,7 +796,7 @@
                   </h4>
                 </li>
                 <li class="for__item">
-                  <section class="for__wrapper">
+                  <section class="for__item-wrapper">
                     <div class="for__background _img">
                       <div class="for__img">
                         <svg width="100%" height="100%" viewBox="0 0 189 147" fill="none"
@@ -826,7 +826,7 @@
                   </h4>
                 </li>
                 <li class="for__item">
-                  <section class="for__wrapper">
+                  <section class="for__item-wrapper">
                     <div class="for__background">
                       <div class="for__img _img">
                         <svg width="100%" height="100%" viewBox="0 0 189 147" fill="none"
@@ -883,7 +883,7 @@
                     </svg>
                   </div>
                 </button>
-                <button class="products__arrow _arrow-next" data-pagination="prev">
+                <button class="products__arrow _arrow-next" data-pagination="next">
                   <div class="produts__icon _img">
                     <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 12H9.5M20 12L14 18M20 12L14 6M6 12H4" stroke="black" stroke-width="2"
@@ -894,90 +894,121 @@
               </div>
             </section>
             <section class="products__content">
-              <ul class="products__slider">
-                <li class="products__slide">
-                  <div class="products__picture">
-                    <img class="products__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+              <ul class="products__slider slider">
+                <li class="slider__item slide">
+                  <div class="slide__wrapper">
+                    <div class="slide__image">
+                      <img class="slide__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                    </div>
+                    <h5 class="slide__title">
+                      Дизайн
+                    </h5>
+                    <p class="slide__description">
+                      Мы принимаем заказы на изготовление трубочек с нанесением Вашего дизайна и логотипа.
+                    </p>
                   </div>
-                  <h5 class="products__title">
-                    Дизайн
-                  </h5>
-                  <p class="products__description">
-                    Мы принимаем заказы на изготовление трубочек с нанесением Вашего дизайна и логотипа.
-                  </p>
                 </li>
-                <li class="products__slide">
-                  <div class="products__picture">
-                    <img class="products__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                <li class="slider__item slide">
+                  <div class="slide__wrapper">
+                    <div class="slide__image">
+                      <img class="slide__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                    </div>
+                    <h5 class="slide__title">
+                      Дизайн
+                    </h5>
+                    <p class="slide__description">
+                      Мы принимаем заказы на изготовление трубочек с нанесением Вашего дизайна и логотипа.
+                    </p>
                   </div>
-                  <h5 class="products__title">
-                    Размеры
-                  </h5>
-                  <p class="products__description">
-                    Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
-                    регулироваться.
-                  </p>
                 </li>
-                <li class="products__slide">
-                  <div class="products__picture">
-                    <img class="products__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                <li class="slider__item slide">
+                  <div class="slide__wrapper">
+                    <div class="slide__image">
+                      <img class="slide__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                    </div>
+                    <h5 class="slide__title">
+                      Размеры
+                    </h5>
+                    <p class="slide__description">
+                      Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
+                      регулироваться.
+                    </p>
                   </div>
-                  <h5 class="products__title">
-                    Размеры
-                  </h5>
-                  <p class="products__description">
-                    Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
-                    регулироваться.
-                  </p>
                 </li>
-                <li class="products__slide">
-                  <div class="products__picture">
-                    <img class="products__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                <li class="slider__item slide">
+                  <div class="slide__wrapper">
+                    <div class="slide__image">
+                      <img class="slide__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                    </div>
+                    <h5 class="slide__title">
+                      Размеры
+                    </h5>
+                    <p class="slide__description">
+                      Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
+                      регулироваться.
+                    </p>
                   </div>
-                  <h5 class="products__title">
-                    Размеры
-                  </h5>
-                  <p class="products__description">
-                    Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
-                    регулироваться.
-                  </p>
                 </li>
-                <li class="products__slide">
-                  <div class="products__picture">
-                    <img class="products__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                <li class="slider__item slide">
+                  <div class="slide__wrapper">
+                    <div class="slide__image">
+                      <img class="slide__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                    </div>
+                    <h5 class="slide__title">
+                      Размеры
+                    </h5>
+                    <p class="slide__description">
+                      Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
+                      регулироваться.
+                    </p>
                   </div>
-                  <h5 class="products__title">
-                    Размеры
-                  </h5>
-                  <p class="products__description">
-                    Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
-                    регулироваться.
-                  </p>
+                </li>
+                <li class="slider__item slide">
+                  <div class="slide__wrapper">
+                    <div class="slide__image">
+                      <img class="slide__img _img" src="./assets/products/sticksOne.jpg" alt="sticks">
+                    </div>
+                    <h5 class="slide__title">
+                      Размеры
+                    </h5>
+                    <p class="slide__description">
+                      Представляет собой полый цилиндр <span>6,8,10,12 мм в диаметре, длиной 200 мм.</span> Длина может
+                      регулироваться.
+                    </p>
+                  </div>
                 </li>
               </ul>
-              <div class="products__card">
-                <div class="products__card-wrapper">
-                  <h6 class="products__name">
+              <div class="products__card card-products">
+                <div class="card-products__wrapper">
+                  <h6 class="card-products__title">
                     Экологические бумажные трубочки
                   </h6>
-                  <p class="products__text">
-                    Экологические бумажные трубочки для горячих и холодных напитков
-                  </p>
-                  <p class="products__text">
-                    Бумажная трубочка не только будет выполнять свою непосредственную функцию, но и станет невероятным
-                    украшением Вашего напитка и подчеркнет Вашу индивидуальность.
-                  </p>
-                  <button class="products__btn _btn">
+                  <div class="card-products__description">
+                    <p class="card-products__text">
+                      Экологические бумажные трубочки для горячих и холодных напитков
+                    </p>
+                    <p class="card-products__text">
+                      Бумажная трубочка не только будет выполнять свою непосредственную функцию, но и станет невероятным
+                      украшением Вашего напитка и подчеркнет Вашу индивидуальность.
+                    </p>
+                  </div>
+                  <button class="card-products__btn _btn">
                     Сделать заказ
                   </button>
                 </div>
-                <div class="products__pogination">
-                  <div class="products__track">
-                    <div class="products__thumb">
+                <div class="products__pogination pogination">
+                  <div class="pogination__track">
+                    <div class="pogination__thumb">
                     </div>
                   </div>
-                  <p class="products__page-number">
-                    01 <sub>/04</sub>
+                  <p class="pogination__number-slides">
+                    <span class="pogination__current-slide-number">
+                      01
+                    </span>
+                    /
+                    <span class="pogination__all-slide-number">
+                      04
+                    </span>
                   </p>
                 </div>
               </div>
@@ -986,18 +1017,19 @@
           <section class="main__send send _indent">
             <div class="send__container">
               <div class="send__wrapper">
-                <section class="send__content">
+                <section class="send__baner">
                   <h4 class="send__title">
                     Оставьте заявку на бесплатную консультацию
                   </h4>
-                  <p class="send__message">
+                  <p class="send__description">
                     Если вам нужна консультация, заполните форму обратной связи
                     и наш менеджер свяжется с вами в ближайшее время!
                   </p>
                 </section>
                 <div class="send__picture">
                   <div class="send__img">
-                    <svg width="100%" height="100%" viewBox="0 0 475 341" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="100%" height="100%" viewBox="0 0 475 341" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M439.341 340.89C467.205 340.89 483.99 312.368 467.644 292.073C467.315 291.634 466.986 291.196 466.547 290.757C456.564 279.457 441.316 275.399 427.932 269.036C424.202 267.281 420.472 265.196 417.839 261.905C414.219 257.298 413.342 250.935 414.11 245.011C417.181 220.328 444.058 205.189 448.446 180.726C451.737 162.186 440.438 143.427 425.08 133.664C409.722 123.901 391.182 121.377 373.301 120.609C355.31 119.842 337.209 120.5 319.766 116.112C315.159 114.905 310.442 113.259 307.26 109.53C303.75 105.361 302.982 99.2177 303.53 93.6229C305.066 78.5937 339.403 26.7049 322.18 9.5914C315.378 2.8996 306.273 -0.830257 296.948 0.157058C287.733 1.03467 279.067 5.31303 270.949 10.1399C253.835 20.2325 194.158 87.0408 172.766 97.1333C151.703 107.006 127.459 104.154 104.312 103.606C81.165 103.167 55.4949 106.568 40.356 124.888C34.9806 131.36 31.3605 140.136 33.1157 148.474C34.2127 153.739 37.3941 158.237 40.9045 162.077C49.0225 170.853 59.5538 176.886 67.2329 186.101C74.912 195.316 78.971 209.907 71.7307 219.56C68.8785 223.29 64.8195 225.704 60.8702 227.898C38.6008 240.513 13.5888 253.349 3.82537 277.812C-1.1112 290.318 -1.00151 304.14 2.61865 317.085C6.56791 330.798 20.2806 340.452 36.0777 340.452H439.341V340.89Z"
                         fill="#DDECFF" />
@@ -1161,9 +1193,11 @@
                       <path opacity="0.13"
                         d="M228.494 256.09C228.494 256.09 247.473 253.567 265.135 248.521C287.514 242.158 283.784 217.256 283.784 217.256L269.961 216.927C265.793 225.923 252.3 248.082 219.389 250.496L226.849 327.067H229.92L228.494 256.09Z"
                         fill="black" />
-                      <path d="M82.7008 340.889H77.7642L98.2784 217.694L103.215 217.584L82.7008 340.889Z" fill="white" />
+                      <path d="M82.7008 340.889H77.7642L98.2784 217.694L103.215 217.584L82.7008 340.889Z"
+                        fill="white" />
                       <path d="M285.869 340.889H291.025L265.684 216.268H260.418L285.869 340.889Z" fill="white" />
-                      <path d="M101.899 224.386L103.215 217.584L98.2785 217.694L96.962 224.386H101.899Z" fill="#E4EDF7" />
+                      <path d="M101.899 224.386L103.215 217.584L98.2785 217.694L96.962 224.386H101.899Z"
+                        fill="#E4EDF7" />
                       <path d="M267.329 224.386L265.684 216.268H260.418L262.063 224.386H267.329Z" fill="#E4EDF7" />
                       <path
                         d="M295.522 212.869H73.2668C71.8407 212.869 70.7437 213.966 70.7437 215.392C70.7437 216.818 71.8407 217.915 73.2668 217.915H295.632C297.058 217.915 298.155 216.818 298.155 215.392C298.046 213.966 296.948 212.869 295.522 212.869Z"
@@ -1316,16 +1350,18 @@
                 <ul class="card-contacts__list">
                   <li class="card-contacts__item">
                     <a class="card-contacts__link" href="#">
-                      <div class="card-contacts__icon _img">
-                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M20 10C20 14.4183 16.4183 20 12 22C7.58172 20 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z"
-                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path
-                            d="M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z"
-                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                      <div class="card-contacts__picture">
+                        <div class="card-contacts__icon _img">
+                          <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M20 10C20 14.4183 16.4183 20 12 22C7.58172 20 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z"
+                              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                              d="M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z"
+                              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
                       </div>
                       <span class="card-contacts__text">
                         г. Витебск, ул. Базовая 49/11, офис.2
@@ -1334,13 +1370,15 @@
                   </li>
                   <li class="card-contacts__item">
                     <a class="card-contacts__link" href="mainto:vitecopro@rambler.ru">
-                      <div class="card-contacts__icon _img">
-                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.5 5.5L10.5858 12.5858C11.3668 13.3668 12.6332 13.3668 13.4142 12.5858L20.5 5.5M4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19Z"
-                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                      <div class="card-contacts__picture">
+                        <div class="card-contacts__icon _img">
+                          <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M3.5 5.5L10.5858 12.5858C11.3668 13.3668 12.6332 13.3668 13.4142 12.5858L20.5 5.5M4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19Z"
+                              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
                       </div>
                       <span class="card-contacts__text">
                         vitecopro@rambler.ru
@@ -1349,13 +1387,15 @@
                   </li>
                   <li class="card-contacts__item">
                     <a class="card-contacts__link" href="#" data-tel="phone">
-                      <div class="card-contacts__icon _img">
-                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M20.9994 16.4767V19.1864C21.0036 20.2223 20.0722 21.0873 19.0264 20.9929C10 21 3 13.935 3.00706 4.96919C2.91287 3.92895 3.77358 3.00106 4.80811 3.00009H7.52325C7.96247 2.99577 8.38828 3.151 8.72131 3.43684C9.66813 4.24949 10.2771 7.00777 10.0428 8.10428C9.85987 8.96036 8.9969 9.55929 8.41019 10.1448C9.69858 12.4062 11.5746 14.2785 13.8405 15.5644C14.4272 14.9788 15.0273 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.8579 15.6021 21.0104 16.0337 20.9994 16.4767Z"
-                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                      <div class="card-contacts__picture">
+                        <div class="card-contacts__icon _img">
+                          <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M20.9994 16.4767V19.1864C21.0036 20.2223 20.0722 21.0873 19.0264 20.9929C10 21 3 13.935 3.00706 4.96919C2.91287 3.92895 3.77358 3.00106 4.80811 3.00009H7.52325C7.96247 2.99577 8.38828 3.151 8.72131 3.43684C9.66813 4.24949 10.2771 7.00777 10.0428 8.10428C9.85987 8.96036 8.9969 9.55929 8.41019 10.1448C9.69858 12.4062 11.5746 14.2785 13.8405 15.5644C14.4272 14.9788 15.0273 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.8579 15.6021 21.0104 16.0337 20.9994 16.4767Z"
+                              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
                       </div>
                       <span class="card-contacts__text" data-tel="number">
                         +375 (25) 686-44-40
@@ -1364,13 +1404,15 @@
                   </li>
                   <li class="card-contacts__item">
                     <a class="card-contacts__link" href="#">
-                      <div class="card-contacts__icon _img">
-                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M12 7V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                      <div class="card-contacts__picture">
+                        <div class="card-contacts__icon _img">
+                          <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M12 7V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
                       </div>
                       <span class="card-contacts__text" data-tel="number">
                         Пн - Пт: с 09:00 до 17:00
@@ -1396,13 +1438,15 @@
               <ul class="card-contacts__list">
                 <li class="card-contacts__item">
                   <a class="card-contacts__link" href="#" data-tel="phone">
-                    <div class="card-contacts__icon _img">
-                      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M20.9994 16.4767V19.1864C21.0036 20.2223 20.0722 21.0873 19.0264 20.9929C10 21 3 13.935 3.00706 4.96919C2.91287 3.92895 3.77358 3.00106 4.80811 3.00009H7.52325C7.96247 2.99577 8.38828 3.151 8.72131 3.43684C9.66813 4.24949 10.2771 7.00777 10.0428 8.10428C9.85987 8.96036 8.9969 9.55929 8.41019 10.1448C9.69858 12.4062 11.5746 14.2785 13.8405 15.5644C14.4272 14.9788 15.0273 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.8579 15.6021 21.0104 16.0337 20.9994 16.4767Z"
-                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
+                    <div class="card-contacts__picture">
+                      <div class="card-contacts__icon _img">
+                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M20.9994 16.4767V19.1864C21.0036 20.2223 20.0722 21.0873 19.0264 20.9929C10 21 3 13.935 3.00706 4.96919C2.91287 3.92895 3.77358 3.00106 4.80811 3.00009H7.52325C7.96247 2.99577 8.38828 3.151 8.72131 3.43684C9.66813 4.24949 10.2771 7.00777 10.0428 8.10428C9.85987 8.96036 8.9969 9.55929 8.41019 10.1448C9.69858 12.4062 11.5746 14.2785 13.8405 15.5644C14.4272 14.9788 15.0273 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.8579 15.6021 21.0104 16.0337 20.9994 16.4767Z"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
                     </div>
                     <span class="card-contacts__text" data-tel="number">
                       +375 (25) 686-44-40
@@ -1411,13 +1455,15 @@
                 </li>
                 <li class="card-contacts__item">
                   <a class="card-contacts__link" href="mainto:vitecopro@rambler.ru">
-                    <div class="card-contacts__icon _img">
-                      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M3.5 5.5L10.5858 12.5858C11.3668 13.3668 12.6332 13.3668 13.4142 12.5858L20.5 5.5M4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19Z"
-                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
+                    <div class="card-contacts__picture">
+                      <div class="card-contacts__icon _img">
+                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.5 5.5L10.5858 12.5858C11.3668 13.3668 12.6332 13.3668 13.4142 12.5858L20.5 5.5M4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19Z"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
                     </div>
                     <span class="card-contacts__text">
                       vitecopro@rambler.ru

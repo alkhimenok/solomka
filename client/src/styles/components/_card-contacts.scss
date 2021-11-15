@@ -10,6 +10,13 @@
   }
   .card-contacts__link {
     @include dFCS;
+    transition: $delay;
+    svg {
+      path {
+        transition: $delay;
+        stroke: $orangeD;
+      }
+    }
     &:hover {
       color: $orangeD;
       svg {

@@ -1,7 +1,7 @@
 {
 	"name": "vid-eco-pro",
 	"version": "1.0.0",
-	"description": "Website. Responsive layout. Using collector WebPack.",
+	"description": "Website for the sale of Eco paper straws for drinks that do not harm nature.",
 	"main": "index.js",
 	"scripts": {
 		"webpackdev": "cross-env NODE_ENV=development webpack --mode development",

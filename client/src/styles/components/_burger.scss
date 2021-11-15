@@ -1,13 +1,12 @@
 .burger {
   @include dFCE;
-  .burger-icon {
+  .burger__icon {
     position: relative;
-    // left: 0;
     width: 25px;
     height: 20px;
     background-color: transparent;
     cursor: pointer;
-    .burger-icon__line,
+    .burger__line,
       &::before,
       &::after {
       content: "";
@@ -20,7 +19,7 @@
       transition: $delay;
       user-select: none;
     }
-    .burger-icon__line {
+    .burger__line {
       top: 50%;
       transform: translate(0, -50%);
       width: 75%;
@@ -35,7 +34,7 @@
     }
     @media screen and (hover: hover) {
       &:hover {
-        .burger-icon__line,
+        .burger__line,
         &::before,
         &::after {
           background-color: $greenD;
@@ -43,14 +42,14 @@
       }
     }
     &:active {
-      .burger-icon__line,
+      .burger__line,
       &::before,
       &::after {
         background-color: $greenD;
       }
     }
     &._active {
-      .burger-icon__line {
+      .burger__line {
         top: 50%;
         transform: scale(0);
       }

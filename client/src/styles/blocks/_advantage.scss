@@ -95,7 +95,7 @@
         bottom: 27%;
       }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       &._right-top {
         left: 0;
       }
@@ -114,6 +114,9 @@
       &._left-top {
         right: 0;
       }
+    }
+    @media screen and (max-width: 370px) {
+      padding: calc(0px + 10 * (100vw / 370));
     }
   }
   .advantage__text {
@@ -212,7 +215,7 @@
       left: 15%;
     }
   }
-  .advantage__main-picture {
+  .advantage__image {
     width: 50%;
     height: 50%;
   }

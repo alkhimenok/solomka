@@ -22,7 +22,6 @@
   .footer__card {
     a {
       color: $blackL;
-      transition: $delay;
       @media screen and (max-width: 768px) {
         justify-content: center;
       }
@@ -30,7 +29,6 @@
     svg {
       path {
         stroke: $blackL;
-        transition: $delay;
       }
     }
   }
