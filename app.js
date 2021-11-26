@@ -14,16 +14,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.post('/', (req, res) => {
-	console.log(req.body)
+	const { body } = req
 
-	const resp = req.body
+	sendMail(body)
+
+
+	const resp = body
 	resp.status = 200
 	res.json(resp)
-
-	sendMail({
-		subject: 'Пользователь хочет получить вошу консультацию',
-		text: `Номер пользователя${req.body.name}, его имя${req.body.phone}`,
-	})
 })
 
 app.get('/', (req, res) => {

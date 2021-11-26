@@ -25,13 +25,3 @@ const start = () => {
 }
 
 window.addEventListener('load', start)
-
-// import { addRequestHandler } from './scripts/request'
-
-// const form = document.querySelector('.send__form')
-// form.addEventListener('submit', hello)
-// const hello = e => {
-// 	e.preventDefault()
-
-
-// }

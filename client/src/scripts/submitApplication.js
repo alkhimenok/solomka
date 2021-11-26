@@ -1,4 +1,5 @@
 import { addRequestHandler } from './request'
+import { getFullDate } from './fullDate'
 
 export const $form = document.querySelector('.send__form')
 
@@ -17,7 +18,10 @@ export const sendForm = e => {
 	const userData = {
 		name,
 		phone,
+		date: getFullDate(),
 	}
+
+	console.log(userData);
 
 	if (checkValid(userName, userPhone)) {
 		addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
