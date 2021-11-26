@@ -1,106 +1,106 @@
 ._indent {
-  padding: 50px 0;
-  @media screen and (max-width: 1280px) {
-    padding: calc(15px + 35 * ((100vw - 370px) / (1280 - 370))) 0;
-  }
-  @media screen and (max-width: 370px) {
-    padding: calc(0px + 15 * (100vw / 370)) 0;
-  }
+	padding: 50px 0;
+	@media screen and (max-width: 1280px) {
+		padding: calc(15px + 35 * ((100vw - 370px) / (1280 - 370))) 0;
+	}
+	@media screen and (max-width: 370px) {
+		padding: calc(0px + 15 * (100vw / 370)) 0;
+	}
 }
 ._container {
-  max-width: 1210px;
-  margin: 0 auto;
+	max-width: 1210px;
+	margin: 0 auto;
 }
 ._body {
-  padding: 0 15px;
-  @media screen and (max-width: 370px) {
-    padding: 0 calc(0px + 15 * (100vw / 370));
-  }
+	padding: 0 15px;
+	@media screen and (max-width: 370px) {
+		padding: 0 calc(0px + 15 * (100vw / 370));
+	}
 }
 ._text {
-  color: $blackL;
-  span {
-    font-family: "ubuntuMedium";
-    font-size: 18px;
-    color: $blackD;
-    @media screen and (max-width: 370px) {
-      font-size: calc(0px + 18 * (100vw / 370));
-    }
-  }
+	color: $blackL;
+	span {
+		font-family: 'ubuntuMedium';
+		font-size: 18px;
+		color: $blackD;
+		@media screen and (max-width: 370px) {
+			font-size: calc(0px + 18 * (100vw / 370));
+		}
+	}
 }
 ._btn {
-  display: block;
-  padding: 14px;
-  font-family: "ubuntuMedium";
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: $white;
-  background-color: $orangeD;
-  border-radius: 40px;
-  transition: $delay;
-  user-select: none;
-  cursor: pointer;
-  &._shadow {
-    padding: 19px;
-    border-radius: 60px;
-    box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
-    @media screen and (max-width: 370px) {
-      padding: calc(0px + 19 * (100vw / 370));
-      box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
-    }
-  }
-  &._green {
-    padding: 12px;
-    font-size: 14px;
-    background-color: $greenD;
-    @media screen and (max-width: 370px) {
-      padding: calc(0px + 12 * (100vw / 370));
-      font-size: calc(0px + 14 * (100vw / 370));
-    }
-  }
-  @media screen and (hover: hover) {
-    &:hover {
-      background-color: $dark;
-    }
-  }
-  &:active {
-    background-color: $dark;
-  }
-  @media screen and (max-width: 370px) {
-    padding: calc(0px + 14 * (100vw / 370));
-    font-size: calc(0px + 18 * (100vw / 370));
-    line-height: calc(0px + 21 * (100vw / 370));
-  }
+	display: block;
+	padding: 14px;
+	font-family: 'ubuntuMedium';
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: $white;
+	background-color: $orangeD;
+	border-radius: 40px;
+	transition: $delay;
+	user-select: none;
+	cursor: pointer;
+	&._shadow {
+		padding: 19px;
+		border-radius: 60px;
+		box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
+		@media screen and (max-width: 370px) {
+			padding: calc(0px + 19 * (100vw / 370));
+			box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
+		}
+	}
+	&._green {
+		padding: 12px;
+		font-size: 14px;
+		background-color: $greenD;
+		@media screen and (max-width: 370px) {
+			padding: calc(0px + 12 * (100vw / 370));
+			font-size: calc(0px + 14 * (100vw / 370));
+		}
+	}
+	@media screen and (hover: hover) {
+		&:hover {
+			background-color: $dark;
+		}
+	}
+	&:active {
+		background-color: $dark;
+	}
+	@media screen and (max-width: 370px) {
+		padding: calc(0px + 14 * (100vw / 370));
+		font-size: calc(0px + 18 * (100vw / 370));
+		line-height: calc(0px + 21 * (100vw / 370));
+	}
 }
 ._input {
-  padding: 12px 22px;
-  font-size: 16px;
-  background-color: transparent;
-  border: 2px solid $orangeL;
-  border-radius: 40px;
-  transition: $delay;
-  &::placeholder {
-    color: $beigeD;
-  }
-  &:focus {
-    border: 2px solid $greenD;
-  }
-  &._green {
-    border: 2px solid $greenL;
-    &::placeholder {
-      color: $blackL;
-    }
-  }
-  @media screen and (max-width: 370px) {
-    font-size: calc(0px + 16 * (100vw / 370));
-    padding: calc(0px + 12 * (100vw / 370)) calc(0px + 22 * (100vw / 370));
-  }
+	padding: 12px 22px;
+	font-size: 16px;
+	background-color: transparent;
+	border: 2px solid $orangeL;
+	border-radius: 40px;
+	transition: $delay;
+	&::placeholder {
+		color: $beigeD;
+	}
+	&:focus {
+		border: 2px solid $greenD;
+	}
+	&._green {
+		border: 2px solid $greenL;
+		&::placeholder {
+			color: $blackL;
+		}
+	}
+	@media screen and (max-width: 370px) {
+		font-size: calc(0px + 16 * (100vw / 370));
+		padding: calc(0px + 12 * (100vw / 370)) calc(0px + 22 * (100vw / 370));
+	}
 }
 ._img {
-  @include dFCC;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+	@include dFCC;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
 }

@@ -33,7 +33,7 @@
   }
   // .about__img {
   // }
-  // .about__form {
+  // .about__call {
   // }
   .about__description {
     margin: 0 0 60px 0;
@@ -55,7 +55,7 @@
       line-height: calc(0px + 24 * (100vw / 370));
     }
   }
-  .about__call {
+  .about__form {
     @include dFCB;
     @media screen and (max-width: 992px) {
       flex-direction: column;
@@ -64,9 +64,9 @@
       }
     }
   }
-  .about__leave-number {
+  .about__input {
     @media screen and (min-width: 993px) {
-      flex: 55%;
+      width: 55%;
       margin: 0 12px 0 0;
     }
     @media screen and (max-width: 992px) {
@@ -76,7 +76,7 @@
       margin: 0 0 calc(0px + 12 * (100vw / 370)) 0;
     }
   }
-  .about__btn_request-call {
+  .about__btn {
     @media screen and (min-width: 993px) {
       flex: 45%;
     }

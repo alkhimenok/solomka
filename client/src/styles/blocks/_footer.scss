@@ -20,8 +20,10 @@
   // .footer__contacts {
   // }
   .footer__card {
-    a {
-      color: $blackL;
+    li {
+      span {
+        color: $blackL;
+      }
       @media screen and (max-width: 768px) {
         justify-content: center;
       }

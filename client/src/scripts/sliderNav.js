@@ -14,9 +14,18 @@ const TRACK_WIDTH = $track.clientWidth
 
 let slideToScroll = document.body.clientWidth >= 1281 ? 2 : 1
 let currentSlideNumber = 0
+let startTouch
+let endTouch
 
-$tumb.style.width = `${TRACK_WIDTH / NUMBER_SLIDES}px`
-$numberSlides.textContent = `0${NUMBER_SLIDES}`
+export const addSliderHandeler = () => {
+	$tumb.style.width = `${TRACK_WIDTH / NUMBER_SLIDES}px`
+	$numberSlides.textContent = `0${NUMBER_SLIDES}`
+
+	$sliderNav.addEventListener('click', checkDirections)
+	$slider.addEventListener('touchstart', handlerTouchStart)
+	$slider.addEventListener('touchmove', handlerTouchMove)
+	$slider.addEventListener('touchend', handlerTouchEnd)
+}
 
 const checkDirections = e => {
 	const { target } = e
@@ -31,7 +40,6 @@ const checkDirections = e => {
 }
 
 const showPrevSlide = () => {
-	
 	if (!$btnPrev.classList.contains('_disable')) {
 		currentSlideNumber--
 		moveSlide(SLIDE_WIDTH, slideToScroll, currentSlideNumber)
@@ -39,7 +47,6 @@ const showPrevSlide = () => {
 }
 
 const showNextSlide = () => {
-	
 	if (!$btnNext.classList.contains('_disable')) {
 		currentSlideNumber++
 		moveSlide(SLIDE_WIDTH, slideToScroll, currentSlideNumber)
@@ -69,9 +76,6 @@ const sheckPosition = () => {
 	}
 }
 
-let startTouch
-let endTouch
-
 const handlerTouchStart = e => {
 	startTouch = e.touches[0].clientX
 }
@@ -87,8 +91,3 @@ const handlerTouchEnd = () => {
 		showPrevSlide()
 	}
 }
-
-$sliderNav.addEventListener('click', checkDirections)
-$slider.addEventListener('touchstart', handlerTouchStart)
-$slider.addEventListener('touchmove', handlerTouchMove)
-$slider.addEventListener('touchend', handlerTouchEnd)
