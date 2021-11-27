@@ -30,7 +30,7 @@ export const sendForm = e => {
 		
 		modal.classList.add('_active')
 
-		setTimeout(() => modal.classList.remove('_active'), 2000)
+		setTimeout(() => modal.classList.remove('_active'), 4000)
 
 		userName.value = ''
 		userPhone.value = ''

@@ -17,5 +17,5 @@ const time = new Date()
 	.map(e => String(e).padStart(2, '0'))
 	.join(':')
 
-	return date + ', ' + time
+	return time + ', ' + date
 }
