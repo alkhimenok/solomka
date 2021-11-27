@@ -26,6 +26,12 @@ export const sendForm = e => {
 	if (checkValid(userName, userPhone)) {
 		addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
 
+		const modal = document.querySelector('.modal')
+		
+		modal.classList.add('_active')
+
+		setTimeout(() => modal.classList.remove('_active'), 2000)
+
 		userName.value = ''
 		userPhone.value = ''
 	}

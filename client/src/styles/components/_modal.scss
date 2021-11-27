@@ -1,0 +1,48 @@
+.modal {
+	position: fixed;
+  top: -100%;
+	z-index: 4;
+	@include dFCC;
+	width: 100%;
+	transition: $longDelay;
+	.modal__body {
+		padding: 20px 30px;
+		background-color: #dbeecef5;
+		@media screen and (min-width: 481px) {
+			width: 480px;
+			border-radius: 10px;
+		}
+		@media screen and (max-width: 480px) {
+			width: 100%;
+		}
+		@media screen and (max-width: 370px) {
+			padding: calc(0px + 20 * (100vw / 370)) calc(0px + 30 * (100vw / 370));
+		}
+	}
+	.modal__title {
+		font-size: 30px;
+		line-height: 50px;
+		margin: 0 0 15px 0;
+		color: $blackL;
+		@media screen and (max-width: 370px) {
+			margin: 0 0 calc(0px + 15 * (100vw / 370)) 0;
+			font-size: calc(0px + 30 * (100vw / 370));
+			line-height: calc(0px + 50 * (100vw / 370));
+		}
+	}
+	.modal__subtit {
+		font-size: 18px;
+		color: $blackL;
+		@media screen and (max-width: 370px) {
+			font-size: calc(0px + 18 * (100vw / 370));
+		}
+	}
+	&._active {
+		@media screen and (min-width: 481px) {
+			top: 50px;
+		}
+		@media screen and (max-width: 480px) {
+			top: 0;
+		}
+	}
+}

@@ -13,6 +13,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
 const getMode = () => (isDev ? 'development' : 'production')
+const getDevtool = mode =>  mode ? 'source-map' : 'inline-source-map'
 
 const getOptiomization = () => {
 	const config = {
@@ -70,7 +71,7 @@ module.exports = {
 		maxEntrypointSize: 512000,
 		maxAssetSize: 512000,
 	},
-	devtool: isDev ? 'source-map' : 'nosources-source-map',
+	devtool: getDevtool(),
 	optimization: getOptiomization(),
 	devServer: {
 		port: PORT,

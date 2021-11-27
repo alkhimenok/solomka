@@ -32,7 +32,7 @@ const setMailOptions = (data) => {
         </div>
         <div style="margin: 25px 0">
           <h3 style="display: block; margin: 0 15px 0 0; color: #000000">Номер телефона:</h3>
-          <a href="tel:375339011719" style="text-decoration: none">
+          <a href="${getCorretctPhone(phone)}" style="text-decoration: none">
             <p style="margin: 5px 0px; font-size: 22px; letter-spacing: 1px; color: #464646; text-transform: uppercase; background-color: #fafafa;">${phone}</p>
           </a>
         </div>
@@ -43,4 +43,8 @@ const setMailOptions = (data) => {
 			</div>
 		`,
 	}
+}
+
+const getCorretctPhone = (number) => {
+  return `tel:${number.replace(/[^\d]/g, '')}`
 }
