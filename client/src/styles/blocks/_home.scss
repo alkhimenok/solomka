@@ -13,7 +13,7 @@
   }
   .home__baner {
     @media screen and (min-width: 769px) {
-      flex: 65%;
+      flex: calc(60% - 65px);
       margin: 0 65px 0 0;
     }
     @media screen and (max-width: 768px) {
@@ -65,9 +65,23 @@
   }
   .home__picture {
     @media screen and (min-width: 769px) {
-      flex: 45%;
+      width: 40%;
+      height: calc((100vw / 100) * 40);
+    }
+    @media screen and (min-width: 1210px) {
+      height: calc((1210px / 100) * 40);
+    }
+    @media screen and (max-width: 768px) {
+      width: calc(80vw - 30px);
+      height: calc(80vw - 30px);
+    }
+    @media screen and (max-width: 480px) {
+      width: calc(100vw - 30px);
+      height: calc(100vw - 30px);
+    }
+    @media screen and (max-width: 370px) {
+      width: calc(100vw - (0px + 30 * (100vw / 370)));
+      height: calc(100vw - (0px + 30 * (100vw / 370)));
     }
   }
-  // .home__img {
-  // }
 }

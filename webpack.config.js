@@ -13,7 +13,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
 const getMode = () => (isDev ? 'development' : 'production')
-const getDevtool = mode =>  mode ? 'source-map' : 'inline-source-map'
+const getDevtool = mode => (mode ? 'source-map' : 'inline-source-map')
 
 const getOptiomization = () => {
 	const config = {

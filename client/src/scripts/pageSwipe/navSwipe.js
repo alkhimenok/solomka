@@ -1,6 +1,6 @@
 import { swipeToSection } from './smoothSwipe'
 
-export const $nav = document.querySelector('.nav')
+export const navs = document.querySelectorAll('.nav')
 
 export const sectionSwipe = e => {
 	if (e.target.tagName !== 'A') return
