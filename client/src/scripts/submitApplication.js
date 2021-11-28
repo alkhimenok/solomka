@@ -1,5 +1,6 @@
 import { addRequestHandler } from './request'
 import { getFullDate } from './fullDate'
+import { activeModal } from './UI/modal'
 
 export const $form = document.querySelector('.send__form')
 
@@ -21,23 +22,21 @@ export const sendForm = e => {
 		date: getFullDate(),
 	}
 
-	console.log(userData);
+	console.log(userData)
 
-	if (checkValid(userName, userPhone)) {  /// check status !!!
+	if (checkValid(userName, userPhone)) {
+		/// check status !!!
 		addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
-
-		const modal = document.querySelector('.modal')
 		
-		modal.classList.add('_active')
-
-		setTimeout(() => modal.classList.remove('_active'), 4000)
+		activeModal()
 
 		userName.value = ''
 		userPhone.value = ''
 	}
 }
 
-const checkValid = (nameInput, phoneInput) => { // !!!
+const checkValid = (nameInput, phoneInput) => {
+	// !!!
 	if (nameInput.value.length < 2) {
 		createLabel(nameInput, 'Некорректное имя!')
 	} else {

@@ -9,26 +9,26 @@
     }
   }
   .advantage__wrapper {
-    @include dFCC;
-    width: 570px;
-    height: 570px;
-    border: 1px dashed $orangeD;
-    border-radius: 50%;
-    @media screen and (max-width: 1280px) {
-      width: calc(100vw / 100 * 40);
-      height: calc(100vw / 100 * 40);
-    }
+    // @include dFCC;
+    // width: 570px;
+    // height: 570px;
+    // border: 1px dashed $orangeD;
+    // border-radius: 50%;
+    // @media screen and (max-width: 1280px) {
+    //   width: calc(100vw / 100 * 40);
+    //   height: calc(100vw / 100 * 40);
+    // }
     @media screen and (min-width: 993px) {
       position: relative;
     }
-    @media screen and (max-width: 992px) {
-      width: calc(100vw / 100 * 60);
-      height: calc(100vw / 100 * 60);
-    }
-    @media screen and (max-width: 480px) {
-      width: calc(100vw / 100 * 75);
-      height: calc(100vw / 100 * 75);
-    }
+    // @media screen and (max-width: 992px) {
+    //   width: calc(100vw / 100 * 60);
+    //   height: calc(100vw / 100 * 60);
+    // }
+    // @media screen and (max-width: 480px) {
+    //   width: calc(100vw / 100 * 75);
+    //   height: calc(100vw / 100 * 75);
+    // }
   }
   .advantage__card {
     position: absolute;
@@ -128,6 +128,25 @@
     }
     @media screen and (max-width: 370px) {
       font-size: calc(0px + 14 * (100vw / 370));
+    }
+  }
+  .advangtage__sircle {
+    @include dFCC;
+    width: 570px;
+    height: 570px;
+    border: 1px dashed $orangeD;
+    border-radius: 50%;
+    @media screen and (max-width: 1280px) {
+      width: calc(100vw / 100 * 40);
+      height: calc(100vw / 100 * 40);
+    }
+    @media screen and (max-width: 992px) {
+      width: calc(100vw / 100 * 60);
+      height: calc(100vw / 100 * 60);
+    }
+    @media screen and (max-width: 480px) {
+      width: calc(100vw / 100 * 75);
+      height: calc(100vw / 100 * 75);
     }
   }
   .advantage__body {

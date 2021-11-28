@@ -10,25 +10,23 @@ export const showLoader = () => {
       <span class="loader-line"></span>
     </div>`
 
-	document.body.insertAdjacentHTML('afterend', spinner)
+	document.body.insertAdjacentHTML('afterbegin', spinner)
 
-  $spinner = document.querySelector('.loader')
+	$spinner = document.querySelector('.loader')
 
 	setTimeout(() => $spinner.classList.add('_show'), 0)
-
 }
-
 
 export const hideLoader = () => {
 	if (!$spinner) {
-    return document.querySelector('.loader')?.remove()
-  }
+		return document.querySelector('.loader')?.remove()
+	}
 
-  $spinner.classList.remove('_show')
+	$spinner.classList.remove('_show')
 
-  setTimeout(() => {
-    $spinner.remove()
+	setTimeout(() => {
+		$spinner.remove()
 
-    $spinner = null
-  }, 600)
+		$spinner = null
+	}, 600)
 }

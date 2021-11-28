@@ -29,7 +29,7 @@ const loadScripts = () => {
 	$advantage.addEventListener('mouseover', startEfect)
 	$form.addEventListener('click', sendForm)
 
-	hideLoader()
+	setTimeout(hideLoader, 0)
 }
 
 const start = () => {
