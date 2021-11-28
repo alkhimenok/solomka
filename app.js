@@ -16,12 +16,13 @@ app.use(express.json())
 app.post('/', (req, res) => {
 	const { body } = req
 
-	sendMail(body)
+	// if (body.name.lenght < 2 && body.phone.length === 19) {
+		sendMail(body)
 
-
-	const resp = body
-	resp.status = 200
-	res.json(resp)
+		const resp = body
+		resp.status = 200
+		res.json(resp)
+	// }
 })
 
 app.get('/', (req, res) => {

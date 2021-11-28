@@ -11,6 +11,7 @@ $greenL: #e9f8db;
 $dark: #383838;
 $blackD: #1d2310;
 $blackL: #292b27;
+$blackT: #000000cb;
 $black: #000000;
 $delay: 0.2s ease-in-out;
 $longDelay: 0.6s ease-in-out;
@@ -62,6 +63,10 @@ $longDelay: 0.6s ease-in-out;
 /* ----- common */
 @import './common';
 /* common ----- */
+
+/* ----- loader */
+@import './components/loader';
+/* loader ----- */
 
 /* ----- logo */
 @import './components/logo';
@@ -143,6 +148,9 @@ body {
 	&._overflow-hidden {
 		overflow: hidden;
 	}
+	// &._show-loader {
+
+	// }
 }
 .wrapper {
 	overflow: hidden;

@@ -23,7 +23,7 @@ export const sendForm = e => {
 
 	console.log(userData);
 
-	if (checkValid(userName, userPhone)) {
+	if (checkValid(userName, userPhone)) {  /// check status !!!
 		addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
 
 		const modal = document.querySelector('.modal')
@@ -37,7 +37,7 @@ export const sendForm = e => {
 	}
 }
 
-const checkValid = (nameInput, phoneInput) => {
+const checkValid = (nameInput, phoneInput) => { // !!!
 	if (nameInput.value.length < 2) {
 		createLabel(nameInput, 'Некорректное имя!')
 	} else {

@@ -7,7 +7,14 @@
 		<title>Vide Eco</title>
 	</head>
 
-	<body>
+	<body style="opacity: 0;">
+		<!-- it is removed after the page is loaded -->
+		<div class="loader _show">
+      <span class="loader-line"></span>
+      <span class="loader-line"></span>
+      <span class="loader-line"></span>
+    </div>
+
 		<div class="wrapper">
 			<div class="modal">
 				<div class="modal__body">
@@ -15,7 +22,7 @@
 					<p class="modal__subtit">Мы перезвоним вам в ближайшее время</p>
 				</div>
 			</div>
-			<header class="header _indent">
+			<header class="header _indent wow animate__slideInDown" data-wow-duration="1s" data-wow-delay="0" data-wow-offset="0">
 				<div class="header__container _container">
 					<div class="header__body _body">
 						<section class="header__logo logo">
@@ -78,7 +85,7 @@
 				<div class="main__container _container">
 					<div class="main__body _body">
 						<section class="main__home home _indent" id="home">
-							<section class="home__baner">
+							<section class="home__baner wow animate__slideInLeft" data-wow-duration="1s" data-wow-delay="0" data-wow-offset="0">
 								<h1 class="home__title">
 									<span>Экологические</span>
 									бумажные трубочки для напитков, которые не вредят природе
@@ -94,7 +101,7 @@
 									<a class="home__btn _btn _shadow" href="#send" data-href="#send">Заказать консультацию</a>
 								</form>
 							</section>
-							<div class="home__picture">
+							<div class="home__picture wow animate__slideInRight" data-wow-duration="1s" data-wow-delay="0" data-wow-offset="0">
 								<div class="home__img _img">
 									<svg width="100%" height="100%" viewBox="0 0 453 445" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path

@@ -5,4 +5,5 @@ export const setMarginForBody = () => {
   const headerHeight =  getComputedStyle($header).height
 
   $body.style.marginTop = headerHeight
+  $body.style.opacity = 1
 }

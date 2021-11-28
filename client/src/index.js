@@ -1,3 +1,8 @@
+import './styles/main.scss'
+import 'animate.css'
+import * as WOW from 'wow.js'
+
+import { showLoader, hideLoader } from './scripts/UI/loader'
 import { setMarginForBody } from './scripts/header/mainIntend'
 import { rewriteNumber } from './scripts/numbers/phoneLink'
 import { setMask } from './scripts/numbers/phoneMask'
@@ -8,10 +13,11 @@ import { $menu, $burgerIcon, hideMenu, showMenu } from './scripts/header/burger'
 import { $advantage, startEfect } from './scripts/advantegeEfects'
 import { $form, sendForm } from './scripts/submitApplication'
 
-import './styles/main.scss'
-
-const start = () => {
+const loadScripts = () => {	
 	setMarginForBody()
+
+	new WOW().init()
+	
 	rewriteNumber()
 	setMask()
 	addSliderHandeler()
@@ -22,6 +28,14 @@ const start = () => {
 	$burgerIcon.addEventListener('click', showMenu)
 	$advantage.addEventListener('mouseover', startEfect)
 	$form.addEventListener('click', sendForm)
+
+	hideLoader()
 }
 
-window.addEventListener('load', start)
+const start = () => {
+	showLoader()
+
+	window.addEventListener('load', loadScripts)
+}
+
+window.addEventListener('DOMContentLoaded', start)
