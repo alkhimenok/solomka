@@ -4,9 +4,9 @@
 	"description": "Website for the sale of Eco paper straws for drinks that do not harm nature.",
 	"main": "app.js",
 	"scripts": {
-		"webpackdev": "cross-env NODE_ENV=development webpack --mode development",
-		"webpackbuild": "cross-env NODE_ENV=production webpack --mode production",
-		"webpackwatch": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+		"webpackdev": "cross-env NODE_ENV=development webpack",
+		"webpackbuild": "cross-env NODE_ENV=production webpack",
+		"webpackwatch": "cross-env NODE_ENV=development webpack-dev-server --open",
 		"serverstart": "node app.js",
 		"serverwatch": "nodemon app.js",
 		"dev": "concurrently \"npm run webpackdev\" \"npm run serverwatch\"",

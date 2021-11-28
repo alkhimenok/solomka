@@ -17,10 +17,10 @@ module.exports = sendMail = userData => {
 	transparter.sendMail(mailOptions, err => console.log(err))
 }
 
-const setMailOptions = (data) => {
-  const {name, phone, date} = data
-	
-  return {
+const setMailOptions = data => {
+	const { name, phone, date } = data
+
+	return {
 		from: 'alhikirill@gmail.com',
 		to: 'kirillalhi@gmail.com',
 		subject: 'Пользователь хочет получить вошу консультацию',
@@ -45,6 +45,6 @@ const setMailOptions = (data) => {
 	}
 }
 
-const getCorretctPhone = (number) => {
-  return `tel:${number.replace(/[^\d]/g, '')}`
+const getCorretctPhone = number => {
+	return `tel:${number.replace(/[^\d]/g, '')}`
 }
