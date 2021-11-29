@@ -19,9 +19,7 @@ app.post('/', (req, res) => {
 	// if (body.name.lenght < 2 && body.phone.length === 19) {
 		sendMail(body)
 
-		const resp = body
-		resp.status = 200
-		res.json(resp)
+		res.status(200).json(body)
 	// }
 })
 

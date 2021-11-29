@@ -22,12 +22,14 @@ export const sendForm = e => {
 		date: getFullDate(),
 	}
 
-	console.log(userData)
-
 	if (checkValid(userName, userPhone)) {
 		/// check status !!!
-		addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
-		
+		const q = addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
+console.log(q);
+		q.then(e => {
+			console.log(e);
+		})
+
 		activeModal()
 
 		userName.value = ''
