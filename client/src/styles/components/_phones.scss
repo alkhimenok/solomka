@@ -11,12 +11,9 @@
         .phones__number {
           color: $greenD;
         }
-        .phones__icon {
-          margin: 0 5px 0 10px;
-          svg {
-            path {
-              stroke: $greenL;
-            }
+        @media screen and (min-width: 371px) {
+          .phones__icon {
+            margin: 0 5px 0 10px;
           }
         }
       }
@@ -25,32 +22,27 @@
       .phones__number {
         color: $greenD;
       }
-      .phones__icon {
-        margin: 0 5px 0 10px;
-        svg {
-          path {
-            stroke: $greenL;
-          }
+      @media screen and (min-width: 371px) {
+        .phones__icon {
+          margin: 0 5px 0 10px;
         }
       }
     }
-  }
-  .phones__number {
-    padding: 5px 0;
-    color: $blackL;
-    border-bottom: 1px solid transparent;
-    transition: $delay;
+    @media screen and (max-width: 370px) {
+      padding: calc(0px + 5 * (100vw / 370)) 0;
+    }
   }
   .phones__icon {
     margin: 0 15px 0 0;
+    font-size: 1.5em;
+    color: $greenD;
     transition: $delay;
-    svg {
-      width: 1.5em;
-      height: 1.5em;
-      path {
-        stroke: $greenD;
-        transition: $delay;
-      }
+    @media screen and (max-width: 370px) {
+      margin: 0 calc(0px + 15 * (100vw / 370)) 0 0;
     }
+  }
+  .phones__number {
+    color: $blackL;
+    transition: $delay;
   }
 }

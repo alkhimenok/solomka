@@ -22,7 +22,7 @@
 
 2. **In the file `.evn`** - add two entries as in the picture
 
-    ![img](client/src/assets/help/envDemo.png)
+    ![img](client/src/assets/img/help/envDemo.png)
 
 > EMAIL=\<Your mail\>
 

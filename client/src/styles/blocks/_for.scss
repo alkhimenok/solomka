@@ -1,86 +1,68 @@
 .for {
-  // .for__headline {
-  // }
-  // .for__content {
-  // }
-  .for__list {
-    @include dFCB;
-    flex-wrap: wrap;
-  }
-  .for__item {
-    width: calc(25% - 10px);
-    margin: 5px;
-    padding: 25px 50px;
-    text-align: center;
-    transition: $delay;
-    @media screen and (max-width: 992px) {
-      width: calc(50% - 10px);
-    }
-    @media screen and (max-width: 768px) {
-      width: 70%;
-      margin: 5px auto;
-    }
-    @media screen and (max-width: 480px) {
-      width: 100%;
-    }
-    @media screen and (max-width: 370px) {
-      padding: calc(0px + 25 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
-    }
-    @media screen and (hover: hover) {
-      &:hover {
-        background-color: $gray;
-        .for__picture {
-          .for__icon {
-            svg {
-              path {
-                fill: $orangeD;
-              }
-            }
-          }
-        }
-      }
-    }
-    &:active {
-      background-color: $gray;
-      .for__picture {
+	// .for__headline {
+	// }
+	// .for__content {
+	// }
+	.for__list {
+		@include dFCB;
+		flex-wrap: wrap;
+	}
+	.for__item {
+		width: calc(25% - 10px);
+		margin: 5px;
+		padding: 25px 50px;
+		text-align: center;
+		transition: $delay;
+		@media screen and (max-width: 992px) {
+			width: calc(50% - 10px);
+		}
+		@media screen and (max-width: 768px) {
+			width: 70%;
+			margin: 5px auto;
+		}
+		@media screen and (max-width: 480px) {
+			width: 100%;
+		}
+		@media screen and (max-width: 370px) {
+			padding: calc(0px + 25 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
+		}
+		@media screen and (hover: hover) {
+			&:hover {
+				background-color: $gray;
         .for__icon {
-          svg {
-            path {
-              fill: $greenL;
-            }
-          }
+          color: $orangeD;
         }
+			}
+		}
+		&:active {
+			background-color: $gray;
+      .for__icon {
+        color: $orangeD;
       }
+		}
+	}
+	.for__item-wrapper {
+		position: relative;
+		margin: 0 auto 25px auto;
+	}
+	.for__background {
+    @media screen and (max-width: 370px) {
+      margin: 0 auto;
+      width: calc(0px + 200 * (100vw / 370));
+      height: calc(0px + 200 * (100vw / 370));
     }
-  }
-  .for__item-wrapper {
-    position: relative;
-    margin: 0 auto 25px auto;
-  }
-  // .for__background {
-  // }
-  .for__img {
-    svg {
-      path {
-        transition: $delay;
-      }
-    }
-  }
-  .for__picture {
-    width: 55%;
+	}
+	.for__icon {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .for__icon {
-    svg {
-      path {
-        fill: $greenD;
-        transition: $delay;
-      }
-    }
-  }
-  // .for__title {
-  // }
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+    font-size: 80px;
+		transition: $delay;
+    @media screen and (max-width: 370px) {
+			font-size: calc(0px + 80 * (100vw / 370));
+		}
+	}
+	// .for__title {
+	// }
 }

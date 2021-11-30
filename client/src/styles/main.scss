@@ -56,6 +56,10 @@ $longDelay: 0.6s ease-in-out;
 @import './fonts';
 /* fonts ----- */
 
+/* ----- icons */
+@import './icons';
+/* icons ----- */
+
 /* ----- reset */
 @import './reset';
 /* reset ----- */
@@ -157,24 +161,24 @@ body {
 	min-height: 100vh;
 }
 // .main {
-//   .main__container {
-//   }
-//   .main__body {
-//     .main__home {
-//     }
-//     .main__about {
-//     }
-//     .main__advantage {
-//     }
-//     .main__for {
-//     }
-//     .main__products {
-//     }
-//     .main__send {
-//     }
-//     .main__maps {
-//     }
-//   }
+// 	.main__container {
+// 	}
+// 	.main__body {
+// 		.main__home {
+// 		}
+// 		.main__about {
+// 		}
+// 		.main__advantage {
+// 		}
+// 		.main__for {
+// 		}
+// 		.main__products {
+// 		}
+// 		.main__send {
+// 		}
+// 		.main__maps {
+// 		}
+// 	}
 // }
 
 // @media screen and (hover: hover) {}

@@ -24,11 +24,7 @@ export const sendForm = e => {
 
 	if (checkValid(userName, userPhone)) {
 		/// check status !!!
-		const q = addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
-console.log(q);
-		q.then(e => {
-			console.log(e);
-		})
+		addRequestHandler('/', 'POST', userData).then(data => console.log(data.status))
 
 		activeModal()
 
