@@ -13,11 +13,11 @@ import { $menu, $burgerIcon, hideMenu, showMenu } from './scripts/header/burger'
 import { $advantage, startEfect } from './scripts/advantegeEfects'
 import { $form, sendForm } from './scripts/submitApplication'
 
-const loadScripts = () => {	
+const loadScripts = () => {
 	setMarginForBody()
 
 	new WOW().init()
-	
+
 	rewriteNumber()
 	setMask()
 	addSliderHandeler()
