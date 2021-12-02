@@ -5,79 +5,64 @@
 	// }
 	.for__list {
 		@include dFCB;
-
 		flex-wrap: wrap;
 	}
-
 	.for__item {
 		width: calc(25% - 10px);
-		padding: 25px 50px;
 		margin: 5px;
+		padding: 25px 50px;
 		text-align: center;
 		transition: $delay;
-
 		@media screen and (max-width: 992px) {
 			width: calc(50% - 10px);
 		}
-
 		@media screen and (max-width: 768px) {
 			width: 70%;
 			margin: 5px auto;
 		}
-
 		@media screen and (max-width: 480px) {
 			width: 100%;
 		}
-
 		@media screen and (max-width: 370px) {
 			padding: calc(0px + 25 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
 		}
-
 		@media screen and (hover: hover) {
 			&:hover {
 				background-color: $gray;
-
-				.for__icon {
-					color: $orangeD;
-				}
+        .for__icon {
+          color: $orangeD;
+        }
 			}
 		}
-
 		&:active {
 			background-color: $gray;
-
-			.for__icon {
-				color: $orangeD;
-			}
+      .for__icon {
+        color: $orangeD;
+      }
 		}
 	}
-
 	.for__item-wrapper {
 		position: relative;
-		margin: 0 auto 25px;
+		margin: 0 auto 25px auto;
 	}
-
 	.for__background {
-		@media screen and (max-width: 370px) {
-			width: calc(0px + 200 * (100vw / 370));
-			height: calc(0px + 200 * (100vw / 370));
-			margin: 0 auto;
-		}
+    @media screen and (max-width: 370px) {
+      margin: 0 auto;
+      width: calc(0px + 200 * (100vw / 370));
+      height: calc(0px + 200 * (100vw / 370));
+    }
 	}
-
 	.for__icon {
-		position: absolute;
+    position: absolute;
 		top: 50%;
 		left: 50%;
-		font-size: 80px;
-		transition: $delay;
 		transform: translate(-50%, -50%);
-
-		@media screen and (max-width: 370px) {
+    font-size: 80px;
+		transition: $delay;
+    @media screen and (max-width: 370px) {
 			font-size: calc(0px + 80 * (100vw / 370));
 		}
 	}
-
 	// .for__title {
 	// }
 }

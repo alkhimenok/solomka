@@ -1,104 +1,84 @@
 .about {
-	// .about__headline {
-	// }
-	.about__content {
-		@include dFCB;
-
-		@media screen and (min-width: 769px) {
-			& > * {
-				flex: 50%;
-			}
-		}
-
-		@media screen and (max-width: 768px) {
-			flex-direction: column;
-
-			& > * {
-				width: 80%;
-			}
-		}
-
-		@media screen and (max-width: 480px) {
-			& > * {
-				width: 100%;
-			}
-		}
-	}
-
-	.about__image {
-		@media screen and (min-width: 769px) {
-			margin: 0 55px 0 0;
-		}
-
-		@media screen and (max-width: 768px) {
-			margin: 0 0 calc(10px + 10 * (100vw / 370)) 0;
-		}
-
-		@media screen and (max-width: 370px) {
-			margin: 0 0 calc(0px + 10 * (100vw / 370)) 0;
-		}
-	}
-
-	// .about__img {
-	// }
-	// .about__call {
-	// }
-	.about__description {
-		margin: 0 0 60px;
-
-		@media screen and (max-width: 1280px) {
-			margin: 0 0 calc(24px + 36 * ((100vw - 370px) / (1280 - 370))) 0;
-		}
-
-		@media screen and (max-width: 370px) {
-			margin: 0 0 calc(0px + 24 * (100vw / 370)) 0;
-		}
-	}
-
-	.about__text {
-		padding: 10px 0;
-		line-height: 28px;
-
-		@media screen and (max-width: 1280px) {
-			line-height: calc(24 + 4 * ((100vw - 370px) / (1280 - 370)));
-		}
-
-		@media screen and (max-width: 370px) {
-			padding: calc(0px + 10 * (100vw / 370));
-			line-height: calc(0px + 24 * (100vw / 370));
-		}
-	}
-
-	.about__form {
-		@include dFCB;
-
-		@media screen and (max-width: 992px) {
-			flex-direction: column;
-
-			& > * {
-				width: 100%;
-			}
-		}
-	}
-
-	.about__input {
-		@media screen and (min-width: 993px) {
-			width: 55%;
-			margin: 0 12px 0 0;
-		}
-
-		@media screen and (max-width: 992px) {
-			margin: 0 0 12px;
-		}
-
-		@media screen and (max-width: 370px) {
-			margin: 0 0 calc(0px + 12 * (100vw / 370)) 0;
-		}
-	}
-
-	.about__btn {
-		@media screen and (min-width: 993px) {
-			flex: 45%;
-		}
-	}
+  // .about__headline {
+  // }
+  .about__content {
+    @include dFCB;
+    @media screen and (min-width: 769px) {
+      & > * {
+        flex: 50%;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      & > * {
+        width: 80%;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  .about__image {
+    @media screen and (min-width: 769px) {
+      margin: 0 55px 0 0;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 0 0 calc(10px + 10 * (100vw / 370)) 0;
+    }
+    @media screen and (max-width: 370px) {
+      margin: 0 0 calc(0px + 10 * (100vw / 370)) 0;
+    }
+  }
+  // .about__img {
+  // }
+  // .about__call {
+  // }
+  .about__description {
+    margin: 0 0 60px 0;
+    @media screen and (max-width: 1280px) {
+      margin: 0 0 calc(24px + 36 * ((100vw - 370px) / (1280 - 370))) 0;
+    }
+    @media screen and (max-width: 370px) {
+      margin: 0 0 calc(0px + 24 * (100vw / 370)) 0;
+    }
+  }
+  .about__text {
+    padding: 10px 0;
+    line-height: 28px;
+    @media screen and (max-width: 1280px) {
+      line-height: calc(24 + 4 * ((100vw - 370px) / (1280 - 370)));
+    }
+    @media screen and (max-width: 370px) {
+      padding: calc(0px + 10 * (100vw / 370));
+      line-height: calc(0px + 24 * (100vw / 370));
+    }
+  }
+  .about__form {
+    @include dFCB;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  .about__input {
+    @media screen and (min-width: 993px) {
+      width: 55%;
+      margin: 0 12px 0 0;
+    }
+    @media screen and (max-width: 992px) {
+      margin: 0 0 12px 0;
+    }
+    @media screen and (max-width: 370px) {
+      margin: 0 0 calc(0px + 12 * (100vw / 370)) 0;
+    }
+  }
+  .about__btn {
+    @media screen and (min-width: 993px) {
+      flex: 45%;
+    }
+  }
 }
