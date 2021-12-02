@@ -1,48 +1,57 @@
 .phones {
-  // .phones__list {
-  // }
-  // .phones__item {
-  // }
-  .phones__link {
-    @include dFCC;
-    padding: 5px 0;
-    @media screen and (hover: hover) {
-      &:hover {
-        .phones__number {
-          color: $greenD;
-        }
-        @media screen and (min-width: 371px) {
-          .phones__icon {
-            margin: 0 5px 0 10px;
-          }
-        }
-      }
-    }
-    &:active {
-      .phones__number {
-        color: $greenD;
-      }
-      @media screen and (min-width: 371px) {
-        .phones__icon {
-          margin: 0 5px 0 10px;
-        }
-      }
-    }
-    @media screen and (max-width: 370px) {
-      padding: calc(0px + 5 * (100vw / 370)) 0;
-    }
-  }
-  .phones__icon {
-    margin: 0 15px 0 0;
-    font-size: 1.5em;
-    color: $greenD;
-    transition: $delay;
-    @media screen and (max-width: 370px) {
-      margin: 0 calc(0px + 15 * (100vw / 370)) 0 0;
-    }
-  }
-  .phones__number {
-    color: $blackL;
-    transition: $delay;
-  }
+	// .phones__list {
+	// }
+	// .phones__item {
+	// }
+	.phones__link {
+		@include dFCC;
+
+		padding: 5px 0;
+
+		@media screen and (hover: hover) {
+			&:hover {
+				.phones__number {
+					color: $greenD;
+				}
+
+				@media screen and (min-width: 371px) {
+					.phones__icon {
+						margin: 0 5px 0 10px;
+					}
+				}
+			}
+		}
+
+		&:active {
+			.phones__number {
+				color: $greenD;
+			}
+
+			@media screen and (min-width: 371px) {
+				.phones__icon {
+					margin: 0 5px 0 10px;
+				}
+			}
+		}
+
+		@media screen and (max-width: 370px) {
+			padding: calc(0px + 5 * (100vw / 370)) 0;
+		}
+	}
+
+	.phones__icon {
+		margin: 0 15px 0 0;
+		font-size: 1.5em;
+		color: $greenD;
+		transition: $delay;
+
+		@media screen and (max-width: 370px) {
+			margin: 0 calc(0px + 15 * (100vw / 370)) 0 0;
+		}
+	}
+
+	.phones__number {
+		color: $blackL;
+		transition: $delay;
+	}
 }

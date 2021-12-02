@@ -1,5 +1,5 @@
 export const rewriteNumber = () => {
-	const phones = document.querySelectorAll('[data-tel="phone"]')
+	const phones = document.querySelectorAll('[data-tel="href"]')
 
 	phones.forEach($phone => {
 		const $number = $phone.querySelector('[data-tel="number"]')

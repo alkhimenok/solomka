@@ -1,72 +1,87 @@
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  width: 100%;
-  background-color: #fffffff5;
-  // .header__container {
-  // }
-  .header__body {
-    position: relative;
-    @include dFCB;
-  }
-  // .header__logo {
-  // }
-  .header__menu {
-    flex: auto;
-    @include dFCB;
-    @media screen and (max-width: 992px) {
-      position: fixed;
-      top: 0;
-      right: -320px;
-      flex-direction: column;
-      width: 320px;
-      height: 100vh;
-      padding: 40px 0;
-      background-color: $orangeL;
-      overflow: auto;
-      transition: $delay;
-    }
-    @media screen and (max-width: 480px) {
-      right: -100%;
-      width: 100%;
-    }
-  }
-  .header__nav {
-    flex: auto;
-    margin: 0 115px 0 45px; // no margin at nav__item
-    @media screen and (max-width: 1280px) {
-      margin: 0 calc(40px + 75 * ((100vw - 993px) / (1280 - 993))) 0 calc(20px + 25 * ((100vw - 993px) / (1280 - 993))); // no margin at nav__item
-    }
-    @media screen and (max-width: 992px) {
-      margin: 0 0 40px 0; // for burger
-    }
-  }
-  .header__call {
-    @include dFCC;
-    @media screen and (max-width: 1280px) {
-      flex-direction: column;
-    }
-  }
-  .header__phones {
-    @media screen and (min-width: 993px) {
-      margin: 0 30px 0 0; // for burger
-    }
-  }
-  .header__btn {
-    @media screen and (min-width: 371px) {
-      width: 170px;
-    }
-  }
-  .header__burger {
-    @media screen and (min-width: 993px) {
-      display: none;
-    }
-  }
-  &._show-menu {
-    .header__menu {
-      right: 0;
-    }
-  }
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	background-color: #fffffff5;
+
+	// .header__container {
+	// }
+	.header__body {
+		position: relative;
+
+		@include dFCB;
+	}
+
+	// .header__logo {
+	// }
+	.header__menu {
+		flex: auto;
+
+		@include dFCB;
+
+		@media screen and (max-width: 992px) {
+			position: fixed;
+			top: 0;
+			right: -320px;
+			flex-direction: column;
+			width: 320px;
+			height: 100vh;
+			padding: 40px 0;
+			overflow: auto;
+			background-color: $orangeL;
+			transition: $delay;
+		}
+
+		@media screen and (max-width: 480px) {
+			right: -100%;
+			width: 100%;
+		}
+	}
+
+	.header__nav {
+		flex: auto;
+		margin: 0 115px 0 45px; // no margin at nav__item
+
+		@media screen and (max-width: 1280px) {
+			margin: 0 calc(40px + 75 * ((100vw - 993px) / (1280 - 993))) 0 calc(20px + 25 * ((100vw - 993px) / (1280 - 993))); // no margin at nav__item
+		}
+
+		@media screen and (max-width: 992px) {
+			margin: 0 0 40px; // for burger
+		}
+	}
+
+	.header__call {
+		@include dFCC;
+
+		@media screen and (max-width: 1280px) {
+			flex-direction: column;
+		}
+	}
+
+	.header__phones {
+		@media screen and (min-width: 993px) {
+			margin: 0 30px 0 0; // for burger
+		}
+	}
+
+	.header__btn {
+		@media screen and (min-width: 371px) {
+			width: 170px;
+		}
+	}
+
+	.header__burger {
+		@media screen and (min-width: 993px) {
+			display: none;
+		}
+	}
+
+	&._show-menu {
+		.header__menu {
+			right: 0;
+		}
+	}
 }

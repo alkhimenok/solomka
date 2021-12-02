@@ -1,36 +1,66 @@
+// .card-contacts {
+// 	.card-contacts__list {
+// 		@include removeMB;
+// 	}
+// 	.card-contacts__item {
+// 		margin: 0 0 20px 0;
+// 		@include dFCS;
+// 		@media screen and (max-width: 370px) {
+// 			margin: 0 0 calc(0px + 20 * (100vw / 370)) 0;
+// 		}
+// 	}
+// 	.card-contacts__link {
+// 		&:hover {
+// 			// .card-contacts__text {
+// 				color: $orangeD;
+// 			// }
+// 		}
+// 	}
+// 	.card-contacts__icon {
+// 		width: 24px;
+// 		margin: 0 12px 0 0;
+// 		// svg {
+// 		// 	path {
+// 		// 		stroke: $orangeD;
+// 		// 	}
+// 		// }
+// 		@media screen and (max-width: 370px) {
+// 			width: calc(0px + 24 * (100vw / 370));
+// 			margin: 0 calc(0px + 12 * (100vw / 370)) 0 0;
+// 		}
+// 	}
+// 	.card-contacts__text {
+// 		transition: $delay;
+// 	}
+// }
+
 .card-contacts {
 	.card-contacts__list {
-		@include removeMB;
 	}
+
 	.card-contacts__item {
-		margin: 0 0 20px 0;
-		@include dFCS;
-		@media screen and (max-width: 370px) {
-			margin: 0 0 calc(0px + 20 * (100vw / 370)) 0;
-		}
 	}
+
 	.card-contacts__link {
-		&:hover {
-			// .card-contacts__text {
-				color: $orangeD;
-			// }
-		}
 	}
+
 	.card-contacts__icon {
-		width: 24px;
-		margin: 0 12px 0 0;
-		// svg {
-		// 	path {
-		// 		stroke: $orangeD;
-		// 	}
+		display: inline-block;
+		width: 18px;
+		margin: 0 15px 0 0;
+		font-size: 18px;
+		text-align: center;
+
+		// ._icon-location {
 		// }
-		@media screen and (max-width: 370px) {
-			width: calc(0px + 24 * (100vw / 370));
-			margin: 0 calc(0px + 12 * (100vw / 370)) 0 0;
-		}
+		// ._icon-mail {
+		// }
+		// ._icon-phone {
+		// }
+		// ._icon-watch {
+		// }
 	}
+
 	.card-contacts__text {
-		transition: $delay;
 	}
 }
-

@@ -1,78 +1,92 @@
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
+
 *,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+*::before,
+*::after {
+	box-sizing: border-box;
+	box-sizing: border-box;
+	box-sizing: border-box;
 }
+
 :focus,
 :active {
-  outline: none;
+	outline: none;
 }
+
 a:focus,
 a:active {
-  outline: none;
+	outline: none;
 }
+
 nav,
 footer,
 header,
 aside {
-  display: block;
+	display: block;
 }
+
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  font-family: "ubuntuRegular";
-  font-display: swap;
-  font-size: 16px;
-  line-height: 24px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  @media screen and (max-width: 370px) {
-    font-size: calc(0px + 16 * (100vw / 370));
-    line-height: calc(0px + 24 * (100vw / 370));
-  }
+	width: 100%;
+	height: 100%;
+	font-family: "ubuntuRegular";
+	font-size: 100%;
+	font-size: 16px;
+	line-height: 24px;
+	font-display: swap;
+	text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	text-size-adjust: 100%;
+
+	@media screen and (max-width: 370px) {
+		font-size: calc(0px + 16 * (100vw / 370));
+		line-height: calc(0px + 24 * (100vw / 370));
+	}
 }
+
 input,
 button,
 textarea {
-  font-family: inherit;
+	font-family: inherit;
 }
+
 input::-ms-clear {
-  display: none;
+	display: none;
 }
+
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
+
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+	padding: 0;
+	border: 0;
 }
+
 a,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
+
 ul,
 li {
-  list-style: none;
+	list-style: none;
 }
+
 img {
-  vertical-align: top;
+	vertical-align: top;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+	font-size: inherit;
+	font-weight: 400;
 }

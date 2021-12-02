@@ -1,6 +1,6 @@
 import { $header, $body } from './mainIntend'
 
-export const $burgerIcon = document.querySelector('.burger__icon')
+export const $burgerIcon = document.querySelector('.burger-icon')
 
 export const $menu = document.querySelector('.header__menu')
 

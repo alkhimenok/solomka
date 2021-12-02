@@ -1,70 +1,82 @@
 .nav {
-  .nav__list {
-    @include dFCB;
-    flex-wrap: nowrap;
-    @media screen and (max-width: 992px) { // for burger
-      align-items: center;
-      flex-direction: column;
-    }
-  }
-  .nav__item {
-    @media screen and (max-width: 992px) { // for burger
-      margin: 20px 10px;
-    }
-    @media screen and (max-width: 370px) {
-      margin: calc(0px + 20 * (100vw / 370)) calc(0px + 10 * (100vw / 370));
-    }
-  }
-  .nav__link {
-    position: relative;
-    padding: 5px 10px;
-    color: $blackD;
-    transition: $delay;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: transparent;
-      transition: $delay;
-      user-select: none;
-      pointer-events: none;
-    }
-    &::before {
-      top: 50%;
-      left: -10%;
-      transform: translate(0, -50%);
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-    }
-    &::after {
-      left: 10%;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      border-radius: 5px;
-    }
-    @media screen and (hover: hover) {
-      &:hover {
-        &::before,
-        &::after {
-          left: 0;
-          background-color: $greenD;
-        }
-      }
-    }
-    &:active {
-      &::before,
-      &::after {
-        left: 0;
-        background-color: $greenD;
-      }
-    }
-    @media screen and (max-width: 992px) { // for burger
-      font-size: 24px;
-    }
-    @media screen and (max-width: 370px) {
-      font-size: calc(0px + 24 * (100vw / 370));
-    }
-  }
+	.nav__list {
+		@include dFCB;
+
+		flex-wrap: nowrap;
+
+		@media screen and (max-width: 992px) { // for burger
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.nav__item {
+		@media screen and (max-width: 992px) { // for burger
+			margin: 20px 10px;
+		}
+
+		@media screen and (max-width: 370px) {
+			margin: calc(0px + 20 * (100vw / 370)) calc(0px + 10 * (100vw / 370));
+		}
+	}
+
+	.nav__link {
+		position: relative;
+		padding: 5px 10px;
+		color: $blackD;
+		transition: $delay;
+
+		&::before,
+		&::after {
+			position: absolute;
+			pointer-events: none;
+			content: "";
+			user-select: none;
+			background-color: transparent;
+			transition: $delay;
+		}
+
+		&::before {
+			top: 50%;
+			left: -10%;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			transform: translate(0, -50%);
+		}
+
+		&::after {
+			bottom: 0;
+			left: 10%;
+			width: 100%;
+			height: 2px;
+			border-radius: 5px;
+		}
+
+		@media screen and (hover: hover) {
+			&:hover {
+				&::before,
+				&::after {
+					left: 0;
+					background-color: $greenD;
+				}
+			}
+		}
+
+		&:active {
+			&::before,
+			&::after {
+				left: 0;
+				background-color: $greenD;
+			}
+		}
+
+		@media screen and (max-width: 992px) { // for burger
+			font-size: 24px;
+		}
+
+		@media screen and (max-width: 370px) {
+			font-size: calc(0px + 24 * (100vw / 370));
+		}
+	}
 }

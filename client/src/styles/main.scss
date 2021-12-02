@@ -1,4 +1,4 @@
-$white: #ffffff;
+$white: #fff;
 $gray: #e3e3e5;
 $blue: #f5f8fe;
 $beigeD: #927e66;
@@ -12,7 +12,7 @@ $dark: #383838;
 $blackD: #1d2310;
 $blackL: #292b27;
 $blackT: #000000cb;
-$black: #000000;
+$black: #000;
 $delay: 0.2s ease-in-out;
 $longDelay: 0.6s ease-in-out;
 
@@ -21,31 +21,37 @@ $longDelay: 0.6s ease-in-out;
 		margin-bottom: 0;
 	}
 }
+
 @mixin removeMR {
 	& > :last-child {
 		margin-right: 0;
 	}
 }
+
 @mixin dFCC {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
 @mixin dFCB {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
+
 @mixin dFCE {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 }
+
 @mixin dFCS {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 }
+
 @mixin dFSB {
 	display: flex;
 	align-items: flex-start;
@@ -53,113 +59,144 @@ $longDelay: 0.6s ease-in-out;
 }
 
 /* ----- fonts */
-@import './fonts';
+@import "./fonts";
+
 /* fonts ----- */
 
 /* ----- icons */
-@import './icons';
+@import "./icons";
+
 /* icons ----- */
 
 /* ----- reset */
-@import './reset';
+@import "./reset";
+
 /* reset ----- */
 
 /* ----- common */
-@import './common';
+@import "./common";
+
 /* common ----- */
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// OK
+
+/* ----- burger */
+@import "./components/burger-icon";
+
+/* burger ----- */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// OK
+
 /* ----- loader */
-@import './components/loader';
+@import "./components/loader";
+
 /* loader ----- */
 
 /* ----- logo */
-@import './components/logo';
+@import "./components/logo";
+
 /* logo ----- */
 
 /* ----- nav */
-@import './components/nav';
+@import "./components/nav";
+
 /* nav ----- */
 
 /* ----- phones */
-@import './components/phones';
+@import "./components/phones";
+
 /* phones ----- */
 
-/* ----- burger */
-@import './components/burger';
-/* burger ----- */
-
 /* ----- headline */
-@import './components/headline';
+@import "./components/headline";
+
 /* headline ----- */
 
 /* ----- card-contacts */
-@import './components/card-contacts';
+@import "./components/card-contacts";
+
 /* card-contacts ----- */
 
 /* ----- slider */
-@import './components/slider';
+@import "./components/slider";
+
 /* slider ----- */
 
 /* ----- card-products */
-@import './components/card-products';
+@import "./components/card-products";
+
 /* card-products ----- */
 
 /* ----- pogination */
-@import './components/pogination';
+@import "./components/pogination";
+
 /* pogination ----- */
 
 /* ----- modal */
-@import './components/modal';
+@import "./components/modal";
+
 /* modal ----- */
 
 /* ----- header */
-@import './blocks/header';
+@import "./blocks/header";
+
 /* header ----- */
 
 /* ----- home */
-@import './blocks/home';
+@import "./blocks/home";
+
 /* home ----- */
 
 /* ----- about */
-@import './blocks/about';
+@import "./blocks/about";
+
 /* about ----- */
 
 /* ----- advantage */
-@import './blocks/advantage';
+@import "./blocks/advantage";
+
 /* advantage ----- */
 
 /* ----- for */
-@import './blocks/for';
+@import "./blocks/for";
+
 /* for ----- */
 
 /* ----- products */
-@import './blocks/products';
+@import "./blocks/products";
+
 /* products ----- */
 
 /* ----- send */
-@import './blocks/send';
+@import "./blocks/send";
+
 /* send ----- */
 
 /* ----- maps */
-@import './blocks/maps';
+@import "./blocks/maps";
+
 /* maps ----- */
 
 /* ----- footer */
-@import './blocks/footer';
+@import "./blocks/footer";
+
 /* footer ----- */
 
 body {
 	&._overflow-hidden {
 		overflow: hidden;
 	}
+
 	// &._show-loader {
 
 	// }
 }
+
 .wrapper {
-	overflow: hidden;
 	min-height: 100vh;
+	overflow: hidden;
 }
+
 // .main {
 // 	.main__container {
 // 	}

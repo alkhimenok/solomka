@@ -1,0 +1,80 @@
+.burger-icon {
+	position: relative;
+	width: 25px;
+	height: 20px;
+	cursor: pointer;
+	background-color: transparent;
+
+	.burger-icon__line,
+	&::before,
+	&::after {
+		position: absolute;
+		right: 0;
+		display: block;
+		height: calc(100% / 5);
+		content: "";
+		user-select: none;
+		background-color: $blackD;
+		border-radius: 4px;
+		transition: $delay;
+	}
+
+	.burger-icon__line {
+		top: 50%;
+		width: 75%;
+		transform: translate(0, -50%);
+	}
+
+	&::before {
+		top: 0;
+		width: 100%;
+	}
+
+	&::after {
+		bottom: 0;
+		width: 50%;
+	}
+
+	@media screen and (hover: hover) {
+		&:hover {
+			.burger-icon__line,
+			&::before,
+			&::after {
+				background-color: $greenD;
+			}
+		}
+	}
+
+	&:active {
+		.burger-icon__line,
+		&::before,
+		&::after {
+			background-color: $greenL;
+		}
+	}
+
+	&._active {
+		.burger-icon__line {
+			top: 50%;
+			transform: scale(0);
+		}
+
+		&::after {
+			bottom: 43%;
+			width: 100%;
+			background-color: $red;
+			transform: rotate(-45deg);
+		}
+
+		&::before {
+			top: 43%;
+			background-color: $red;
+			transform: rotate(45deg);
+		}
+	}
+
+	@media screen and (max-width: 370px) {
+		width: calc(0px + 25 * (100vw / 370));
+		height: calc(0px + 20 * (100vw / 370));
+	}
+}
