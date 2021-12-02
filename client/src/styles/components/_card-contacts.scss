@@ -11,19 +11,19 @@
 	}
 	.card-contacts__link {
 		&:hover {
-			.card-contacts__text {
+			// .card-contacts__text {
 				color: $orangeD;
-			}
+			// }
 		}
 	}
 	.card-contacts__icon {
 		width: 24px;
 		margin: 0 12px 0 0;
-		svg {
-			path {
-				stroke: $orangeD;
-			}
-		}
+		// svg {
+		// 	path {
+		// 		stroke: $orangeD;
+		// 	}
+		// }
 		@media screen and (max-width: 370px) {
 			width: calc(0px + 24 * (100vw / 370));
 			margin: 0 calc(0px + 12 * (100vw / 370)) 0 0;
@@ -33,3 +33,4 @@
 		transition: $delay;
 	}
 }
+
