@@ -31,20 +31,24 @@ body {
   font-size: 100%;
   font-family: "ubuntuRegular";
   font-display: swap;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 10px;
+  line-height: 120%;
+  color: $textPrimaryColor;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  @media screen and (max-width: 370px) {
-    font-size: calc(0px + 16 * (100vw / 370));
-    line-height: calc(0px + 24 * (100vw / 370));
+  @media screen and (max-width: $breackpointXSMax) {
+    font-size: calc(0px + 10 * (100vw / 370));
   }
 }
 input,
 button,
 textarea {
   font-family: inherit;
+  font-size: 10px;
+  @media screen and (max-width: $breackpointXSMax) {
+    font-size: calc(0px + 10 * (100vw / 370));
+  }
 }
 input::-ms-clear {
   display: none;

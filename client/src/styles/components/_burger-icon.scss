@@ -13,7 +13,7 @@
 		height: calc(100% / 6);
 		content: '';
 		user-select: none;
-		background-color: $blackD;
+		background-color: $balckColor;
 		border-radius: 4px;
 		transition: $delay;
 	}
@@ -35,7 +35,7 @@
 			.burger-icon__line,
 			&::before,
 			&::after {
-				background-color: $greenD;
+				width: 100%;
 			}
 		}
 	}
@@ -43,7 +43,7 @@
 		.burger-icon__line,
 		&::before,
 		&::after {
-			background-color: $greenL;
+			background-color: $secondaryColor;
 		}
 	}
 	&._active {
@@ -54,16 +54,16 @@
 		&::after {
 			bottom: 43%;
 			width: 100%;
-			background-color: $red;
+			background-color: $errorColor;
 			transform: rotate(-45deg);
 		}
 		&::before {
-			top: 43%;
-			background-color: $red;
+			top: 38%;
+			background-color: $errorColor;
 			transform: rotate(45deg);
 		}
 	}
-	@media screen and (max-width: 370px) {
+	@media screen and (max-width: $breackpointXSMax) {
 		width: calc(0px + 25 * (100vw / 370));
 		height: calc(0px + 20 * (100vw / 370));
 	}

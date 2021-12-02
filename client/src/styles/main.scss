@@ -1,20 +1,29 @@
-$white: #ffffff;
-$gray: #e3e3e5;
-$blue: #f5f8fe;
-$beigeD: #927e66;
-$beigeL: #faddbc;
-$orangeD: #e78c14;
-$orangeL: #fddcb0;
-$red: #e42121;
-$greenD: #708a34;
-$greenL: #e9f8db;
-$dark: #383838;
-$blackD: #1d2310;
-$blackL: #292b27;
-$blackT: #000000cb;
-$black: #000000;
+$whiteColor: #ffffff;
+$transparentWhiteColor: #ffffffee;
+$balckColor: #000000;
+$errorColor: #e42121;
+$primaryColor: #708a34;
+$secondaryColor: #e78c14;
+$transparentPrimaryColor: #d6eaa8;
+$transparentSecondaryColor: #fddcb0;
+$textPrimaryColor: #1d2310;
+$textSecondaryColor: #292b27;
+
 $delay: 0.2s ease-in-out;
 $longDelay: 0.6s ease-in-out;
+
+$breackpointXLMax: 1180px;
+$breackpointLGMax: 992px;
+$breackpointMDMax: 768px;
+$breackpointSMMax: 576px;
+$breackpointXSMax: 370px;
+
+$breackpointXSMin: 0px;
+$breackpointSMMin: $breackpointXSMax + 1px; // 371px
+$breackpointMDMin: $breackpointSMMax + 1px; // 577px
+$breackpointLGMin: $breackpointMDMax + 1px; // 769px
+$breackpointXLMin: $breackpointLGMax + 1px; // 993px
+$breackpointXXLMin: $breackpointXLMax + 1; // 1181px
 
 @mixin removeMB {
 	& > :last-child {
@@ -26,31 +35,68 @@ $longDelay: 0.6s ease-in-out;
 		margin-right: 0;
 	}
 }
-@mixin dFCC {
+@mixin flex($align-items: center, $justify-content: center, $flex-direction: row, $flex-wrap: nowrap) {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-@mixin dFCB {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-@mixin dFCE {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-@mixin dFCS {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-@mixin dFSB {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-}
+	align-items: $align-items;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+	flex-wrap: $flex-wrap;
+} // @include flex(center, center, row, nowrap)
+
+// $white: #ffffff;
+// $gray: #e3e3e5;
+// $blue: #f5f8fe;
+// $beigeD: #927e66;
+// $beigeL: #faddbc;
+// $red: #e42121;
+// $orangeD: #e78c14;
+// $orangeL: #fddcb0;
+// $greenD: #708a34;
+// $greenL: #e9f8db;
+// $dark: #383838;
+// $blackD: #1d2310;
+// $blackL: #292b27;
+// $blackT: #000000cb;
+// $black: #000000;
+
+// @media screen and (hover: hover) {}
+// @media screen and (hover: none) {}
+// @media screen and (max-width: $breackpointXSMax) {}
+// @media screen and (min-width: $breackpointSMMin) {}
+// @media screen and (max-width: $breackpointSMMax) {}
+// @media screen and (min-width: $breackpointMDMin) {}
+// @media screen and (max-width: $breackpointMDMax) {}
+// @media screen and (min-width: $breackpointLGMin) {}
+// @media screen and (max-width: $breackpointLGMax) {}
+// @media screen and (min-width: $breackpointXLMin) {}
+// @media screen and (max-width: $breackpointXLMax) {}
+// @media screen and (min-width: $breackpointXXLMin) {}
+
+// @mixin dFCC {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+// @mixin dFCB {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: space-between;
+// }
+// @mixin dFCE {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: flex-end;
+// }
+// @mixin dFCS {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: flex-start;
+// }
+// @mixin dFSB {
+// 	display: flex;
+// 	align-items: flex-start;
+// 	justify-content: space-between;
+// }
 
 /* ----- fonts */
 @import './fonts';
@@ -68,19 +114,9 @@ $longDelay: 0.6s ease-in-out;
 @import './common';
 /* common ----- */
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// OK
-
-/* ----- burger */
-@import './components/burger-icon';
-/* burger ----- */
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// OK
-
-
-/* ----- loader */
-@import './components/loader';
-/* loader ----- */
+// /* ----- loader */
+// @import './components/loader';
+// /* loader ----- */
 
 /* ----- logo */
 @import './components/logo';
@@ -94,79 +130,82 @@ $longDelay: 0.6s ease-in-out;
 @import './components/phones';
 /* phones ----- */
 
+/* ----- burger */
+@import './components/burger-icon';
+/* burger ----- */
 
-/* ----- headline */
-@import './components/headline';
-/* headline ----- */
+// /* ----- headline */
+// @import './components/headline';
+// /* headline ----- */
 
-/* ----- card-contacts */
-@import './components/card-contacts';
-/* card-contacts ----- */
+// /* ----- slider */
+// @import './components/slider';
+// /* slider ----- */
 
-/* ----- slider */
-@import './components/slider';
-/* slider ----- */
+// /* ----- card-contacts */
+// @import './components/card-contacts';
+// /* card-contacts ----- */
 
-/* ----- card-products */
-@import './components/card-products';
-/* card-products ----- */
+// /* ----- card-products */
+// @import './components/card-products';
+// /* card-products ----- */
 
-/* ----- pogination */
-@import './components/pogination';
-/* pogination ----- */
+// /* ----- pogination */
+// @import './components/pogination';
+// /* pogination ----- */
 
-/* ----- modal */
-@import './components/modal';
-/* modal ----- */
+// /* ----- modal */
+// @import './components/modal';
+// /* modal ----- */
 
 /* ----- header */
 @import './blocks/header';
 /* header ----- */
 
-/* ----- home */
-@import './blocks/home';
-/* home ----- */
+// /* ----- home */
+// @import './blocks/home';
+// /* home ----- */
 
-/* ----- about */
-@import './blocks/about';
-/* about ----- */
+// /* ----- about */
+// @import './blocks/about';
+// /* about ----- */
 
-/* ----- advantage */
-@import './blocks/advantage';
-/* advantage ----- */
+// /* ----- advantage */
+// @import './blocks/advantage';
+// /* advantage ----- */
 
-/* ----- for */
-@import './blocks/for';
-/* for ----- */
+// /* ----- for */
+// @import './blocks/for';
+// /* for ----- */
 
-/* ----- products */
-@import './blocks/products';
-/* products ----- */
+// /* ----- products */
+// @import './blocks/products';
+// /* products ----- */
 
-/* ----- send */
-@import './blocks/send';
-/* send ----- */
+// /* ----- send */
+// @import './blocks/send';
+// /* send ----- */
 
-/* ----- maps */
-@import './blocks/maps';
-/* maps ----- */
+// /* ----- maps */
+// @import './blocks/maps';
+// /* maps ----- */
 
-/* ----- footer */
-@import './blocks/footer';
-/* footer ----- */
+// /* ----- footer */
+// @import './blocks/footer';
+// /* footer ----- */
 
-body {
-	&._overflow-hidden {
-		overflow: hidden;
-	}
-	// &._show-loader {
+// body {
+// 	&._overflow-hidden {
+// 		overflow: hidden;
+// 	}
+// 	// &._show-loader {
+// 	// }
+// }
+// .wrapper {
+// 	overflow: hidden;
+// 	min-height: 100vh;
+// }
 
-	// }
-}
-.wrapper {
-	overflow: hidden;
-	min-height: 100vh;
-}
 // .main {
 // 	.main__container {
 // 	}
@@ -187,21 +226,3 @@ body {
 // 		}
 // 	}
 // }
-
-// @media screen and (hover: hover) {}
-// @media screen and (hover: none) {}
-// @media screen and (max-width: 320px) {}
-// @media screen and (min-width: 321px) {}
-// @media screen and (max-width: 370px) {}
-// @media screen and (min-width: 371px) {}
-// @media screen and (max-width: 480px) {}
-// @media screen and (min-width: 481px) {}
-// @media screen and (max-width: 768px) {}
-// @media screen and (min-width: 769px) {}
-// @media screen and (max-width: 992px) {}
-// @media screen and (min-width: 993px) {}
-// @media screen and (max-width: 1024px) {}
-// @media screen and (min-width: 1025px) {}
-// @media screen and (max-width: 1280px) {}
-// @media screen and (min-width: 1281px) {}
-// @media screen and (min-width: 1801px) {}

@@ -4,7 +4,6 @@
 	"description": "Website for the sale of Eco paper straws for drinks that do not harm nature.",
 	"main": "app.js",
 	"scripts": {
-		"stylelint": "stylelint \"./client/src/styles/**/*.scss\" --fix",
 		"webpackdev": "cross-env NODE_ENV=development webpack",
 		"webpackbuild": "cross-env NODE_ENV=production webpack",
 		"webpackwatch": "cross-env NODE_ENV=development webpack-dev-server --open",

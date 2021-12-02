@@ -1,10 +1,10 @@
 ._indent {
 	padding: 50px 0;
-	@media screen and (max-width: 1280px) {
-		padding: calc(15px + 35 * ((100vw - 370px) / (1280 - 370))) 0;
+	@media screen and (max-width: $breackpointXLMax) {
+		padding: calc(12px + 35 * ((100vw - 370px) / (1280 - 370))) 0;
 	}
-	@media screen and (max-width: 370px) {
-		padding: calc(0px + 15 * (100vw / 370)) 0;
+	@media screen and (max-width: $breackpointXSMax) {
+		padding: calc(0px + 12 * (100vw / 370)) 0;
 	}
 }
 ._container {
@@ -13,94 +13,111 @@
 }
 ._body {
 	padding: 0 15px;
-	@media screen and (max-width: 370px) {
+	@media screen and (max-width: $breackpointXSMax) {
 		padding: 0 calc(0px + 15 * (100vw / 370));
 	}
 }
-._text {
-	color: $blackL;
-	span {
-		font-family: 'ubuntuMedium';
-		font-size: 18px;
-		color: $blackD;
-		@media screen and (max-width: 370px) {
-			font-size: calc(0px + 18 * (100vw / 370));
-		}
-	}
-}
 ._btn {
-	display: block;
+	display: inline-block;
+	text-align: center;
 	padding: 14px;
 	font-family: 'ubuntuMedium';
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: $white;
-	background-color: $orangeD;
+	font-size: 1.8rem;
+	color: $whiteColor;
+	background-color: $secondaryColor;
 	border-radius: 40px;
 	transition: $delay;
 	user-select: none;
-	cursor: pointer;
-	&._shadow {
+	&._big {
 		padding: 19px;
+		font-family: 'ubuntuBold';
 		border-radius: 60px;
-		box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
-		@media screen and (max-width: 370px) {
-			padding: calc(0px + 19 * (100vw / 370));
-			box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
-		}
+	}
+	&._small {
+		padding: 12px;
+		font-size: 1.4rem;
 	}
 	&._green {
-		padding: 12px;
-		font-size: 14px;
-		background-color: $greenD;
-		@media screen and (max-width: 370px) {
-			padding: calc(0px + 12 * (100vw / 370));
-			font-size: calc(0px + 14 * (100vw / 370));
-		}
+		background-color: $primaryColor;
+	}
+	&._shadow {
+		box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
 	}
 	@media screen and (hover: hover) {
 		&:hover {
-			background-color: $dark;
+			background-color: $transparentSecondaryColor;
+			&._green {
+				background-color: $transparentPrimaryColor;
+			}
 		}
 	}
 	&:active {
-		background-color: $dark;
+		color: $secondaryColor;
+		&._green {
+			color: $primaryColor;
+		}
 	}
-	@media screen and (max-width: 370px) {
+	@media screen and (max-width: $breackpointXSMax) {
 		padding: calc(0px + 14 * (100vw / 370));
-		font-size: calc(0px + 18 * (100vw / 370));
-		line-height: calc(0px + 21 * (100vw / 370));
+		&._big {
+			padding: calc(0px + 19 * (100vw / 370));
+		}
+		&._small {
+			padding: calc(0px + 12 * (100vw / 370));
+		}
+		&._shadow {
+			box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
+		}
 	}
 }
 ._input {
-	padding: 12px 22px;
-	font-size: 16px;
-	background-color: transparent;
-	border: 2px solid $orangeL;
+	padding: 16px 24px;
+	font-size: 1.6rem;
+	color: $textSecondaryColor;
+	background-color: $whiteColor;
+	border: 2px solid $transparentSecondaryColor;
 	border-radius: 40px;
 	transition: $delay;
-	&::placeholder {
-		color: $beigeD;
-	}
-	&:focus {
-		border: 2px solid $greenD;
-	}
 	&._green {
-		border: 2px solid $greenL;
-		&::placeholder {
-			color: $blackL;
+		border-color: $transparentPrimaryColor;
+	}
+	&._small {
+		padding: 17px 24px;
+		font-size: 1.4rem;
+	}
+	@media screen and (hover: hover) {
+		&:hover {
+			border-color: $secondaryColor;
+			&._green {
+				border-color: $primaryColor;
+			}
+		}
+	}
+	&:active,
+	&:focus {
+		background-color: $transparentSecondaryColor;
+		border-color: $secondaryColor;
+		&._green {
+			background-color: $transparentPrimaryColor;
+			border-color: $primaryColor;
 		}
 	}
 	@media screen and (max-width: 370px) {
-		font-size: calc(0px + 16 * (100vw / 370));
-		padding: calc(0px + 12 * (100vw / 370)) calc(0px + 22 * (100vw / 370));
+		padding: calc(0px + 16 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
+		&._small {
+			padding: calc(0px + 17 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
+		}
 	}
 }
-._img {
-	@include dFCC;
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	object-position: center;
-}
+
+// ._text {
+// 	color: $blackL;
+// 	span {
+// 		font-family: 'ubuntuMedium';
+// 		font-size: 18px;
+// 		color: $blackD;
+// 		@media screen and (max-width: 370px) {
+// 			font-size: calc(0px + 18 * (100vw / 370));
+// 		}
+// 	}
+// }

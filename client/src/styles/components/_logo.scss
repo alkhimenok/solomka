@@ -1,12 +1,13 @@
 .logo {
   .logo__icon {
     display: inline-block;
-    padding: 10px 50px;
-    color: $black;
-    background-color: $greenL;
+    padding: 15px 50px;
+    font-size: 1.6rem;
+    color: $balckColor;
+    background-color: $transparentPrimaryColor;
     border-radius: 40px;
-    @media screen and (max-width: 370px) {
-      padding: calc(0px + 10 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
+    @media screen and (max-width: $breackpointXSMax) {
+      padding: calc(0px + 15 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
     }
   }
 }
