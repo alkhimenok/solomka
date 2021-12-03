@@ -1,87 +1,72 @@
 .home {
-  @include dFCB;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    & > * {
-      width: 80%;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    & > * {
-      width: 100%;
-    }
-  }
-  .home__baner {
-    @media screen and (min-width: 769px) {
-      flex: calc(60% - 65px);
-      margin: 0 65px 0 0;
-    }
-    @media screen and (max-width: 768px) {
-      margin: 0 0 calc(25px + 15 * ((100vw - 370px) / (1280 - 370))) 0;
-    }
-    @media screen and (max-width: 370px) {
-      margin: 0 0 calc(0px + 25 * (100vw / 370)) 0;
-    }
-  }
-  .home__title {
-    margin: 0 0 24px 0;
-    font-family: "ubuntuBold";
-    font-size: 45px;
-    line-height: 52px;
-    color: $blackD;
-    span {
-      color: $greenD;
-    }
-    @media screen and (max-width: 1280px) {
-      margin: 0 0 calc(16px + 6 * ((100vw - 370px) / (1280 - 370))) 0;
-      font-size: calc(36px + 9 * ((100vw - 370px) / (1280 - 370)));
-      line-height: calc(44px + 8 * ((100vw - 370px) / (1280 - 370)));
-    }
-    @media screen and (max-width: 370px) {
-      margin: 0 0 calc(0px + 16 * (100vw / 370)) 0;
-      font-size: calc(0px + 36 * (100vw / 370));
-      line-height: calc(0px + 44 * (100vw / 370));
-    }
-    @media screen and (max-width: 320px) {
-      word-break: break-all;
-    }
-  }
-  .home__description {
-    margin: 0 0 60px 0;
-    color: $blackL;
-    @media screen and (max-width: 1280px) {
-      margin: 0 0 calc(30px + 30 * ((100vw - 370px) / (1280 - 370))) 0;
-    }
-    @media screen and (max-width: 370px) {
-      margin: 0 0 calc(0px + 30 * (100vw / 370)) 0;
-    }
-  }
-  .home__btn {
-    width: 300px;
-    @media screen and (max-width: 480px) {
-      width: 90%;
-      margin: 0 5%;
-    }
-  }
-  .home__picture {
-    @media screen and (min-width: 769px) {
-      width: 40%;
-      height: calc((100vw / 100) * 40);
-    }
-    @media screen and (min-width: 1210px) {
-      height: calc((1210px / 100) * 40);
-    }
-    @media screen and (max-width: 768px) {
-      width: calc(80vw - 30px);
-      height: calc(80vw - 30px);
-    }
-    @media screen and (max-width: 480px) {
-      width: calc(100vw - 30px);
-      height: calc(100vw - 30px);
-    }
-    @media screen and (max-width: 370px) {
-      width: calc(100vw - (0px + 30 * (100vw / 370)));
-      height: calc(100vw - (0px + 30 * (100vw / 370)));
-    }
-  }
+	@include flex(center, space-between);
+	@media screen and (max-width: $breackpointMDMax) {
+		flex-direction: column;
+	}
+	.home__baner {
+		@media screen and (min-width: $breackpointLGMin) {
+			width: calc(60% - 65px);
+			margin: 0 65px 0 0;
+		}
+		@media screen and (max-width: $breackpointMDMax) {
+			margin: 0 0 calc(25px + 15 * ((100vw - 370px) / (1280 - 370))) 0;
+		}
+		@media screen and (max-width: $breackpointXSMax) {
+			margin: 0 0 calc(0px + 25 * (100vw / 370)) 0;
+		}
+	}
+	.home__title {
+		margin: 0 0 24px 0;
+		font-family: 'ubuntuBold';
+		font-size: 4.5rem;
+		line-height: 5.2rem;
+		span {
+			color: $primaryColor;
+		}
+		@media screen and (max-width: $breackpointXLMax) {
+			margin: 0 0 calc(16px + 6 * ((100vw - 370px) / (1280 - 370))) 0;
+		}
+		@media screen and (max-width: $breackpointXSMax) {
+			margin: 0 0 calc(0px + 16 * (100vw / 370)) 0;
+		}
+	}
+	.home__description {
+		margin: 0 0 60px 0;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: $textSecondaryColor;
+		@media screen and (max-width: $breackpointXLMax) {
+			margin: 0 0 calc(32px + 28 * ((100vw - 370px) / (1280 - 370))) 0;
+		}
+		@media screen and (max-width: $breackpointXSMax) {
+			margin: 0 0 calc(0px + 32 * (100vw / 370)) 0;
+		}
+	}
+	.home__form {
+		@media screen and (max-width: $breackpointSMMax) {
+			text-align: center;
+		}
+	}
+	.home__btn {
+		@media screen and (min-width: $breackpointMDMin) {
+			width: 300px;
+		}
+		@media screen and (max-width: $breackpointSMMax) {
+			width: 90%;
+		}
+	}
+	.home__picture {
+		@media screen and (min-width: $breackpointXXLMin) {
+			width: calc(((1180px - 30px) / 100) * 40);
+			height: calc(((1180px - 30px) / 100) * (445 / (453 / 40)));
+		}
+		@media screen and (max-width: $breackpointXLMax) {
+			width: calc(((100vw - 30px) / 100) * 40);
+			height: calc(((100vw - 30px) / 100) * (445 / (453 / 40)));
+		}
+		@media screen and (max-width: $breackpointMDMax) {
+			width: calc(((100vw - 30px) / 100) * 90);
+			height: calc(((100vw - 30px) / 100) * (445 / (453 / 90)));
+		}
+	}
 }

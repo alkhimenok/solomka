@@ -1,18 +1,12 @@
 .nav {
 	.nav__list {
 		@include flex(center, space-between, row, wrap);
-		@media screen and (min-width: $breackpointXXLMin) {
-			@include removeMR;
-		}
     @media screen and (max-width: $breackpointLGMax) {
-      flex-direction: column;
-      @include removeMB;
+			flex-direction: column;
+			@include removeMB;
     } 
 	}
 	.nav__item {
-    @media screen and (min-width: $breackpointXXLMin) {
-      margin: 0 30px 0 0;
-    }
 		@media screen and (max-width: $breackpointLGMax) {
       margin: 0 0 40px 0;
     }

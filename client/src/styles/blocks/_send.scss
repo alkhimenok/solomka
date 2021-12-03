@@ -76,6 +76,19 @@
 			height: calc((100vw / 45 * 32) - (0px + 30 * (100vw / 370)));
 			margin: 0 0 calc(0px + 24 * (100vw / 370)) 0;
 		}
+
+		// @media screen and (min-width: $breackpointXXLMin) {
+		// 	width: calc(((1180px - 30px) / 100) * 40);
+		// 	height: calc(((1180px - 30px) / 100) * (445 / (453 / 40)));
+		// }
+		// @media screen and (max-width: $breackpointXLMax) {
+		// 	width: calc(((100vw - 30px) / 100) * 40);
+		// 	height: calc(((100vw - 30px) / 100) * (445 / (453 / 40)));
+		// }
+		// @media screen and (max-width: $breackpointMDMax) {
+		// 	width: calc(((100vw - 30px) / 100) * 90);
+		// 	height: calc(((100vw - 30px) / 100) * (445 / (453 / 90)));
+		// }
 	}
 	// .send__img {
 	// }

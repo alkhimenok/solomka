@@ -24,7 +24,7 @@ $breackpointSMMin: $breackpointXSMax + 1px; // 371px
 $breackpointMDMin: $breackpointSMMax + 1px; // 577px
 $breackpointLGMin: $breackpointMDMax + 1px; // 769px
 $breackpointXLMin: $breackpointLGMax + 1px; // 993px
-$breackpointXXLMin: $breackpointXLMax + 1; // 1181px
+$breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 
 @mixin removeMB {
 	& > :last-child {
@@ -36,11 +36,6 @@ $breackpointXXLMin: $breackpointXLMax + 1; // 1181px
 		margin-right: 0;
 	}
 }
-// @mixin forChildren($type, $value) {
-// 	& {
-// 		$type: $value;
-// 	}
-// }
 @mixin flex($align-items: center, $justify-content: center, $flex-direction: row, $flex-wrap: nowrap) {
 	display: flex;
 	align-items: $align-items;
@@ -168,9 +163,9 @@ $breackpointXXLMin: $breackpointXLMax + 1; // 1181px
 @import './blocks/header';
 /* header ----- */
 
-// /* ----- home */
-// @import './blocks/home';
-// /* home ----- */
+/* ----- home */
+@import './blocks/home';
+/* home ----- */
 
 // /* ----- about */
 // @import './blocks/about';
