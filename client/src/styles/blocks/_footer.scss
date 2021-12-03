@@ -30,7 +30,9 @@
     @include flex(stretch, center, column);
   }
   .footer__input {
-    margin: 0 0 14px 0;
+    @media screen and (min-width: $breackpointSMMin) {
+      margin: 0 0 14px 0;
+    }
     @media screen and (max-width: $breackpointXSMax) {
       margin: 0 0 calc(0px + 14 * (100vw / 370)) 0;
     }

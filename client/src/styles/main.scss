@@ -42,7 +42,7 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 	justify-content: $justify-content;
 	flex-direction: $flex-direction;
 	flex-wrap: $flex-wrap;
-} // @include flex(center, center, row, nowrap)
+}
 
 // $white: #ffffff;
 // $gray: #e3e3e5;
@@ -135,9 +135,9 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './components/burger-icon';
 /* burger ----- */
 
-// /* ----- headline */
-// @import './components/headline';
-// /* headline ----- */
+/* ----- headline */
+@import './components/headline';
+/* headline ----- */
 
 // /* ----- slider */
 // @import './components/slider';
@@ -167,9 +167,9 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './blocks/home';
 /* home ----- */
 
-// /* ----- about */
-// @import './blocks/about';
-// /* about ----- */
+/* ----- about */
+@import './blocks/about';
+/* about ----- */
 
 // /* ----- advantage */
 // @import './blocks/advantage';

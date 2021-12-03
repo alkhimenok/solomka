@@ -20,7 +20,7 @@
 ._btn {
 	display: inline-block;
 	text-align: center;
-	padding: 14px;
+	padding: 19px;
 	font-family: 'ubuntuMedium';
 	font-size: 1.8rem;
 	color: $whiteColor;
@@ -29,12 +29,11 @@
 	transition: $delay;
 	user-select: none;
 	&._big {
-		padding: 19px;
+		padding: 24px;
 		font-family: 'ubuntuBold';
 		border-radius: 60px;
 	}
 	&._small {
-		padding: 17px;
 		font-size: 1.4rem;
 	}
 	&._green {
@@ -53,17 +52,16 @@
 	}
 	&:active {
 		color: $secondaryColor;
+		background-color: $transparentSecondaryColor;
 		&._green {
 			color: $primaryColor;
+			background-color: $transparentPrimaryColor;
 		}
 	}
 	@media screen and (max-width: $breackpointXSMax) {
-		padding: calc(0px + 14 * (100vw / 370));
+		padding: calc(0px + 19 * (100vw / 370));
 		&._big {
-			padding: calc(0px + 19 * (100vw / 370));
-		}
-		&._small {
-			padding: calc(0px + 17 * (100vw / 370));
+			padding: calc(0px + 24 * (100vw / 370));
 		}
 		&._shadow {
 			box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
@@ -71,7 +69,7 @@
 	}
 }
 ._input {
-	padding: 16px 24px;
+	padding: 14px 24px;
 	font-size: 1.6rem;
 	color: $textSecondaryColor;
 	background-color: transparent;
@@ -82,7 +80,7 @@
 		border-color: $transparentPrimaryColor;
 	}
 	&._small {
-		padding: 17px 24px;
+		padding: 15px 24px;
 		font-size: 1.4rem;
 	}
 	@media screen and (hover: hover) {
@@ -102,22 +100,16 @@
 			border-color: $primaryColor;
 		}
 	}
-	@media screen and (max-width: 370px) {
-		padding: calc(0px + 16 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
+	@media screen and (max-width: $breackpointXSMax) {
+		padding: calc(0px + 14 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
 		&._small {
-			padding: calc(0px + 17 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
+			padding: calc(0px + 15 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
 		}
 	}
 }
-
-// ._text {
-// 	color: $blackL;
-// 	span {
-// 		font-family: 'ubuntuMedium';
-// 		font-size: 18px;
-// 		color: $blackD;
-// 		@media screen and (max-width: 370px) {
-// 			font-size: calc(0px + 18 * (100vw / 370));
-// 		}
-// 	}
-// }
+._img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
