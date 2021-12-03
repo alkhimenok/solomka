@@ -1,7 +1,7 @@
 ._indent {
 	padding: 50px 0;
 	@media screen and (max-width: $breackpointXLMax) {
-		padding: calc(12px + 35 * ((100vw - 370px) / (1280 - 370))) 0;
+		padding: calc(12px + 38 * ((100vw - 370px) / (1180 - 370))) 0;
 	}
 	@media screen and (max-width: $breackpointXSMax) {
 		padding: calc(0px + 12 * (100vw / 370)) 0;
@@ -34,7 +34,7 @@
 		border-radius: 60px;
 	}
 	&._small {
-		padding: 12px;
+		padding: 17px;
 		font-size: 1.4rem;
 	}
 	&._green {
@@ -63,7 +63,7 @@
 			padding: calc(0px + 19 * (100vw / 370));
 		}
 		&._small {
-			padding: calc(0px + 12 * (100vw / 370));
+			padding: calc(0px + 17 * (100vw / 370));
 		}
 		&._shadow {
 			box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
@@ -74,7 +74,7 @@
 	padding: 16px 24px;
 	font-size: 1.6rem;
 	color: $textSecondaryColor;
-	background-color: $whiteColor;
+	background-color: transparent;
 	border: 2px solid $transparentSecondaryColor;
 	border-radius: 40px;
 	transition: $delay;

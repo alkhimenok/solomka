@@ -1,0 +1,46 @@
+.contacts {
+	.contacts__list {
+		@include removeMB;
+		@media screen and (max-width: $breackpointMDMax) {
+			text-align: center;
+		}
+	}
+	.contacts__item {
+		margin: 0 0 28px 0;
+		font-size: 1.6rem;
+		@media screen and (max-width: $breackpointXSMax) {
+			margin: 0 0 calc(0px + 28 * (100vw / 370)) 0;
+		}
+	}
+	.contacts__link {
+		color: inherit;
+		transition: $delay;
+		@media screen and (hover: hover) {
+			&:hover {
+				opacity: 0.3;
+			}
+		}
+		@media screen and (min-width: $breackpointSMMin) {
+			&:active {
+				.contacts__icon {
+					margin: 0 5px 0 10px;
+				}
+			}
+		}
+	}
+	.contacts__icon {
+		width: 18px;
+		display: inline-block;
+		text-align: center;
+		margin: 0 15px 0 0;
+		font-size: 1.8rem;
+		transition: $delay;
+		@media screen and (max-width: $breackpointXSMax) {
+			width: calc(0px + 18 * (100vw / 370));
+			margin: 0 calc(0px + 15 * (100vw / 370)) 0 0;
+			font-size: calc(0px + 18 * (100vw / 370));
+		}
+	}
+	// .contacts__text {
+	// }
+}

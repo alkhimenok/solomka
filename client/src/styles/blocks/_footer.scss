@@ -1,55 +1,38 @@
 .footer {
-  background-color: $blue;
+  background-color: $footerBackgroundColor;
   // .footer__container {
   // }
   .footer__body {
-    @include dFSB;
-    @media screen and (max-width: 992px) {
+    @include flex(flex-start, space-between);
+    @media screen and (max-width: $breackpointMDMax) {
       align-items: center;
-    }
-    @media screen and (max-width: 768px) {
       flex-direction: column;
-      & > * {
-        margin: 0 0 30px 0; 
-        @media screen and (max-width: 370px) {
-          margin: 0 0 calc(0px + 20 * (100vw / 370)) 0;
-        }
-      }
+    }
+    @media screen and (max-width: $breackpointSMMax) {
+      align-items: stretch;
     }
   }
   // .footer__contacts {
   // }
-  .footer__card {
-    li {
-      span {
-        color: $blackL;
-      }
-      @media screen and (max-width: 768px) {
-        justify-content: center;
-      }
+  .footer__nav {
+    @media screen and (min-width: $breackpointXLMin) {
+      flex: auto;
+      margin: 0 35px;
     }
-    svg {
-      path {
-        stroke: $blackL;
-      }
+    @media screen and (max-width: $breackpointMDMax) {
+      margin: 50px 0;
+    }
+    @media screen and (max-width: $breackpointXSMax) {
+      margin: calc(0px + 50 * (100vw / 370)) 0;
     }
   }
-  // .footer__nav {
-  // }
   .footer__form {
-    @include dFCC;
-    flex-direction: column;
-    & > * {
-      width: 100%;
-    }
+    @include flex(stretch, center, column);
   }
   .footer__input {
     margin: 0 0 14px 0;
-    @media screen and (max-width: 1280px) {
-      margin: 0 0 calc(12px + 2 * ((100vw - 370px) / (1280 - 370))) 0;
-    }
-    @media screen and (max-width: 370px) {
-      margin: 0 0 calc(0px + 12 * (100vw / 370)) 0;
+    @media screen and (max-width: $breackpointXSMax) {
+      margin: 0 0 calc(0px + 14 * (100vw / 370)) 0;
     }
   }
   // .footer__btn {
