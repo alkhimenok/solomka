@@ -9,10 +9,10 @@ const config = require('config')
 const autoprefixer = require('autoprefixer')
 
 const PORT = config.get('port')
-const isDev = process.env.NODE_ENV === 'development'
-const isProd = !isDev
+const isProd = process.env.NODE_ENV === 'production'
+const isDev = !isProd
 
-const getMode = () => (isDev ? 'development' : 'production')
+const getMode = () => (isProd ? 'production' : 'development')
 const getDevtool = mode => (mode ? 'source-map' : 'inline-source-map')
 
 const getOptiomization = () => {

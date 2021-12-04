@@ -52,22 +52,17 @@
 
 ### **Uing terminal you can:**
 
-- To build a project in the client-side development mode
 
-  ```
-  npm run webpackdev
-  ```
-
-1. To build the client side in production mode
+1. To build a project in the client-side development mode
 
     ```
-    npm run webpackbuild
+    npm run clientbuild
     ```
 
 2. To build the client side with automatic server updates
 
     ```
-    npm run webpackwatch
+    npm run clientwatch
     ```
 
 3. To run only the server side
