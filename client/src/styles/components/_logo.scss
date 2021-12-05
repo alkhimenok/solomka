@@ -1,11 +1,14 @@
 .logo {
+  background-color: $transparent;
   .logo__icon {
     display: inline-block;
-    padding: 15px 50px;
     font-size: 1.6rem;
     color: $balckColor;
     background-color: $transparentPrimaryColor;
     border-radius: 40px;
+    @media screen and (min-width: $breackpointSMMin) {
+      padding: 15px 50px;
+    }
     @media screen and (max-width: $breackpointXSMax) {
       padding: calc(0px + 15 * (100vw / 370)) calc(0px + 50 * (100vw / 370));
     }

@@ -12,7 +12,7 @@
 		transition: $delay;
 		@media screen and (hover: hover) {
 			&:hover {
-				background-color: $footerBackgroundColor;
+				background-color: $secondaryBackgroundColor;
 				.for__icon {
 					color: $secondaryColor;
 				}
@@ -34,8 +34,6 @@
 			padding: calc(0px + 40 * (100vw / 370));
 		}
 	}
-	// .for__item-wrapper {
-	// }
 	.for__background {
 		@media screen and (max-width: $breackpointXSMax) {
 			width: calc(((100vw - 30px) / 100) * 60);
@@ -48,18 +46,31 @@
 		left: 50%;
 		top: 40%;
 		transform: translate(-50%, -50%);
-		font-size: 7rem;
 		color: $primaryColor;
 		transition: $delay;
+		&._icon-coffee {
+			font-size: 7rem;
+		}
+		&._icon-dish {
+			font-size: 7.5rem;
+		}
+		&._icon-balloons {
+			font-size: 9rem;
+		}
+		&._icon-dinner {
+			font-size: 6rem;
+		}
 	}
 	.for__title {
 		font-family: 'ubuntuMedium';
 		font-size: 1.8rem;
 		line-height: 2.4rem;
 		@media screen and (min-width: $breackpointSMMin) {
+			height: 50px;
 			margin: 24px 0 0 0;
 		}
 		@media screen and (max-width: $breackpointXSMax) {
+			height: calc(0px + 50 * (100vw / 370));
 			margin: calc(0px + 24 * (100vw / 370)) 0 0 0;
 		}
 	}

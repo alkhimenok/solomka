@@ -17,7 +17,7 @@
 		padding: 0 calc(0px + 15 * (100vw / 370));
 	}
 }
-._btn {
+._btn { //////////////////////////////////////////////////////////////////////////////////////////////////////
 	display: inline-block;
 	text-align: center;
 	padding: 19px;
@@ -29,11 +29,12 @@
 	transition: $delay;
 	user-select: none;
 	&._big {
-		padding: 24px;
+		padding: 20px;
 		font-family: 'ubuntuBold';
 		border-radius: 60px;
 	}
 	&._small {
+		padding: 14px;
 		font-size: 1.4rem;
 	}
 	&._green {
@@ -59,20 +60,23 @@
 		}
 	}
 	@media screen and (max-width: $breackpointXSMax) {
-		padding: calc(0px + 19 * (100vw / 370));
+		padding: calc(0px + 15 * (100vw / 370));
 		&._big {
-			padding: calc(0px + 24 * (100vw / 370));
+			padding: calc(0px + 20 * (100vw / 370));
+		}
+		&._small {
+			padding: calc(0px + 12 * (100vw / 370));
 		}
 		&._shadow {
 			box-shadow: 0px calc(0px + 8 * (100vw / 370)) calc(0px + 25 * (100vw / 370)) rgba(175, 108, 20, 0.25);
 		}
 	}
 }
-._input {
+._input { //////////////////////////////////////////////////////////////////////////////////////////////////////
 	padding: 14px 24px;
 	font-size: 1.6rem;
 	color: $textSecondaryColor;
-	background-color: transparent;
+	background-color: $transparent;
 	border: 2px solid $transparentSecondaryColor;
 	border-radius: 40px;
 	transition: $delay;

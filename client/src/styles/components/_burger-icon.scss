@@ -1,9 +1,7 @@
 .burger-icon {
 	position: relative;
-	width: 25px;
-	height: 20px;
 	cursor: pointer;
-	background-color: transparent;
+	background-color: $transparent;
 	.burger-icon__line,
 	&::before,
 	&::after {
@@ -46,6 +44,14 @@
 			background-color: $secondaryColor;
 		}
 	}
+	@media screen and (min-width: $breackpointSMMin) {
+		width: 25px;
+		height: 20px;
+	}
+	@media screen and (max-width: $breackpointXSMax) {
+		width: calc(0px + 25 * (100vw / 370));
+		height: calc(0px + 20 * (100vw / 370));
+	}
 	&._active {
 		.burger-icon__line {
 			top: 50%;
@@ -62,9 +68,5 @@
 			background-color: $errorColor;
 			transform: rotate(45deg);
 		}
-	}
-	@media screen and (max-width: $breackpointXSMax) {
-		width: calc(0px + 25 * (100vw / 370));
-		height: calc(0px + 20 * (100vw / 370));
 	}
 }

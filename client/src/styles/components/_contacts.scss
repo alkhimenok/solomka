@@ -1,4 +1,5 @@
 .contacts {
+	background-color: $transparent;
 	.contacts__list {
 		@include removeMB;
 		@media screen and (max-width: $breackpointMDMax) {

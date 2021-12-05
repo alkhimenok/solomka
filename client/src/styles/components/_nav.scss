@@ -1,15 +1,16 @@
 .nav {
+	background-color: $transparent;
 	.nav__list {
 		@include flex(center, space-between, row, wrap);
-    @media screen and (max-width: $breackpointLGMax) {
+		@media screen and (max-width: $breackpointLGMax) {
 			flex-direction: column;
 			@include removeMB;
-    } 
+		}
 	}
 	.nav__item {
 		@media screen and (max-width: $breackpointLGMax) {
-      margin: 0 0 40px 0;
-    }
+			margin: 0 0 40px 0;
+		}
 		@media screen and (max-width: $breackpointXSMax) {
 			margin: 0 0 calc(0px + 40 * (100vw / 370)) 0;
 		}
@@ -17,8 +18,6 @@
 	.nav__link {
 		display: inline-block;
 		color: $textSecondaryColor;
-		padding: 5px;
-		font-size: 1.6rem;
 		transition: $delay;
 		@media screen and (hover: hover) {
 			&:hover {
@@ -26,12 +25,18 @@
 			}
 		}
 		&:active {
-			background-color: $transparentPrimaryColor;
+			background-color: $secondaryBackgroundColor;
 			border-radius: 40px;
 		}
-    @media screen and (max-width: $breackpointLGMax) {
-      font-size: 2.4rem;
-    }
+		@media screen and (min-width: $breackpointSMMin) {
+			padding: 5px;
+		}
+		@media screen and (min-width: $breackpointXLMin) {
+			font-size: 1.6rem;
+		}
+		@media screen and (max-width: $breackpointLGMax) {
+			font-size: 2.4rem;
+		}
 		@media screen and (max-width: $breackpointXSMax) {
 			padding: calc(0px + 5 * (100vw / 370));
 		}

@@ -1,14 +1,5 @@
 .headline {
 	text-align: start;
-	@media screen and (min-width: $breackpointXXLMin) {
-		padding: 0 0 40px 0;
-	}
-	@media screen and (max-width: $breackpointXLMax) {
-		padding: 0 0 calc(16px + 24 * ((100vw - 370px) / (1180 - 370))) 0;
-	}
-	@media screen and (max-width: $breackpointXSMax) {
-		padding: 0 0 calc(0px + 16 * (100vw / 370)) 0;
-	}
 	.headline__title {
 		font-family: 'ubuntuBold';
 		@media screen and (min-width: $breackpointXXLMin) {
@@ -36,5 +27,14 @@
 		@media screen and (max-width: $breackpointXSMax) {
 			margin: calc(0px + 16 * (100vw / 370)) 0 0 0;
 		}
+	}
+	@media screen and (min-width: $breackpointXXLMin) {
+		padding: 0 0 40px 0;
+	}
+	@media screen and (max-width: $breackpointXLMax) {
+		padding: 0 0 calc(16px + 24 * ((100vw - 370px) / (1180 - 370))) 0;
+	}
+	@media screen and (max-width: $breackpointXSMax) {
+		padding: 0 0 calc(0px + 16 * (100vw / 370)) 0;
 	}
 }

@@ -1,15 +1,15 @@
 .phones {
+	background-color: $transparent;
 	// .phones__list {
 	// }
 	// .phones__item {
 	// }
 	.phones__link {
 		display: inline-block;
-		padding: 5px 0;
 		@media screen and (hover: hover) {
 			&:hover {
 				.phones__number {
-					color: $transparentPrimaryColor;
+					color: $primaryColor;
 				}
 				@media screen and (min-width: $breackpointSMMin) {
 					.phones__icon {
@@ -23,16 +23,23 @@
 				transform: rotate(45deg);
 			}
 		}
-    @media screen and (max-width: $breackpointXSMax) {
+		@media screen and (min-width: $breackpointSMMin) {
+			padding: 5px 0;
+		}
+		@media screen and (max-width: $breackpointXSMax) {
 			padding: calc(0px + 5 * (100vw / 370)) 0;
 		}
 	}
 	.phones__icon {
 		display: inline-block;
-		margin: 0 15px 0 0;
 		font-size: 1.8rem;
 		color: $primaryColor;
 		transition: $delay;
+		// &._icon-phone {
+		// }
+		@media screen and (min-width: $breackpointSMMin) {
+			margin: 0 15px 0 0;
+		}
 		@media screen and (max-width: $breackpointXSMax) {
 			margin: 0 calc(0px + 15 * (100vw / 370)) 0 0;
 		}

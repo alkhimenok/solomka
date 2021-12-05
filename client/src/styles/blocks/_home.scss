@@ -1,8 +1,4 @@
 .home {
-	@include flex(center, space-between);
-	@media screen and (max-width: $breackpointMDMax) {
-		flex-direction: column;
-	}
 	.home__baner {
 		@media screen and (min-width: $breackpointLGMin) {
 			width: calc(60% - 65px);
@@ -75,5 +71,9 @@
 			width: calc(((100vw - 30px) / 100) * 90);
 			height: calc(((100vw - 30px) / 100) * (445 / (453 / 90)));
 		}
+	}
+	@include flex(center, space-between);
+	@media screen and (max-width: $breackpointMDMax) {
+		flex-direction: column;
 	}
 }
