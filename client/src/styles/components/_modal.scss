@@ -1,47 +1,95 @@
 .modal {
-	position: fixed;
-  top: -100%;
-	z-index: 4;
-	@include dFCC;
-	width: 100%;
+	position: absolute;
+	top: -30%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: $secondaryColor;
 	transition: $longDelay;
-	.modal__body {
-		padding: 20px 30px;
-		background-color: #dbeecef5;
-		@media screen and (min-width: 481px) {
-			width: 480px;
-			border-radius: 10px;
-		}
-		@media screen and (max-width: 480px) {
+	.modal__btn_close {
+		position: absolute;
+		@include flex(center, center);
+		right: 4%;
+		top: 10%;
+		transform: rotate(45deg);
+		cursor: pointer;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0%;
 			width: 100%;
+			height: 10%;
+			background-color: $whiteColor;
+			border-radius: 8px;
+			transition: $delay;
+			pointer-events: none;
 		}
-		@media screen and (max-width: 370px) {
-			padding: calc(0px + 20 * (100vw / 370)) calc(0px + 30 * (100vw / 370));
+		&::before {
+			transform: rotate(90deg);
+		}
+		@media screen and (hover: hover) {
+			&:hover {
+				&::before,
+				&::after {
+					background-color: $errorColor;
+				}
+			}
+		}
+		@media screen and (min-width: $breackpointSMMin) {
+			width: 25px;
+			height: 25px;
+			&:active {
+				width: 21px;
+				right: calc(4% + 2px);
+			}
+		}
+		@media screen and (max-width: $breackpointXSMax) {
+			width: calc(0px + 25 * (100vw / 370));
+			height: calc(0px + 25 * (100vw / 370));
+		}
+	}
+	.modal__body {
+		width: 90%;
+		@media screen and (min-width: $breackpointSMMin) {
+			padding: 20px 20px 40px;
+		}
+		@media screen and (max-width: $breackpointXSMax) {
+			padding: calc(0px + 20 * (100vw / 370)) calc(0px + 20 * (100vw / 370)) calc(0px + 40 * (100vw / 370));
 		}
 	}
 	.modal__title {
-		font-size: 30px;
-		line-height: 50px;
-		margin: 0 0 15px 0;
-		color: $blackL;
-		@media screen and (max-width: 370px) {
-			margin: 0 0 calc(0px + 15 * (100vw / 370)) 0;
-			font-size: calc(0px + 30 * (100vw / 370));
-			line-height: calc(0px + 50 * (100vw / 370));
+		color: $whiteColor;
+		font-size: 3rem;
+		line-height: 3rem;
+		@media screen and (min-width: $breackpointSMMin) {
+			margin: 0 0 20px 0;
+		}
+		@media screen and (max-width: $breackpointXSMax) {
+			margin: 0 0 calc(0px + 20 * (100vw / 370)) 0;
 		}
 	}
-	.modal__subtit {
-		font-size: 18px;
-		color: $blackL;
-		@media screen and (max-width: 370px) {
-			font-size: calc(0px + 18 * (100vw / 370));
-		}
+	.modal__subtitle {
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+		color: $transparentPrimaryBackgroundColor;
 	}
-	&._active {
-		@media screen and (min-width: 481px) {
+	@media screen and (min-width: $breackpointSMMin) {
+		width: 450px;
+		border-radius: 20px;
+	}
+	@media screen and (max-width: $breackpointSMMax) {
+		width: 100%;
+		border-radius: 0 0 10px 10px;
+	}
+	@media screen and (max-width: $breackpointXSMax) {
+		border-radius: 0 0 calc(0px + 10 * (100vw / 370)) calc(0px + 10 * (100vw / 370));
+	}
+	&._show {
+		@media screen and (min-width: $breackpointMDMin) {
 			top: 50px;
 		}
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: $breackpointSMMax) {
 			top: 0;
 		}
 	}

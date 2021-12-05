@@ -1,12 +1,12 @@
 export const activeModal = () => {
 	const modal = `
-  <div class="modal">
-    <div class="modal__body">
-      <h4 class="modal__title">Спасибо за ваше сообщение!</h4>
-      <p class="modal__subtit">Мы перезвоним вам в ближайшее время</p>
-    </div>
-  </div>
-  `
+    <div class="modal _show">
+      <div class="modal__btn_close"></div>
+      <div class="modal__body">
+        <h4 class="modal__title">Спасибо за ваше <br> сообщение!</h4>
+        <p class="modal__subtitle">Мы перезвоним вам в ближайшее время</p>
+      </div>
+    </div>`
 
 	document.body.insertAdjacentHTML('afterbegin', modal)
 

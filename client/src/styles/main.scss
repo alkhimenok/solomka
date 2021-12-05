@@ -62,9 +62,13 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './common';
 /* common ----- */
 
-// /* ----- loader */
-// @import './components/loader';
-// /* loader ----- */
+/* ----- loader */
+@import './components/loader';
+/* loader ----- */
+
+/* ----- modal */
+@import './components/modal';
+/* modal ----- */
 
 /* ----- logo */
 @import './components/logo';
@@ -89,10 +93,6 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 /* ----- contacts */
 @import './components/contacts';
 /* contacts ----- */
-
-// /* ----- modal */
-// @import './components/modal';
-// /* modal ----- */
 
 /* ----- header */
 @import './blocks/header';
@@ -142,21 +142,21 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 
 // .main {
 // 	.main__container {
-// 	}
-// 	.main__body {
-// 		.main__home {
-// 		}
-// 		.main__about {
-// 		}
-// 		.main__advantage {
-// 		}
-// 		.main__for {
-// 		}
-// 		.main__products {
-// 		}
-// 		.main__send {
-// 		}
-// 		.main__map {
+// 		.main__body {
+// 			.main__home {
+// 			}
+// 			.main__about {
+// 			}
+// 			.main__advantage {
+// 			}
+// 			.main__for {
+// 			}
+// 			.main__products {
+// 			}
+// 			.main__send {
+// 			}
+// 			.main__map {
+// 			}
 // 		}
 // 	}
 // }
