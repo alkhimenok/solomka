@@ -38,7 +38,7 @@
       height: 460px;
     }
 		@media screen and (max-width: $breackpointXLMax) {
-			height: calc(200px + 260 * ((100vw - 370px) / (1280 - 370)));
+			height: calc(200px + 260 * ((100vw - 370px) / (1180 - 370)));
 		}
 		@media screen and (max-width: $breackpointXSMax) {
 			height: calc(0px + 200 * (100vw / 370)) 0;

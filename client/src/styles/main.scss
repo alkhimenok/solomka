@@ -86,21 +86,9 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './components/headline';
 /* headline ----- */
 
-// /* ----- slider */
-// @import './components/slider';
-// /* slider ----- */
-
 /* ----- contacts */
 @import './components/contacts';
 /* contacts ----- */
-
-// /* ----- card-products */
-// @import './components/card-products';
-// /* card-products ----- */
-
-// /* ----- pogination */
-// @import './components/pogination';
-// /* pogination ----- */
 
 // /* ----- modal */
 // @import './components/modal';
@@ -126,9 +114,9 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './blocks/for';
 /* for ----- */
 
-// /* ----- products */
-// @import './blocks/products';
-// /* products ----- */
+/* ----- products */
+@import './blocks/products';
+/* products ----- */
 
 /* ----- send */
 @import './blocks/send';
