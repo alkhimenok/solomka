@@ -53,7 +53,6 @@
 	"dependencies": {
 		"animate.css": "^4.1.1",
 		"config": "^3.3.6",
-		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
 		"imask": "^6.2.2",
 		"nodemailer": "^6.7.2",

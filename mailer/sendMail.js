@@ -1,13 +1,12 @@
 const nodemailer = require('nodemailer')
-const dotenv = require('dotenv')
-
-dotenv.config()
+const config = require('config')
+const MAILER_DATA = config.get('mailer')
 
 const transparter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: process.env.EMAIL,
-		pass: process.env.PASSWORD,
+		user: MAILER_DATA.email,
+		pass: MAILER_DATA.password
 	},
 })
 
