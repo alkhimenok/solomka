@@ -1,231 +1,193 @@
 .advantage {
+	background-color: $primaryBackgroundColor;
 	// .advantage__headline {
 	// }
-	.advantage__content {
-		@include dFCC;
-		@media screen and (max-width: 992px) {
-			position: relative;
-			padding: 260px 0;
+	.advantage__body {
+		position: relative;
+		@include flex(center, center);
+		@media screen and (max-width: $breackpointMDMax) {
+			padding: 150px 0 170px;
 		}
-		@media screen and (max-width: 370px) {
-			padding: calc(0px + 260 * (100vw / 370)) 0;
-		}
-	}
-	.advantage__wrapper {
-		@media screen and (min-width: 993px) {
-			position: relative;
+		@media screen and (max-width: $breackpointXSMax) {
+			padding: calc(0px + 150 * (100vw / 370)) 0 calc(0px + 170 * (100vw / 370));;
 		}
 	}
 	.advantage__card {
 		position: absolute;
-		z-index: 2;
-		padding: 10px;
-		background-color: $greenD;
-		border-radius: 10px;
+		display: inline-block;
+		background-color: $primaryColor;
 		transition: $delay;
-		cursor: pointer;
-		&._hovered {
-			background-color: $orangeD;
+		@media screen and (min-width: $breackpointSMMin) {
+			padding: 10px;
+			border-radius: 10px;
 		}
-		@media screen and (min-width: 993px) {
+		@media screen and (min-width: $breackpointLGMin) {
 			&._right-top {
-				top: 20px;
-				left: 80%;
+				top: 4%;
+				left: 65%;
 			}
 			&._right-center {
+				left: 73%;
 				top: 50%;
-				left: 95%;
 				transform: translate(0, -50%);
 			}
 			&._right-bottom {
-				left: 80%;
-				bottom: 20px;
+				bottom: 4%;
+				left: 65%;
 			}
 			&._left-bottom {
-				right: 80%;
-				bottom: 20px;
+				right: 65%;
+				bottom: 4%;
 			}
 			&._left-center {
+				right: 73%;
 				top: 50%;
-				right: 95%;
 				transform: translate(0, -50%);
 			}
 			&._left-top {
-				top: 20px;
-				right: 80%;
+				top: 4%;
+				right: 65%;
 			}
-		}
-		@media screen and (max-width: 992px) {
+		} 
+		@media screen and (max-width: $breackpointMDMax) {
 			&._right-top {
-				right: 15%;
-				bottom: 0;
-			}
-			&._right-center {
-				right: 15%;
-				bottom: 27%;
-			}
-			&._right-bottom {
-				left: 15%;
-				bottom: 12%;
-			}
-			&._left-bottom {
 				top: 0;
-				left: 15%;
-			}
-			&._left-center {
-				top: 24%;
-				left: 15%;
-			}
-			&._left-top {
-				top: 12%;
-				right: 15%;
-			}
-		}
-		@media screen and (max-width: 480px) {
-			&._right-top {
-				right: 0%;
+				left: 0;
 			}
 			&._right-center {
-				right: 0%;
+				right: 0;
+				top: 10%;
 			}
 			&._right-bottom {
-				left: 0%;
+				top: 20%;
+				left: 0;
 			}
 			&._left-bottom {
-				left: 0%;
+				right: 0;
+				bottom: 0%;
 			}
 			&._left-center {
-				left: 0%;
+				left: 0;
+				bottom: 10%;
 			}
 			&._left-top {
-				right: 0%;
+				bottom: 23%;
+				right: 0;
 			}
 		}
-		@media screen and (max-width: 370px) {
+		@media screen and (max-width: $breackpointXSMax) {
 			padding: calc(0px + 10 * (100vw / 370));
+			border-radius: calc(0px + 10 * (100vw / 370));
 		}
 	}
 	.advantage__text {
-		color: $white;
-		white-space: nowrap;
-		pointer-events: none;
-		@media screen and (max-width: 1280px) {
-			font-size: calc(14px + 2 * ((100vw - 370px) / (1280 - 370)));
+		font-family: 'ubuntuMedium';
+		color: $whiteColor;
+		@media screen and (min-width: $breackpointXXLMin) {
+			font-size: 1.6rem;
+			line-height: 2.5rem;
 		}
-		@media screen and (max-width: 370px) {
-			font-size: calc(0px + 14 * (100vw / 370));
+		@media screen and (max-width: $breackpointXLMax) {
+			font-size: calc(1.4rem + 2 * ((100vw - 370px) / (1180 - 370)));
+			line-height: calc(1.8rem + 7 * ((100vw - 370px) / (1180 - 370)));
 		}
 	}
-	.advangtage__sircle {
-		@include dFCC;
-		width: 570px;
-		height: 570px;
-		border: 1px dashed $orangeD;
+	.advangtage__circle_big,
+	.advantage__circle_small,
+	.advantage__icon {
+		@include flex(center, center);
+		background-color: $primaryBackgroundColor;
+		border: 2px dashed $secondaryColor;
 		border-radius: 50%;
-		@media screen and (max-width: 1280px) {
-			width: calc(100vw / 100 * 40);
-			height: calc(100vw / 100 * 40);
+	}
+	.advangtage__circle_big {
+		@media screen and (min-width: $breackpointXXLMin) {
+			width: 570px;
+			height: 570px;
 		}
-		@media screen and (max-width: 992px) {
-			width: calc(100vw / 100 * 60);
-			height: calc(100vw / 100 * 60);
+		@media screen and (max-width: $breackpointXLMax) {
+			width: calc(295px + 275 * ((100vw - 370px) / (1180 - 370)));
+			height: calc(295px + 275 * ((100vw - 370px) / (1180 - 370)));
 		}
-		@media screen and (max-width: 480px) {
-			width: calc(100vw / 100 * 75);
-			height: calc(100vw / 100 * 75);
+		@media screen and (max-width: $breackpointXSMax) {
+			width: calc(0px + 295 * (100vw / 370));
+			height: calc(0px + 295 * (100vw / 370));
 		}
 	}
-	.advantage__body {
+	.advantage__circle_small {
 		position: relative;
-		@include dFCC;
-		width: 385px;
-		height: 385px;
-		border: 1px dashed $orangeD;
-		border-radius: 50%;
-		@media screen and (max-width: 1280px) {
-			width: calc(100vw / 100 * 25);
-			height: calc(100vw / 100 * 25);
+		@media screen and (min-width: $breackpointXXLMin) {
+			width: 390px;
+			height: 390px;
 		}
-		@media screen and (max-width: 992px) {
-			width: calc(100vw / 100 * 40);
-			height: calc(100vw / 100 * 40);
+		@media screen and (max-width: $breackpointXLMax) {
+			width: calc(190px + 200 * ((100vw - 370px) / (1180 - 370)));
+			height: calc(190px + 200 * ((100vw - 370px) / (1180 - 370)));
 		}
-		@media screen and (max-width: 480px) {
-			width: calc(100vw / 100 * 50);
-			height: calc(100vw / 100 * 50);
+		@media screen and (max-width: $breackpointXSMax) {
+			width: calc(0px + 190 * (100vw / 370));
+			height: calc(0px + 190 * (100vw / 370));
 		}
 	}
 	.advantage__icon {
 		position: absolute;
-		@include dFCC;
-		width: 15%;
-		height: 15%;
-		background-color: $white;
-		border: 1px dashed $orangeD;
-		border-radius: 50%;
+		color: $secondaryColor;
 		transition: $delay;
-		cursor: pointer;
-		&:nth-child(1) {
-			&::before {
-				font-size: 18px;
-				@media screen and (max-width: 1210px) {
-					font-size: calc(14px + 4 * ((100vw - 370px) / (1280 - 370)));
-				}
-				@media screen and (max-width: 370px) {
-					font-size: calc(0px + 14 * (100vw / 370));
-				}
-			}
-		}
-		&::before {
-			font-size: 24px;
-			color: $orangeD;
-			transition: $delay;
-			@media screen and (max-width: 1210px) {
-				font-size: calc(18px + 6 * ((100vw - 370px) / (1280 - 370)));
-			}
-			@media screen and (max-width: 370px) {
-				font-size: calc(0px + 18 * (100vw / 370));
-			}
-		}
-		// @media screen and (max-width: 768px) {
-		//   font-size: 0.7em;
-		// }
-		&._hovered {
-			background-color: $orangeD;
-			&::before {
-				color: $white;
-			}
-		}
 		&._right-top {
-			top: 7%;
-			right: 7%;
+			top: 5%;
+			right: 5%;
 		}
 		&._right-center {
-			right: -7%;
+			right: -9%;
 			top: 50%;
 			transform: translate(0, -50%);
 		}
 		&._right-bottom {
-			bottom: 7%;
-			right: 7%;
+			bottom: 5%;
+			right: 5%;
 		}
 		&._left-bottom {
-			left: 7%;
-			bottom: 7%;
+			left: 5%;
+			bottom: 5%;
 		}
 		&._left-center {
-			left: -7%;
+			left: -9%;
 			top: 50%;
 			transform: translate(0, -50%);
 		}
 		&._left-top {
-			top: 7%;
-			left: 7%;
+			top: 5%;
+			left: 5%;
+		}
+		// &._icon-flower {
+		// }
+		// &._icon-like {
+		// }
+		// &._icon-wood {
+		// }
+		// &._icon-sheet {
+		// }
+		// &._icon-world {
+		// }
+		// &._icon-trees {
+		// }
+		@media screen and (min-width: $breackpointXXLMin) {
+			width: 72px;
+			height: 72px;
+			font-size: 3.4rem;
+		}
+		@media screen and (max-width: $breackpointXLMax) {
+			width: calc(36px + 36 * ((100vw - 370px) / (1180 - 370)));
+			height: calc(36px + 36 * ((100vw - 370px) / (1180 - 370)));
+			font-size: calc(1.7rem + 17 * ((100vw - 370px) / (1180 - 370)));
+		}
+		@media screen and (max-width: $breackpointXSMax) {
+			width: calc(0px + 36 * (100vw / 370));
+			height: calc(0px + 36 * (100vw / 370));
 		}
 	}
-	.advantage__img {
+	.advantage__picture {
 		width: 50%;
-		height: 50%;
 	}
 	// .advantage__img {
 	// }

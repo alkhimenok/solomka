@@ -106,9 +106,9 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './blocks/about';
 /* about ----- */
 
-// /* ----- advantage */
-// @import './blocks/advantage';
-// /* advantage ----- */
+/* ----- advantage */
+@import './blocks/advantage';
+/* advantage ----- */
 
 /* ----- for */
 @import './blocks/for';
@@ -134,8 +134,6 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 // 	&._overflow-hidden {
 // 		overflow: hidden;
 // 	}
-// 	// &._show-loader {
-// 	// }
 // }
 // .wrapper {
 // 	overflow: hidden;

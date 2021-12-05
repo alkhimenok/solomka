@@ -1,4 +1,5 @@
 .products {
+	background-color: $primaryBackgroundColor;
 	.products__header {
 		@include flex(flex-start, space-between);
 	}
