@@ -3,10 +3,10 @@ const $btnPrev = $sliderNav.querySelector(`[data-pagination=prev]`)
 const $btnNext = $sliderNav.querySelector(`[data-pagination=next]`)
 const $slider = document.querySelector('.slider')
 const $slides = $slider.querySelectorAll('.slide')
-const $currentSlideNumber = document.querySelector('.pogination__current-slide-number')
-const $numberSlides = document.querySelector('.pogination__all-slide-number')
-const $track = document.querySelector('.pogination__track')
-const $tumb = document.querySelector('.pogination__thumb')
+const $currentSlideNumber = document.querySelector('.products__card-curret-slide-number')
+const $numberSlides = document.querySelector('.products__card-all-slide-number')
+const $track = document.querySelector('.products__card-track')
+const $tumb = document.querySelector('.products__card-thumb')
 
 const NUMBER_SLIDES = $slider.children.length
 const SLIDE_WIDTH = $slides[0].clientWidth

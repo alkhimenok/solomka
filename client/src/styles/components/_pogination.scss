@@ -8,7 +8,7 @@
   @media screen and (max-width: 370px) {
     padding: calc(0px + 16 * (100vw / 370)) 0;
   }
-  .pogination__track {
+  .products__card-track {
     width: 30%;
     height: 6px;
     margin: 0 auto 24px;
@@ -20,20 +20,20 @@
       margin: 0 auto calc(0px + 24 * (100vw / 370));
     }
   }
-  .pogination__thumb {
+  .products__card-thumb {
     width: 30%;
     height: 100%;
     background-color: $orangeD;
   }
-  .pogination__number-slides {
+  .products__card-slide-numbers {
     color: $gray;
   }
-  .pogination__current-slide-number {
+  .products__card-curret-slide-number {
     font-family: "ubuntuBold";
     font-size: 1.4em;
     color: $dark;
   }
-  .pogination__all-slide-number {
+  .products__card-all-slide-number {
     @media screen and (max-width: 1280px) {
       margin: 0 0 calc(24px + 10 * ((100vw - 370px) / (1280 - 370))) 0;
     }

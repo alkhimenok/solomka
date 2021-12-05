@@ -1,4 +1,5 @@
 .about {
+	background-color: $primaryBackgroundColor;
 	// .about__headline {
 	// }
 	.about__content {
@@ -62,10 +63,6 @@
 		@include flex(stretch, space-between);
 		@media screen and (max-width: $breackpointLGMax) {
 			flex-direction: column;
-		}
-		@media screen and (min-width: $breackpointMDMin) and (max-width: $breackpointLGMax) {
-			width: 80%;
-			margin: 0 auto;
 		}
 	}
 	.about__input {

@@ -134,9 +134,9 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './blocks/send';
 /* send ----- */
 
-// /* ----- maps */
-// @import './blocks/maps';
-// /* maps ----- */
+/* ----- map */
+@import './blocks/map';
+/* map ----- */
 
 /* ----- footer */
 @import './blocks/footer';
@@ -170,7 +170,7 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 // 		}
 // 		.main__send {
 // 		}
-// 		.main__maps {
+// 		.main__map {
 // 		}
 // 	}
 // }

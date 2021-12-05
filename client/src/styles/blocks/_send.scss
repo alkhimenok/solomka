@@ -1,21 +1,29 @@
 .send {
-	.send__container {
+	background-color: $primaryBackgroundColor;
+	.send__body {
 		@media screen and (min-width: $breackpointLGMin) {
-			position: relative;
-			width: calc(100% - (calc(0px + 65 * ((100vw - 769px) / (1180 - 769))) * 2));
-			margin: auto;
+			padding: calc(0px + 80 * ((100vw - 769px) / (1180 - 769))) calc(0px + 65 * ((100vw - 769px) / (1180 - 769)));
+		}
+		@media screen and (min-width: $breackpointXLMin) {
+			box-shadow: 0px 4px 40px rgba(148, 196, 40, 0.25);
+			border-radius: 8px;
 		}
 		@media screen and (min-width: $breackpointXXLMin) {
-			width: calc(100% - (65px * 2));
+			padding: 80px 65px;
 		}
 	}
-	.send__body {
+	.send__wrapper {
+		@media screen and (min-width: $breackpointLGMin) {
+			position: relative;
+		}
+	}
+	.send__baner {
 		@media screen and (min-width: $breackpointLGMin) {
 			width: 50%;
 			margin: auto 0 auto auto;
 		}
 	}
-	.send__baner {
+	.send__headline {
 		@media screen and (min-width: $breackpointXXLMin) {
 			margin: 0 0 45px 0;
 		}
@@ -120,9 +128,8 @@
 	}
 	.send__label {
 		position: absolute;
-		top: -15%;
+		top: -20%;
 		font-size: 1rem;
-		line-height: 100%;
 		color: $errorColor;
 		background-color: $whiteColor;
 		border: 1px solid $errorColor;
@@ -143,9 +150,5 @@
 		@media screen and (min-width: $breackpointXLMin) {
 			width: 60%;
 		}
-	}
-	@media screen and (min-width: $breackpointLGMin) {
-		box-shadow: 0px 4px 40px rgba(148, 196, 40, 0.25);
-		border-radius: 8px;
 	}
 }

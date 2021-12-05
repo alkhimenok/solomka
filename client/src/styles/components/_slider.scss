@@ -17,18 +17,18 @@
 			min-width: 80%;
 		}
 	}
-	.slide__wrapper {
+	.products__slide-wrapper {
 		padding: 0 20px;
 	}
-	.slide__image {
+	.products__slide-picture {
 		margin: 0 0 18px 0;
 		@media screen and (max-width: 370px) {
 			margin: 0 0 calc(0px + 18 * (100vw / 370)) 0;
 		}
 	}
-	// .slide__img {
+	// .products__slide-img {
 	// }
-	.slide__title {
+	.products__slide-title {
 		margin: 0 0 18px 0;
 		font-family: 'ubuntuBold';
 		font-size: 18px;
@@ -37,7 +37,7 @@
 			margin: 0 0 calc(0px + 18 * (100vw / 370)) 0;
 		}
 	}
-	.slide__description {
+	.products__slide-description {
 		line-height: 21px;
 		span {
 			font-family: 'ubuntuMedium';
