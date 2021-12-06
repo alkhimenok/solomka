@@ -1,43 +1,38 @@
 import './styles/main.scss'
-// import 'animate.css'
-// import * as WOW from 'wow.js'
+import 'animate.css'
+import WOW from 'wow.js'
 
-// import { showLoader, hideLoader } from './scripts/UI/loader'
-// import { setMarginForBody } from './scripts/header/mainIntend'
-// import { rewriteNumber } from './scripts/numbers/phoneLink'
-// import { setMask } from './scripts/numbers/phoneMask'
-// import { addSliderHandeler } from './scripts/sliderNav'
-// import { addSendSwipeHandler } from './scripts/pageSwipe/sendSwipe'
-// import { navs, sectionSwipe } from './scripts/pageSwipe/navSwipe'
-// import { $menu, $burgerIcon, hideMenu, showMenu } from './scripts/header/burger'
-// import { $advantage, startEfect } from './scripts/advantegeEfects'
-// import { $form, sendForm } from './scripts/submitApplication'
+import { showLoader, hideLoader } from './scripts/UI/loader'
+import { setMarginForHeader } from './scripts/indent'
+import { setPhoneMask } from './scripts/phones/inputMask'
+import { rewriteCallLinks } from './scripts/phones/callLinks'
 
-// const loadScripts = () => {
-// 	setMarginForBody()
+import { navs, handlerNavMove } from './scripts/pageMove/navMove'
+import { applications, moveToSendSection } from './scripts/pageMove/toSendSection'
+import { $burgerIcon, toggleShowMenu } from './scripts/burger'
+import { $sendBtn, showModalSuccess } from './scripts/UI/modal'
+import { $sliderNav, addHandlerCliderClicks } from './scripts/slider'
 
-// 	new WOW().init()
+const start = () => {
+	try {
+		// new WOW().init()
 
-// 	rewriteNumber()
-// 	setMask()
-// 	addSliderHandeler()
-// 	addSendSwipeHandler()
+		setMarginForHeader()
+		setPhoneMask()
+		rewriteCallLinks()
 
-// 	navs.forEach($nav => {
-// 		$nav.addEventListener('click', sectionSwipe)
-// 	})
-// 	$menu.addEventListener('click', hideMenu)
-// 	$burgerIcon.addEventListener('click', showMenu)
-// 	$advantage.addEventListener('mouseover', startEfect)
-// 	$form.addEventListener('click', sendForm)
+		navs.forEach($nav => $nav.addEventListener('click', handlerNavMove))
+		applications.forEach($application => $application.addEventListener('click', moveToSendSection))
+		$burgerIcon.addEventListener('click', toggleShowMenu)
+		$sendBtn.addEventListener('click', showModalSuccess)
+		$sliderNav.addEventListener('click', addHandlerCliderClicks)
+	} catch (error) {
+		console.error(error)
+		// showError(error)
+	} finally {
+		hideLoader()
+	}
+}
 
-// 	setTimeout(hideLoader, 0)
-// }
-
-// const start = () => {
-// 	showLoader()
-
-// 	window.addEventListener('load', loadScripts)
-// }
-
-// window.addEventListener('DOMContentLoaded', start)
+window.addEventListener('DOMContentLoaded', showLoader)
+window.addEventListener('load', start)

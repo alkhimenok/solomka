@@ -13,10 +13,10 @@
 	// .header__logo {
 	// }
 	.header__menu {
-    @include flex(center, space-between);
-    @media screen and (min-width: $breackpointXLMin) {
-      flex: auto;
-    }
+		@include flex(center, space-between);
+		@media screen and (min-width: $breackpointXLMin) {
+			flex: auto;
+		}
 		@media screen and (max-width: $breackpointLGMax) {
 			position: fixed;
 			top: 0;
@@ -36,13 +36,13 @@
 		@media screen and (max-width: $breackpointXSMax) {
 			padding: calc(0px + 55 * (100vw / 370)) 0;
 		}
-		&._active {
+		&._opened {
 			right: 0;
 		}
 	}
 	.header__nav {
 		@media screen and (min-width: $breackpointXLMin) {
-      flex: auto;
+			flex: auto;
 			margin: 0 100px 0 50px;
 		}
 	}
@@ -53,9 +53,9 @@
 		}
 	}
 	.header__phones {
-    @media screen and (min-width: $breackpointSMMin) {
-      margin: 0 0 10px 0;
-    }
+		@media screen and (min-width: $breackpointSMMin) {
+			margin: 0 0 10px 0;
+		}
 		@media screen and (min-width: $breackpointXXLMin) {
 			margin: 0 30px 0 0;
 		}

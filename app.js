@@ -23,10 +23,6 @@ app.post('/', (req, res) => {
 	// }
 })
 
-app.get('/', (req, res) => {
-	res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
-})
+app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html')))
 
-app.listen(PORT, () => {
-	console.log(`server started on port ${PORT}`)
-})
+app.listen(PORT, () => console.log(`server started on port ${PORT}`))

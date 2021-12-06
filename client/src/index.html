@@ -10,14 +10,14 @@
 	<!-- <body style="opacity: 0"> -->
 	<body>
 		<div class="wrapper">
-			<header class="header _indent">
+			<header class="header _indent" id="header">
 				<div class="header__container _container">
 					<div class="header__body _body">
 						<section class="header__logo logo">
 							<a class="logo__icon" href="#">Logo</a>
 						</section>
-						<section class="header__menu">
-							<nav class="header__nav nav">
+						<section class="header__menu" id="menu">
+							<nav class="header__nav nav" data-list="nav">
 								<ul class="nav__list">
 									<li class="nav__item">
 										<a class="nav__link" href="#home" data-href="#home">Главная</a>
@@ -53,7 +53,7 @@
 							</section>
 						</section>
 						<section class="header__burger">
-							<div class="burger__burger-icon burger-icon">
+							<div class="burger__burger-icon burger-icon" id="burgerIcon">
 								<span class="burger-icon__line"></span>
 							</div>
 						</section>
@@ -142,7 +142,6 @@
 								</div>
 								<div
 									class="advantage__card _right-center wow animate__fadeInRight"
-									data-advantage-message="like"
 									data-wow-duration="1s"
 									data-wow-delay="0"
 									data-wow-offset="50">
@@ -154,7 +153,6 @@
 								</div>
 								<div
 									class="advantage__card _right-bottom wow animate__fadeInBottomRight"
-									data-advantage-message="wood"
 									data-wow-duration="1s"
 									data-wow-delay="0"
 									data-wow-offset="50">
@@ -166,7 +164,6 @@
 								</div>
 								<div
 									class="advantage__card _left-top wow animate__fadeInTopLeft"
-									data-advantage-message="sheet"
 									data-wow-duration="1s"
 									data-wow-delay="0"
 									data-wow-offset="50">
@@ -178,7 +175,6 @@
 								</div>
 								<div
 									class="advantage__card _left-center wow animate__fadeInLeft"
-									data-advantage-message="world"
 									data-wow-duration="1s"
 									data-wow-delay="0"
 									data-wow-offset="50">
@@ -192,7 +188,6 @@
 								</div>
 								<div
 									class="advantage__card _left-bottom wow animate__fadeInBottomLeft"
-									data-advantage-message="trees"
 									data-wow-duration="1s"
 									data-wow-delay="0"
 									data-wow-offset="50">
@@ -208,12 +203,12 @@
 									data-wow-delay="0"
 									data-wow-offset="100">
 									<div class="advantage__circle_small">
-										<span class="advantage__icon _right-top _icon-flower" data-advantage-icon="flower"></span>
-										<span class="advantage__icon _right-center _icon-like" data-advantage-icon="like"></span>
-										<span class="advantage__icon _right-bottom _icon-wood" data-advantage-icon="wood"></span>
-										<span class="advantage__icon _left-top _icon-sheet" data-advantage-icon="sheet"></span>
-										<span class="advantage__icon _left-center _icon-world" data-advantage-icon="world"></span>
-										<span class="advantage__icon _left-bottom _icon-trees" data-advantage-icon="trees"></span>
+										<span class="advantage__icon _right-top _icon-flower"></span>
+										<span class="advantage__icon _right-center _icon-like"></span>
+										<span class="advantage__icon _right-bottom _icon-wood"></span>
+										<span class="advantage__icon _left-top _icon-sheet"></span>
+										<span class="advantage__icon _left-center _icon-world"></span>
+										<span class="advantage__icon _left-bottom _icon-trees"></span>
 										<div class="advantage__picture">
 											<svg class="advantage__img _img">
 												<use xlink:href="assets/sprite.svg#advantage"></use>
@@ -277,17 +272,17 @@
 								<section class="products__headline headline">
 									<h2 class="headline__title">Наша продукция</h2>
 								</section>
-								<div class="products__nav">
-									<button class="products__arrow _arrow-prev _disable" data-pagination="prev">
+								<div class="products__nav" id="sliderNav">
+									<button class="products__arrow _arrow-prev _disable" id="arrowPrev">
 										<span class="products__icon _icon-arrow-left"></span>
 									</button>
-									<button class="products__arrow _arrow-next" data-pagination="next">
+									<button class="products__arrow _arrow-next" id="arrowNext">
 										<span class="products__icon _icon-arrow-right"></span>
 									</button>
 								</div>
 							</section>
 							<section class="products__content">
-								<ul class="products__slider">
+								<ul class="products__slider" id="slider">
 									<li class="products__slide">
 										<div class="products__slide-picture">
 											<img class="products__slide-img _img" src="./assets/img/products/sticksOne.jpg" alt="sticks" />
@@ -370,13 +365,13 @@
 										<form class="send__form">
 											<fieldset class="send__fieldset _input-name">
 												<input class="send__input _input" id="userName" name="userName" type="text" placeholder="Имя" />
-												<label class="send__label" id="labelUserName" for="userName">Некорректное имя!</label>
+												<label class="send__label" for="userName">Некорректное имя!</label>
 											</fieldset>
 											<fieldset class="send__fieldset _input-phone">
 												<input class="send__input _input" id="userPhone" name="userPhone" type="tel" data-phone="mask" />
-												<label class="send__label" id="labelUserPhone" for="userPhone">Некорректное имя!</label>
+												<label class="send__label" for="userPhone">Некорректное имя!</label>
 											</fieldset>
-											<a class="send__btn _btn _shadow" href="#">Заказать консультацию</a>
+											<a class="send__btn _btn _shadow" id="sendBtn" href="#">Заказать консультацию</a>
 										</form>
 									</div>
 								</div>
@@ -429,7 +424,7 @@
 					</div>
 				</div>
 			</main>
-			<footer class="footer _indent wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0" data-wow-offset="50">
+			<footer class="footer _indent wow animate__slideInUp" id="footer" data-wow-duration="1s" data-wow-delay="0" data-wow-offset="50">
 				<div class="footer__container _container">
 					<div class="footer__body _body">
 						<section class="footer__contacts contacts">
@@ -454,7 +449,7 @@
 								</li>
 							</ul>
 						</section>
-						<nav class="footer__nav nav">
+						<nav class="footer__nav nav" data-list="nav">
 							<ul class="nav__list">
 								<li class="nav__item">
 									<a class="nav__link" href="#home" data-href="#home">Главная</a>

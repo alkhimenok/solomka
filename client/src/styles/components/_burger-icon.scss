@@ -12,7 +12,7 @@
 		background-color: $balckColor;
 		border-radius: 4px;
 		transition: $delay;
-		user-select: none;
+		pointer-events: none;
 	}
 	.burger-icon__line {
 		top: 50%;
@@ -51,7 +51,7 @@
 		width: calc(0px + 25 * (100vw / 370));
 		height: calc(0px + 20 * (100vw / 370));
 	}
-	&._active {
+	&._close-icon {
 		.burger-icon__line {
 			top: 50%;
 			transform: scale(0);

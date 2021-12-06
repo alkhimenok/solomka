@@ -130,11 +130,11 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 @import './blocks/footer';
 /* footer ----- */
 
-// body {
-// 	&._overflow-hidden {
-// 		overflow: hidden;
-// 	}
-// }
+body {
+	&._overflow-hidden {
+		overflow: hidden;
+	}
+}
 // .wrapper {
 // 	overflow: hidden;
 // 	min-height: 100vh;
