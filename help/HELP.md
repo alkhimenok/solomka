@@ -18,15 +18,23 @@
 
 ### **Verification:**
 
-1. **To enter your mailbox** - create a file in the root of the project `.evn`
+1. **To enter your mailbox** - in folder `config` there are two files
 
-2. **In the file `.evn`** - add two entries as in the picture
+- To use mail in development mode:
+   - `default.json`
+- For using mail in production:
+   - `production.json`
+2. **Both have the following entry**
 
-    ![img](client/src/assets/img/help/envDemo.png)
+    ![img](mailerConfigDemo.png)
 
-> EMAIL=\<Your mail\>
+3. **Add correct data!** 
 
-> PASSWORD=\<Your password\>
+   
+
+> `email`=\<Youre mail\>
+
+> `password`=\<Your password\>
 
 > Be sure to be case sensitive!!!
 
@@ -41,7 +49,6 @@
   </a>
 </p>
 
-
 ## **Webpack** - it is an open source JavaScript module builder
 
 <br>
@@ -52,48 +59,47 @@
 
 ### **Uing terminal you can:**
 
-
 1. To build a project in the client-side development mode
 
-    ```
-    npm run clientbuild
-    ```
+   ```
+   npm run clientbuild
+   ```
 
 2. To build the client side with automatic server updates
 
-    ```
-    npm run clientwatch
-    ```
+   ```
+   npm run clientwatch
+   ```
 
 3. To run only the server side
 
-    ```
-    npm run serverstart
-    ```
+   ```
+   npm run serverstart
+   ```
 
 4. To automatically update the server side
 
-    ```
-    npm run serverwatch
-    ```
+   ```
+   npm run serverwatch
+   ```
 
 5. To run the entire project in development mode
 
-    ```
-    npm run dev
-    ```   
+   ```
+   npm run dev
+   ```
 
 6. To run the entire project in production mode
 
-    ```
-    npm run prod
-    ```
+   ```
+   npm run prod
+   ```
 
 7. To get statistics of the project load
 
-    ```
-    npm run stats
-    ```
+   ```
+   npm run stats
+   ```
 
 <br>
 
