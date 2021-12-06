@@ -5,15 +5,14 @@
 	.burger-icon__line,
 	&::before,
 	&::after {
+		content: '';
 		position: absolute;
 		right: 0;
-		display: block;
 		height: calc(100% / 6);
-		content: '';
-		user-select: none;
 		background-color: $balckColor;
 		border-radius: 4px;
 		transition: $delay;
+		user-select: none;
 	}
 	.burger-icon__line {
 		top: 50%;

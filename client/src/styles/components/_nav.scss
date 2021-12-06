@@ -25,7 +25,7 @@
 			}
 		}
 		&:active {
-			background-color: $secondaryBackgroundColor;
+			background-color: $backgroundSecondaryColor;
 			border-radius: 40px;
 		}
 		@media screen and (min-width: $breackpointSMMin) {

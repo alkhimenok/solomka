@@ -1,5 +1,6 @@
 .headline {
 	text-align: start;
+	background-color: $transparent;
 	.headline__title {
 		font-family: 'ubuntuBold';
 		@media screen and (min-width: $breackpointXXLMin) {

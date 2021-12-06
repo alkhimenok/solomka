@@ -1,5 +1,5 @@
 .products {
-	background-color: $primaryBackgroundColor;
+	background-color: $backgroundPrimaryColor;
 	.products__header {
 		@include flex(flex-start, space-between);
 	}
@@ -7,7 +7,7 @@
 	// }
 	.products__nav {
 		.products__arrow {
-			background-color: $primaryBackgroundColor;
+			background-color: $backgroundPrimaryColor;
 			border: 1px solid $secondaryColor;
 			border-radius: 50%;
 			transition: $delay;
@@ -78,10 +78,10 @@
 	}
 	.products__slider {
 		@include flex(flex-start, space-between);
+		overflow: hidden;
 		@media screen and (max-width: $breackpointXLMax) {
 			justify-content: flex-start;
 		}
-		overflow: hidden;
 		.products__slide {
 			@media screen and (min-width: $breackpointXXLMin) {
 				min-width: calc(33.333% - 15px);
@@ -141,12 +141,13 @@
 	.products__card {
 		.products__card-wrapper {
 			background-color: $primaryColor;
-			border-radius: 8px;
 			@media screen and (min-width: $breackpointSMMin) {
 				padding: 30px 40px;
+				border-radius: 8px;
 			}
 			@media screen and (max-width: $breackpointXSMax) {
 				padding: calc(0px + 30 * (100vw / 370)) calc(0px + 40 * (100vw / 370));
+				border-radius: calc(0px + 8 * (100vw / 370));
 			}
 		}
 		.products__card-title {
@@ -168,9 +169,9 @@
 			}
 		}
 		.products__card-description {
-			color: $whiteColor;
 			font-size: 1.6rem;
 			line-height: 2.4rem;
+			color: $whiteColor;
 			@include removeMB;
 			@media screen and (min-width: $breackpointXXLMin) {
 				margin: 0 0 60px 0;

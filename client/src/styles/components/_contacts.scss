@@ -2,9 +2,6 @@
 	background-color: $transparent;
 	.contacts__list {
 		@include removeMB;
-		@media screen and (max-width: $breackpointMDMax) {
-			text-align: center;
-		}
 	}
 	.contacts__item {
 		font-size: 1.6rem;
@@ -36,6 +33,14 @@
 		display: inline-block;
 		text-align: center;
 		transition: $delay;
+		// &._icon-location {
+		// }
+		// &._icon-mail {
+		// }
+		// &._icon-phone {
+		// }
+		// &._icon-watch {
+		// }
 		@media screen and (min-width: $breackpointSMMin) {
 			width: 18px;
 			margin: 0 15px 0 0;

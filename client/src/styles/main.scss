@@ -8,9 +8,9 @@ $transparentPrimaryColor: #d6eaa8;
 $transparentSecondaryColor: #fddcb0;
 $textPrimaryColor: #1d2310;
 $textSecondaryColor: #292b27;
-$primaryBackgroundColor: #ffffff;
-$secondaryBackgroundColor: #f5f8fe;
-$transparentPrimaryBackgroundColor: #ffffffee;
+$backgroundPrimaryColor: #ffffff;
+$backgroundSecondaryColor: #f5f8fe;
+$transparentBackgroundPrimaryColor: #ffffffee;
 
 $delay: 0.2s ease-in-out;
 $longDelay: 0.6s ease-in-out;
@@ -140,23 +140,24 @@ $breackpointXXLMin: $breackpointXLMax + 1px; // 1181px
 // 	min-height: 100vh;
 // }
 
-// .main {
-// 	.main__container {
-// 		.main__body {
-// 			.main__home {
-// 			}
-// 			.main__about {
-// 			}
-// 			.main__advantage {
-// 			}
-// 			.main__for {
-// 			}
-// 			.main__products {
-// 			}
-// 			.main__send {
-// 			}
-// 			.main__map {
-// 			}
-// 		}
-// 	}
-// }
+.main {
+	background-color: $backgroundPrimaryColor;
+	// .main__container {
+	// }
+	// .main__body {
+	// }
+	// .main__home {
+	// }
+	// .main__about {
+	// }
+	// .main__advantage {
+	// }
+	// .main__for {
+	// }
+	// .main__products {
+	// }
+	// .main__send {
+	// }
+	// .main__map {
+	// }
+}

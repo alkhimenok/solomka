@@ -1,5 +1,7 @@
 ._indent {
-	padding: 50px 0;
+	@media screen and (min-width: $breackpointXXLMin) {
+		padding: 50px 0;
+	}
 	@media screen and (max-width: $breackpointXLMax) {
 		padding: calc(12px + 38 * ((100vw - 370px) / (1180 - 370))) 0;
 	}
@@ -12,7 +14,9 @@
 	margin: 0 auto;
 }
 ._body {
-	padding: 0 15px;
+	@media screen and (min-width: $breackpointSMMin) {
+		padding: 0 15px;
+	}
 	@media screen and (max-width: $breackpointXSMax) {
 		padding: 0 calc(0px + 15 * (100vw / 370));
 	}
@@ -20,28 +24,20 @@
 ._btn {
 	display: inline-block;
 	text-align: center;
-	padding: 19px;
 	font-family: 'ubuntuMedium';
 	font-size: 1.8rem;
 	color: $whiteColor;
 	background-color: $secondaryColor;
-	border-radius: 40px;
 	transition: $delay;
 	user-select: none;
 	&._big {
-		padding: 24px;
 		font-family: 'ubuntuBold';
-		border-radius: 60px;
 	}
 	&._small {
-		padding: 14px;
 		font-size: 1.4rem;
 	}
 	&._green {
 		background-color: $primaryColor;
-	}
-	&._shadow {
-		box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
 	}
 	@media screen and (hover: hover) {
 		&:hover {
@@ -59,10 +55,26 @@
 			background-color: $transparentPrimaryColor;
 		}
 	}
+	@media screen and (min-width: $breackpointSMMin) {
+		padding: 19px;
+		border-radius: 40px;
+		&._big {
+			padding: 24px;
+			border-radius: 60px;
+		}
+		&._small {
+			padding: 14px;
+		}
+		&._shadow {
+			box-shadow: 0px 8px 25px rgba(175, 108, 20, 0.25);
+		}
+	}
 	@media screen and (max-width: $breackpointXSMax) {
 		padding: calc(0px + 19 * (100vw / 370));
+		border-radius: calc(0px + 40 * (100vw / 370));
 		&._big {
 			padding: calc(0px + 24 * (100vw / 370));
+			border-radius: calc(0px + 60 * (100vw / 370));
 		}
 		&._small {
 			padding: calc(0px + 14 * (100vw / 370));
@@ -73,18 +85,15 @@
 	}
 }
 ._input {
-	padding: 14px 24px;
 	font-size: 1.6rem;
 	color: $textSecondaryColor;
 	background-color: $transparent;
 	border: 2px solid $transparentSecondaryColor;
-	border-radius: 40px;
 	transition: $delay;
 	&._green {
 		border-color: $transparentPrimaryColor;
 	}
 	&._small {
-		padding: 15px 24px;
 		font-size: 1.4rem;
 	}
 	@media screen and (hover: hover) {
@@ -104,8 +113,16 @@
 			border-color: $primaryColor;
 		}
 	}
+	@media screen and (min-width: $breackpointSMMin) {
+		padding: 14px 24px;
+		border-radius: 40px;
+		&._small {
+			padding: 15px 24px;
+		}
+	}
 	@media screen and (max-width: $breackpointXSMax) {
 		padding: calc(0px + 14 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
+		border-radius: calc(0px + 40 * (100vw / 370));
 		&._small {
 			padding: calc(0px + 15 * (100vw / 370)) calc(0px + 24 * (100vw / 370));
 		}

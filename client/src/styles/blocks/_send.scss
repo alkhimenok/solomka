@@ -1,5 +1,5 @@
 .send {
-	background-color: $primaryBackgroundColor;
+	background-color: $backgroundPrimaryColor;
 	.send__body {
 		@media screen and (min-width: $breackpointLGMin) {
 			padding: calc(0px + 80 * ((100vw - 769px) / (1180 - 769))) calc(0px + 65 * ((100vw - 769px) / (1180 - 769)));

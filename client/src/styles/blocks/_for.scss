@@ -1,5 +1,5 @@
 .for {
-	background-color: $primaryBackgroundColor;
+	background-color: $backgroundPrimaryColor;
 	// .for__headline {
 	// }
 	// .for__content {
@@ -13,7 +13,7 @@
 		transition: $delay;
 		@media screen and (hover: hover) {
 			&:hover {
-				background-color: $secondaryBackgroundColor;
+				background-color: $backgroundSecondaryColor;
 				.for__icon {
 					color: $secondaryColor;
 				}
@@ -36,6 +36,7 @@
 		}
 	}
 	.for__background {
+		fill: $backgroundSecondaryColor;
 		@media screen and (max-width: $breackpointXSMax) {
 			width: calc(((100vw - 30px) / 100) * 60);
 			height: calc(((100vw - 30px) / 100) * (150 / (192 / 60)));

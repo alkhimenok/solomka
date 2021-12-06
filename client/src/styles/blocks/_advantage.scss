@@ -1,5 +1,5 @@
 .advantage {
-	background-color: $primaryBackgroundColor;
+	background-color: $backgroundPrimaryColor;
 	// .advantage__headline {
 	// }
 	.advantage__body {
@@ -96,7 +96,7 @@
 	.advantage__circle_small,
 	.advantage__icon {
 		@include flex(center, center);
-		background-color: $primaryBackgroundColor;
+		background-color: $backgroundPrimaryColor;
 		border: 2px dashed $secondaryColor;
 		border-radius: 50%;
 	}

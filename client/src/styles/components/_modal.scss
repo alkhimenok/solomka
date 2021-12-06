@@ -7,10 +7,10 @@
 	transition: $longDelay;
 	.modal__btn_close {
 		position: absolute;
-		@include flex(center, center);
 		right: 4%;
 		top: 10%;
 		transform: rotate(45deg);
+		@include flex(center, center);
 		cursor: pointer;
 		&::before,
 		&::after {
@@ -59,9 +59,9 @@
 		}
 	}
 	.modal__title {
-		color: $whiteColor;
 		font-size: 3rem;
 		line-height: 3rem;
+		color: $whiteColor;
 		@media screen and (min-width: $breackpointSMMin) {
 			margin: 0 0 20px 0;
 		}
@@ -72,7 +72,7 @@
 	.modal__subtitle {
 		font-size: 1.8rem;
 		line-height: 2.2rem;
-		color: $transparentPrimaryBackgroundColor;
+		color: $transparentBackgroundPrimaryColor;
 	}
 	@media screen and (min-width: $breackpointSMMin) {
 		width: 450px;

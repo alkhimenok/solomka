@@ -1,16 +1,16 @@
 .map {
   position: relative;
-	background-color: $primaryBackgroundColor;
+	background-color: $backgroundPrimaryColor;
 	// .map__headline {
 	// }
 	.map__contacts {
 		background-color: $primaryColor;
-		border-radius: 8px;
 		li {
-      color: $whiteColor;
+			color: $whiteColor;
 		}
     @media screen and (min-width: $breackpointSMMin) {
-      padding: 30px 25px;
+			padding: 30px 25px;
+			border-radius: 8px;
     }
 		@media screen and (min-width: $breackpointLGMin) {
       position: absolute;
@@ -28,8 +28,9 @@
 			width: 100%;
 		}
 		@media screen and (max-width: $breackpointXSMax) {
-			padding: calc(0px + 30 * (100vw / 370)) calc(0px + 25 * (100vw / 370));
 			margin: 0 0 calc(0px + 25 * (100vw / 370)) 0;
+			padding: calc(0px + 30 * (100vw / 370)) calc(0px + 25 * (100vw / 370));
+			border-radius: calc(0px + 8 * (100vw / 370));
 		}
 	}
 	.map__wrapper {
