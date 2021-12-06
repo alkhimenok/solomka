@@ -80,7 +80,7 @@
 	}
 	.products__slider {
 		@include flex(flex-start, space-between);
-		transition: $delay;
+		transition: $longDelay	;
 		@media screen and (max-width: $breackpointXLMax) {
 			justify-content: flex-start;
 		}
@@ -143,6 +143,7 @@
 		}
 	}
 	.products__card {
+		background-color: $transparentBackgroundPrimaryColor;
 		.products__card-wrapper {
 			background-color: $primaryColor;
 			@media screen and (min-width: $breackpointSMMin) {
@@ -250,7 +251,7 @@
 			font-family: 'ubuntuBold';
 			font-size: 2.1rem;
 		}
-		.products__card-all-slide-number {
+		.products__card-total-slides {
 			color: $textSecondaryColor;
 		}
 		@media screen and (min-width: $breackpointXXLMin) {
