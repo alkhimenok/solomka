@@ -19,16 +19,18 @@ import {
 	addHandlerCliderTouch,
 	addHandlerCliderClicks,
 	setPoginationSize,
-} from './scripts/slider'
+} from './scripts/slider/swiper'
+import { startAutoSwiper } from './scripts/slider/autoSwiper'
 
 const start = () => {
 	try {
-		// new WOW().init()
+		new WOW().init()
 
 		setMarginForHeader()
 		setPhoneMask()
 		rewriteCallLinks()
 		setPoginationSize()
+		startAutoSwiper()
 
 		navs.forEach($nav => $nav.addEventListener('click', handlerNavMove))
 		applications.forEach($application => $application.addEventListener('click', moveToSendSection))
