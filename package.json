@@ -1,5 +1,5 @@
 {
-	"name": "salomka",
+	"name": "solomka",
 	"version": "1.0.0",
 	"description": "",
 	"main": "app.js",
@@ -15,15 +15,15 @@
 	"browserslist": "> 0.25%, not dead",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/alkhimenok/salomka.git"
+		"url": "git+https://github.com/alkhimenok/solomka.git"
 	},
 	"keywords": [],
 	"author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/alkhimenok/salomka/issues"
+		"url": "https://github.com/alkhimenok/solomka/issues"
 	},
-	"homepage": "https://github.com/alkhimenok/salomka#readme",
+	"homepage": "https://github.com/alkhimenok/solomka#readme",
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
 		"@babel/polyfill": "^7.12.1",
