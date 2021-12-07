@@ -11,16 +11,24 @@ export const submitForm = e => {
 	const { value: phone } = $inputUserPhone
 
 	const userData = {
-		name,
-		phone,
 		callLink: getCorrectCallLink(phone),
 		date: getFullDate(),
+		name,
+		phone,
 	}
 
-	handlerRequest('/', 'POST', userData)
+	handlerRequest('/', 'POST', userData).then(data => {
+		const { status, name } = data
 
-	showModalSuccess(name)
+		if (status === 200) {
+			showModalSuccess(name)
+			clearFomr()
+			console.log(data)
+		}
+	})
+}
 
+const clearFomr = () => {
 	$inputUserName.value = ''
 	$inputUserPhone.value = ''
 	$btnSendForm.classList.add('_disable')

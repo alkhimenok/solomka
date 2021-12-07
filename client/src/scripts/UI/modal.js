@@ -12,14 +12,14 @@ export const showModalSuccess = name => {
 	$modal = document.querySelector('#modal')
 	$btnClose = $modal.querySelector('.modal__btn_close')
 	timeout = setTimeout(hideModalSuccess, 4000)
-
-	setTimeout(() => $modal.classList.add('_show'), 0)
-
+	
+	setTimeout(() => $modal.classList.add('_show'), 100)
+	
 	$btnClose.addEventListener('click', hideModalSuccess)
 }
 
-const getModal = (name) => {
-	const startMessage = name ? name.slice(0, 1).toUpperCase() + name.slice(1) + ', мы' : 'Мы'
+const getModal = name => {
+	const startMessage = name ? name?.slice(0, 1).toUpperCase() + name?.slice(1) + ', мы' : 'Мы'
 
 	return `
 		<div class="modal" id="modal">

@@ -42,7 +42,6 @@ const start = () => {
 		$sendForm.addEventListener('change', handlerChangeSendForm)
 		$sendForm.addEventListener('submit', submitForm)
 	} catch (error) {
-		// lintener errors
 		console.error(error)
 	} finally {
 		hideLoader()

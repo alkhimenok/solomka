@@ -1,6 +1,4 @@
-export const handlerRequest = async (url = '/', method = 'GET', data = null) => {
-	// lintener errors
-
+export const handlerRequest = async (url = '', method = 'GET', data = null) => {
 	try {
 		const headers = {}
 		let body = {}
@@ -16,10 +14,7 @@ export const handlerRequest = async (url = '/', method = 'GET', data = null) => 
 			body,
 		})
 	
-		const responseData = await response.json()
-    console.log('request:', responseData);
-    
-		return responseData
+		return await response.json()
 	} catch (error) {
 		console.log(error)
 	}
