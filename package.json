@@ -1,5 +1,5 @@
 {
-	"name": "vid-eco-pro",
+	"name": "salomka",
 	"version": "1.0.0",
 	"description": "",
 	"main": "app.js",
@@ -15,15 +15,15 @@
 	"browserslist": "> 0.25%, not dead",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/alkhimenok/vid-eco-pro.git"
+		"url": "git+https://github.com/alkhimenok/salomka.git"
 	},
 	"keywords": [],
 	"author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/alkhimenok/vid-eco-pro/issues"
+		"url": "https://github.com/alkhimenok/salomka/issues"
 	},
-	"homepage": "https://github.com/alkhimenok/vid-eco-pro#readme",
+	"homepage": "https://github.com/alkhimenok/salomka#readme",
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
 		"@babel/polyfill": "^7.12.1",
