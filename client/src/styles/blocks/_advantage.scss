@@ -18,6 +18,12 @@
 		display: inline-block;
 		background-color: $primaryColor;
 		transition: $delay;
+		cursor: default;
+		@media screen and (hover: hover) {
+			&:hover {
+				background-color: $secondaryColor;
+			}
+		}
 		@media screen and (min-width: $breackpointSMMin) {
 			padding: 10px;
 			border-radius: 10px;

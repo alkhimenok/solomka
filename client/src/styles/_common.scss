@@ -39,20 +39,26 @@
 	&._green {
 		background-color: $primaryColor;
 	}
-	@media screen and (hover: hover) {
-		&:hover {
-			background-color: $transparentSecondaryColor;
-			&._green {
-				background-color: $transparentPrimaryColor;
+	&._disable {
+		opacity: 0.6;
+		pointer-events: none;
+	}
+	&:not(._disable) {
+		@media screen and (hover: hover) {
+			&:hover {
+				background-color: $transparentSecondaryColor;
+				&._green {
+					background-color: $transparentPrimaryColor;
+				}
 			}
 		}
-	}
-	&:active {
-		color: $secondaryColor;
-		background-color: $transparentSecondaryColor;
-		&._green {
-			color: $primaryColor;
-			background-color: $transparentPrimaryColor;
+		&:active {
+			color: $secondaryColor;
+			background-color: $transparentSecondaryColor;
+			&._green {
+				color: $primaryColor;
+				background-color: $transparentPrimaryColor;
+			}
 		}
 	}
 	@media screen and (min-width: $breackpointSMMin) {

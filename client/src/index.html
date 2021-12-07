@@ -362,16 +362,16 @@
 												<use xlink:href="assets/sprite.svg#send"></use>
 											</svg>
 										</div>
-										<form class="send__form">
+										<form class="send__form" id="sendForm">
 											<fieldset class="send__fieldset _input-name">
-												<input class="send__input _input" id="userName" name="userName" type="text" placeholder="Имя" />
+												<input class="send__input _input" name="inputUserName" type="text" placeholder="Имя" />
 												<label class="send__label" for="userName">Некорректное имя!</label>
 											</fieldset>
 											<fieldset class="send__fieldset _input-phone">
-												<input class="send__input _input" id="userPhone" name="userPhone" type="tel" data-phone="mask" />
+												<input class="send__input _input" name="inputUserPhone" type="tel" data-phone="mask" />
 												<label class="send__label" for="userPhone">Некорректное имя!</label>
 											</fieldset>
-											<a class="send__btn _btn _shadow" id="sendBtn" href="#">Заказать консультацию</a>
+											<button class="send__btn _btn _shadow _disable" name="btnSendForm">Заказать консультацию</button>
 										</form>
 									</div>
 								</div>
@@ -414,11 +414,11 @@
 								</ul>
 							</div>
 							<div class="map__wrapper wow animate__slideInLeft" data-wow-duration="1s" data-wow-delay="0" data-wow-offset="50">
-								<script
+								<!-- <script
 									type="text/javascript"
 									charset="utf-8"
 									async
-									src="https://api-map.yandex.ru/services/constructor/1.0/js/?um=constructor%3A31587966de5f81ea97279ffc54c322298849b2c1dd55e2e42dcb5cb3c0ffeb13&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+									src="https://api-map.yandex.ru/services/constructor/1.0/js/?um=constructor%3A31587966de5f81ea97279ffc54c322298849b2c1dd55e2e42dcb5cb3c0ffeb13&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
 							</div>
 						</section>
 					</div>

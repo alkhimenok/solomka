@@ -15,7 +15,7 @@ app.use(express.json())
 
 app.post('/', (req, res) => {
 	const { body } = req
-
+	console.log(body);
 	// if (body.name.lenght < 2 && body.phone.length === 19) {
 		sendMail(body)
 
