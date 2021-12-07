@@ -2,25 +2,25 @@ import './styles/main.scss'
 import 'animate.css'
 import WOW from 'wow.js'
 
-import { showLoader, hideLoader } from './scripts/UI/loader'
-import { setMarginForHeader } from './scripts/indent'
-import { setPhoneMask } from './scripts/phones/inputMask'
-import { rewriteCallLinks } from './scripts/phones/callLinks'
-import { navs, handlerNavMove } from './scripts/pageMove/navMove'
-import { applications, moveToSendSection } from './scripts/pageMove/toSendSection'
-import { $burgerIcon, toggleShowMenu } from './scripts/burger'
+import { showLoader, hideLoader } from './scripts/UI/loader' // ok
+import { setMarginForHeader } from './scripts/indent' // ok
+import { setPhoneMask } from './scripts/phones/inputMask' // ok
+import { rewriteCallLinks } from './scripts/phones/callLinks' // ok
+import { navs, addHandlerPageNav } from './scripts/pageMove/navMove' // ok
+import { applications, moveToSendSection } from './scripts/pageMove/toSendSection' // ok
+import { $burgerIcon, toggleShowMenu } from './scripts/burger' // ok
 import {
 	$slider,
 	$sliderNav,
+	setPoginationSize,
 	setPositionTouchStart,
 	setPositionTouchEnd,
-	addHandlerCliderTouch,
-	addHandlerCliderClicks,
-	setPoginationSize,
-} from './scripts/slider/swiper'
-import { startAutoSwiper } from './scripts/slider/autoSwiper'
-import { $sendForm, handlerChangeForm } from './scripts/form/validator'
-import { submitForm } from './scripts/form/submit'
+	addHandlerSliderTouch,
+	addHandlerSliderClicks,
+} from './scripts/slider/swiper' // ok
+import { startAutoSwiper } from './scripts/slider/autoSwiper' // ok
+import { $sendForm, handlerChangeSendForm } from './scripts/form/validator' // ok
+import { submitForm } from './scripts/form/submit' // ok
 
 const start = () => {
 	try {
@@ -32,14 +32,14 @@ const start = () => {
 		setPoginationSize()
 		startAutoSwiper()
 
-		navs.forEach($nav => $nav.addEventListener('click', handlerNavMove))
+		navs.forEach($nav => $nav.addEventListener('click', addHandlerPageNav))
 		applications.forEach($application => $application.addEventListener('click', moveToSendSection))
 		$burgerIcon.addEventListener('click', toggleShowMenu)
 		$slider.addEventListener('touchstart', setPositionTouchStart)
 		$slider.addEventListener('touchmove', setPositionTouchEnd)
-		$slider.addEventListener('touchend', addHandlerCliderTouch)
-		$sliderNav.addEventListener('click', addHandlerCliderClicks)
-		$sendForm.addEventListener('change', handlerChangeForm)
+		$slider.addEventListener('touchend', addHandlerSliderTouch)
+		$sliderNav.addEventListener('click', addHandlerSliderClicks)
+		$sendForm.addEventListener('change', handlerChangeSendForm)
 		$sendForm.addEventListener('submit', submitForm)
 	} catch (error) {
 		// lintener errors

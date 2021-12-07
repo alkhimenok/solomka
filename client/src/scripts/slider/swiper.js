@@ -4,8 +4,8 @@ const $products = document.querySelector('#products')
 
 export const $slider = $products.querySelector('#slider')
 export const $sliderNav = $products.querySelector('#sliderNav')
-export const $arrowNext = $sliderNav.querySelector(`#arrowNext`)
-export const $arrowPrev = $sliderNav.querySelector('#arrowPrev')
+export const $btnNext = $sliderNav.querySelector(`#btnNext`)
+export const $btnPrev = $sliderNav.querySelector('#btnPrev')
 
 const $poginationThumb = $products.querySelector('#poginationThumb')
 const $currentSlide = $products.querySelector('#currentSlide')
@@ -27,10 +27,10 @@ export const setPoginationSize = () => {
 
 export const setPositionTouchStart = e => (touchStart = e.touches[0].clientX)
 export const setPositionTouchEnd = e => (touchEnd = e.touches[0].clientX)
-export const addHandlerCliderTouch = () => moneSlide(touchStart > touchEnd ? $arrowNext : $arrowPrev)
-export const addHandlerCliderClicks = e => (e.target.classList.contains('products__arrow') ? moneSlide(e.target) : null)
+export const addHandlerSliderTouch = () => moveSlide(touchStart > touchEnd ? $btnNext : $btnPrev)
+export const addHandlerSliderClicks = e => (e.target.classList.contains('products__arrow') ? moveSlide(e.target) : null)
 
-export const moneSlide = arrow => {
+export const moveSlide = arrow => {
 	if (arrow.classList.contains('_disable')) return
 
 	const BODY_WIDTH = $body.clientWidth
@@ -48,13 +48,13 @@ export const moneSlide = arrow => {
 
 export const checkSliderBoundaries = () => {
 	if (curretSlide === MIN_SLIDES) {
-		$arrowPrev.classList.add('_disable')
+		$btnPrev.classList.add('_disable')
 		return 'min'
 	} else if (curretSlide === MAX_SLIDES - 1) {
-		$arrowNext.classList.add('_disable')
+		$btnNext.classList.add('_disable')
 		return 'max'
 	} else {
-		$arrowPrev.classList.remove('_disable')
-		$arrowNext.classList.remove('_disable')
+		$btnPrev.classList.remove('_disable')
+		$btnNext.classList.remove('_disable')
 	}
 }

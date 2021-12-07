@@ -1,4 +1,4 @@
-import { $arrowNext, $arrowPrev, moneSlide, checkSliderBoundaries } from './swiper'
+import { $btnNext, $btnPrev, moveSlide, checkSliderBoundaries } from './swiper'
 
 export const startAutoSwiper = () => {
 	let currentVector
@@ -7,11 +7,11 @@ export const startAutoSwiper = () => {
 		const sliderState = checkSliderBoundaries()
 
 		if (sliderState === 'min') {
-			currentVector = $arrowNext
+			currentVector = $btnNext
 		} else if (sliderState === 'max') {
-			currentVector = $arrowPrev
+			currentVector = $btnPrev
 		}
 
-		moneSlide(currentVector)
+		moveSlide(currentVector)
 	}, 7000)
 }

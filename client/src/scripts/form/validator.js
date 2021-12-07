@@ -8,7 +8,7 @@ export const $btnSendForm = $sendForm.btnSendForm
 let isUserNameValid = false
 let isUserPhoneValid = false
 
-export const handlerChangeForm = e => {
+export const handlerChangeSendForm = e => {
 	const { target } = e
 	const { value } = target
 
@@ -25,8 +25,8 @@ export const handlerChangeForm = e => {
 	}
 }
 
-const isInputValid = (input, condition) => {
-	const $fieldset = input.closest('fieldset')
+const isInputValid = ($input, condition) => {
+	const $fieldset = $input.closest('fieldset')
 
 	if (condition) {
 		$fieldset.classList.add('_no-valid')

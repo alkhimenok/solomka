@@ -1,7 +1,7 @@
 import { $body } from '../indent'
 
-let $spinner = null
-const spinner = `
+let $loader = null
+const loader = `
   <div class="loader" id="loader">
     <span class="loader-line"></span>
     <span class="loader-line"></span>
@@ -10,23 +10,23 @@ const spinner = `
 `
 
 export const showLoader = () => {
-	if ($spinner) return
+	if ($loader) return
 
-	$body.insertAdjacentHTML('afterbegin', spinner)
+	$body.insertAdjacentHTML('afterbegin', loader)
 
-	$spinner = document.querySelector('#loader')
+	$loader = document.querySelector('#loader')
 
-	setTimeout(() => $spinner.classList.add('_show'), 0)
+	setTimeout(() => $loader.classList.add('_show'), 0)
 }
 
 export const hideLoader = () => {
-	if (!$spinner) return document.querySelector('#loader')?.remove()
+	if (!$loader) return document.querySelector('#loader')?.remove()
 
-	$spinner.classList.remove('_show')
+	$loader.classList.remove('_show')
 
 	setTimeout(() => {
-		$spinner.remove()
+		$loader.remove()
 
-		$spinner = null
+		$loader = null
 	}, 600)
 }

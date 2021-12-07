@@ -1,16 +1,16 @@
 import { moveToSection } from './movementAnimation'
-import { toggleShowMenu } from '../burger'
+import { hideMenu } from '../burger'
 
 export const navs = document.querySelectorAll('[data-list="nav"]')
 
-export const handlerNavMove = e => {
+export const addHandlerPageNav  = e => {
 	if (e.target.tagName !== 'A') return
 
 	const { target } = e
 	const { href } = target.dataset
 
 	moveToSection(href)
-	toggleShowMenu()
+	hideMenu()
 
 	e.preventDefault()
 }
