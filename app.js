@@ -3,7 +3,7 @@ const path = require('path')
 const config = require('config')
 const bodyParser = require('body-parser')
 
-const sendMail = require('./mailer/sendMail')
+const { submitMail } = require('./mailer/submitMail')
 
 const app = express()
 
@@ -13,17 +13,23 @@ app.use(express.static(path.resolve(__dirname, 'client', 'dist')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json())
 
+app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html')))
+
 app.post('/', (req, res) => {
 	const { body } = req
-	console.log(body);
-	// if (body.name.lenght < 2 && body.phone.length === 19) {
+
+	if (!(body.name.lenght < 2) && !(body.phone.length < 19)) {
+		submitMail(body)
+
 		body.status = 200
-		sendMail(body)
 
 		res.status(200).json(body)
-	// }
-})
+	} else {
+		body.status = 400
+		body.info = 'incomplete data'
 
-app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html')))
+		res.sendStatus(400).json(body)
+	}
+})
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`))

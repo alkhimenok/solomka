@@ -7,6 +7,10 @@ import { showModalSuccess } from '../UI/modal'
 export const submitForm = e => {
 	e.preventDefault()
 
+	if ($btnSendForm.classList.contains('_disable')) return
+
+	console.log('submit');
+
 	const { value: name } = $inputUserName
 	const { value: phone } = $inputUserPhone
 
@@ -18,7 +22,7 @@ export const submitForm = e => {
 	}
 
 	handlerRequest('/', 'POST', userData).then(data => {
-		const { status, name } = data
+		const { name, status } = data
 
 		if (status === 200) {
 			showModalSuccess(name)

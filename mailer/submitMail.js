@@ -1,23 +1,24 @@
 const nodemailer = require('nodemailer')
 const config = require('config')
-const MAILER_DATA = config.get('mailer')
 
-const transparter = nodemailer.createTransport({
-	service: 'gmail',
-	auth: {
-		user: MAILER_DATA.email,
-		pass: MAILER_DATA.password
-	},
-})
+const adminEmailData = config.get('adminEmailData')
 
-module.exports = sendMail = userData => {
-	const mailOptions = setMailOptions(userData)
+const submitMail = userData => {
+	const mailOptions = getMailOptions(userData)
 
 	transparter.sendMail(mailOptions, err => console.log(err))
 }
 
-const setMailOptions = data => {
-	const { name, phone, callLink,  date } = data
+const transparter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: adminEmailData.email,
+		pass: adminEmailData.password,
+	},
+})
+
+const getMailOptions = data => {
+	const { callLink, date, name, phone } = data
 
 	return {
 		from: 'alhikirill@gmail.com',
@@ -43,3 +44,5 @@ const setMailOptions = data => {
 		`,
 	}
 }
+
+module.exports.submitMail = submitMail
