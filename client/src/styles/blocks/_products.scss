@@ -144,7 +144,7 @@
 	}
 	.products__card {
 		background-color: $transparentBackgroundPrimaryColor;
-		.products__card-wrapper {
+		.products__card-body {
 			background-color: $primaryColor;
 			@media screen and (min-width: $breackpointSMMin) {
 				padding: 30px 40px;

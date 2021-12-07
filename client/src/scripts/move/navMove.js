@@ -1,4 +1,4 @@
-import { moveToSection } from './movementAnimation'
+import { moveToSection } from './moveMentAnimation'
 import { hideMenu } from '../burger'
 
 export const navs = document.querySelectorAll('[data-list="nav"]')

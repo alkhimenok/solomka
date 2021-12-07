@@ -2,13 +2,13 @@ import './styles/main.scss'
 import 'animate.css'
 import WOW from 'wow.js'
 
-import { showLoader, hideLoader } from './scripts/UI/loader' // ok
-import { setMarginForHeader } from './scripts/indent' // ok
-import { setPhoneMask } from './scripts/phones/inputMask' // ok
-import { rewriteCallLinks } from './scripts/phones/callLinks' // ok
-import { navs, addHandlerPageNav } from './scripts/pageMove/navMove' // ok
-import { applications, moveToSendSection } from './scripts/pageMove/toSendSection' // ok
-import { $burgerIcon, toggleShowMenu } from './scripts/burger' // ok
+import { showLoader, hideLoader } from './scripts/UI/loader'
+import { $body, setMarginForHeader } from './scripts/indent'
+import { setPhoneMask } from './scripts/phones/inputMask'
+import { rewriteCallLinks } from './scripts/phones/callLinks'
+import { navs, addHandlerPageNav } from './scripts/move/navMove'
+import { applications, moveToSendSection } from './scripts/move/toSendSection'
+import { $burgerIcon, toggleShowMenu } from './scripts/burger'
 import {
 	$slider,
 	$sliderNav,
@@ -17,10 +17,10 @@ import {
 	setPositionTouchEnd,
 	addHandlerSliderTouch,
 	addHandlerSliderClicks,
-} from './scripts/slider/swiper' // ok
-import { startAutoSwiper } from './scripts/slider/autoSwiper' // ok
-import { $sendForm, handlerChangeSendForm } from './scripts/form/validator' // ok
-import { submitForm } from './scripts/form/submit' // ok
+} from './scripts/slider/swiper'
+import { startAutoSwiper } from './scripts/slider/autoSwiper'
+import { $sendForm, handlerChangeSendForm } from './scripts/form/validator'
+import { submitForm } from './scripts/form/submit'
 
 const start = () => {
 	try {
@@ -44,6 +44,8 @@ const start = () => {
 	} catch (error) {
 		console.error(error)
 	} finally {
+		$body.style.opacity = 1
+		
 		hideLoader()
 	}
 }

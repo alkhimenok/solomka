@@ -3,7 +3,6 @@ export const { sendForm: $sendForm } = document.forms
 export const $inputUserName = $sendForm.inputUserName
 export const $inputUserPhone = $sendForm.inputUserPhone
 export const $btnSendForm = $sendForm.btnSendForm
-// const { inputUserName: $inputUserName, inputUserPhone: $inputUserPhone, btnSendForm: $btnSendForm } = $sendForm
 
 let isUserNameValid = false
 let isUserPhoneValid = false

@@ -1,4 +1,4 @@
-import { moveToSection } from './movementAnimation'
+import { moveToSection } from './moveMentAnimation'
 
 export const applications = document.querySelectorAll('[data-form=application]')
 
@@ -11,9 +11,9 @@ export const moveToSendSection = e => {
 	const { href } = btn.dataset
 
 	if (input?.value) {
-		const userPhone = document.querySelector('#userPhone')
+		const inputUserPhone = document.querySelector('#inputUserPhone')
 
-		userPhone.value = input.value
+		inputUserPhone.value = input.value
 	}
 
 	if (target === btn) {
