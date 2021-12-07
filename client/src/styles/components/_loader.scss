@@ -11,7 +11,7 @@ $maxHeight: 30px;
   left: 0;
   z-index: 5;
   @include flex(center, center);
-  background-color: $backgroundSecondaryColor;
+  background-color: $transparentBackgroundPrimaryColor;
   opacity: 0;
   visibility: hidden;
   transition: $longDelay;
