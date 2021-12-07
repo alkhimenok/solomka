@@ -21,8 +21,8 @@ const getMailOptions = data => {
 	const { callLink, date, name, phone } = data
 
 	return {
-		from: 'alhikirill@gmail.com',
-		to: 'kirillalhi@gmail.com',
+		from: adminEmailData.email,
+		to: adminEmailData.email,
 		subject: 'Пользователь хочет получить вошу консультацию',
 		html: `
 			<div style="padding: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif">
