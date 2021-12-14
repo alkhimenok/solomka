@@ -47,14 +47,21 @@ export const moveSlide = arrow => {
 }
 
 export const checkSliderBoundaries = () => {
-	if (curretSlide === MIN_SLIDES) {
-		$btnPrev.classList.add('_disable')
-		return 'min'
-	} else if (curretSlide === MAX_SLIDES - 1) {
-		$btnNext.classList.add('_disable')
-		return 'max'
-	} else {
-		$btnPrev.classList.remove('_disable')
-		$btnNext.classList.remove('_disable')
-	}
+  let res
+
+  if (curretSlide === MIN_SLIDES) {
+    $btnPrev.classList.add("_disable")
+    res = "min"
+  } else {
+    $btnPrev.classList.remove("_disable")
+  }
+	
+  if (curretSlide === MAX_SLIDES - 1) {
+    $btnNext.classList.add("_disable")
+    res = "max"
+  } else {
+    $btnNext.classList.remove("_disable")
+  }
+
+  return res
 }
