@@ -7,11 +7,11 @@ export const $sliderNav = $products.querySelector('#sliderNav')
 export const $btnNext = $sliderNav.querySelector(`#btnNext`)
 export const $btnPrev = $sliderNav.querySelector('#btnPrev')
 
+export const slides = $slider.children
+
 const $poginationThumb = $products.querySelector('#poginationThumb')
 const $currentSlide = $products.querySelector('#currentSlide')
 const $totalSlides = $products.querySelector('#totalSlides')
-
-const slides = $slider.children
 
 const MIN_SLIDES = 0
 const MAX_SLIDES = slides.length

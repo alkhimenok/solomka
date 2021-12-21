@@ -1,6 +1,8 @@
-import { $btnNext, $btnPrev, moveSlide, checkSliderBoundaries } from './swiper'
+import { $btnNext, $btnPrev, slides, moveSlide, checkSliderBoundaries } from './swiper'
 
 export const startAutoSwiper = () => {
+	if (slides.length <= 2) return 
+
 	let currentVector
 
 	setInterval(() => {
