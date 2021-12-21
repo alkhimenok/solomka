@@ -19,7 +19,7 @@ export const handlerRequest = async (url = '', method = 'GET', reqData = null) =
 		const resData = await response.json()
 
 		if (resData.status > 399) {
-			showModal('error', resData.status, resData.info)
+			showModal('error', 'Сообщение не отправлено!', 'Произошел сбой сервера, попробуйте отправить сообщение позже.')
 
 			throw new Error(resData.info)
 		} else {

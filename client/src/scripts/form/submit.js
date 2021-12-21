@@ -27,7 +27,6 @@ export const submitForm = e => {
 		if (status === 200) {
 			showModal('success', name, 'Мы перезвоним вам в ближайшее время')
 			clearFomr()
-			console.log(data)
 		}
 	})
 }

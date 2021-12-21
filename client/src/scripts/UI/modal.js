@@ -24,7 +24,7 @@ const getModal = (type, title, description) => {
 	if (type === 'success') {
 		modalTitle = title ? title?.slice(0, 1).toUpperCase() + title?.slice(1) + ', cпасибо за ваше сообщение!' : 'Cпасибо за ваше сообщение!'
 	} else if (type === 'error') {
-		modalTitle = `Ошибка ${title}`
+		modalTitle = title
 	}
 
 	return `
