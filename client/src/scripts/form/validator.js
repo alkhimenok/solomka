@@ -4,18 +4,9 @@ export const $inputUserName = $sendForm.inputUserName
 export const $inputUserPhone = $sendForm.inputUserPhone
 export const $btnSendForm = $sendForm.btnSendForm
 
-let isUserNameValid = false
-let isUserPhoneValid = false
-
 export const handlerChangeSendForm = e => {
-	const { target } = e
-	const { value } = target
-
-	if (target === $inputUserName) {
-		isUserNameValid = isInputValid(target, value.length < 2)
-	} else {
-		isUserPhoneValid = isInputValid(target, value.length < 19)
-	}
+	let isUserNameValid = isInputValid($inputUserName, $inputUserName.value.length < 2)
+	let isUserPhoneValid = isInputValid($inputUserPhone, $inputUserPhone.value.length < 19)
 
 	if (isUserNameValid && isUserPhoneValid) {
 		$btnSendForm.classList.remove('_disable')
