@@ -62,25 +62,25 @@
 1. To build a project in the client-side development mode
 
    ```
-   npm run clientbuild
+   npm run build
    ```
 
 2. To build the client side with automatic server updates
 
    ```
-   npm run clientwatch
+   npm run watch
    ```
 
 3. To run only the server side
 
    ```
-   npm run serverstart
+   npm run start
    ```
 
 4. To automatically update the server side
 
    ```
-   npm run serverwatch
+   npm run server
    ```
 
 5. To run the entire project in development mode
