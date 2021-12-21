@@ -70,7 +70,7 @@
 			margin: 0 0 calc(0px + 20 * (100vw / 370)) 0;
 		}
 	}
-	.modal__subtitle {
+	.modal__description {
 		font-size: 1.8rem;
 		line-height: 2.2rem;
 		color: $transparentBackgroundPrimaryColor;
@@ -85,6 +85,20 @@
 	}
 	@media screen and (max-width: $breackpointXSMax) {
 		border-radius: 0 0 calc(0px + 10 * (100vw / 370)) calc(0px + 10 * (100vw / 370));
+	}
+	&._error {
+		background-color: $backgroundPrimaryColor;
+		border: 2px solid $errorColor;
+		.modal__btn_close {
+			&::before,
+			&::after {
+				background-color: $errorColor;
+			}
+		}
+		.modal__title,
+		.modal__description {
+			color: $errorColor;
+		}
 	}
 	&._show {
 		@media screen and (min-width: $breackpointMDMin) {

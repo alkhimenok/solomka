@@ -18,17 +18,22 @@ app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'dist'
 app.post('/', (req, res) => {
 	const { body } = req
 
-	if (!(body.name.lenght < 2) && !(body.phone.length < 19)) {
-		submitMail(body)
+	try {
+		if ((body.name.length < 2) || (body.phone.length < 19)) {
+			body.status = 400
 
-		body.status = 200
+			throw new Error('Incomplete data')
+		} else {
+			submitMail(body)
 
-		res.status(200).json(body)
-	} else {
-		body.status = 400
-		body.info = 'incomplete data'
+			body.status = 200
 
-		res.sendStatus(400).json(body)
+			res.status(body.status).json(body)
+		}
+	} catch (error) {
+		body.info = error.message
+
+		res.json(body)
 	}
 })
 

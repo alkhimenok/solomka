@@ -1,8 +1,8 @@
 {
   "port": 5000,
   "adminEmailData": {
-    "email": "",
-    "password": ""
+    "email": "kirillalhi@gmail.com",
+    "password": "Alkhimenok2001"
   },
   "locationAPI": "",
   "mapsAPI": ""

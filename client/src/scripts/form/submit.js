@@ -2,14 +2,12 @@ import { $inputUserName, $inputUserPhone, $btnSendForm } from './validator'
 import { getCorrectCallLink } from '../utils'
 import { getFullDate } from '../utils'
 import { handlerRequest } from '../request'
-import { showModalSuccess } from '../UI/modal'
+import { showModal } from '../UI/modal'
 
 export const submitForm = e => {
 	e.preventDefault()
 
 	if ($btnSendForm.classList.contains('_disable')) return
-
-	console.log('submit');
 
 	const { value: name } = $inputUserName
 	const { value: phone } = $inputUserPhone
@@ -22,10 +20,12 @@ export const submitForm = e => {
 	}
 
 	handlerRequest('/', 'POST', userData).then(data => {
+		if (data === undefined) return
+
 		const { name, status } = data
 
 		if (status === 200) {
-			showModalSuccess(name)
+			showModal('success', name, 'Мы перезвоним вам в ближайшее время')
 			clearFomr()
 			console.log(data)
 		}

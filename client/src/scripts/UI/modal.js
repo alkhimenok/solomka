@@ -4,41 +4,47 @@ let $modal = null
 let $btnClose = null
 let timeout
 
-export const showModalSuccess = name => {
+export const showModal = (type, title, description) => {
 	if ($modal) return
 
-	$body.insertAdjacentHTML('afterbegin', getModal(name))
+	$body.insertAdjacentHTML('afterbegin', getModal(type, title, description))
 
 	$modal = document.querySelector('#modal')
 	$btnClose = $modal.querySelector('.modal__btn_close')
-	timeout = setTimeout(hideModalSuccess, 4000)
+	timeout = setTimeout(hideModal, 4000)
 	
 	setTimeout(() => $modal.classList.add('_show'), 100)
 	
-	$btnClose.addEventListener('click', hideModalSuccess)
+	$btnClose.addEventListener('click', hideModal)
 }
 
-const getModal = name => {
-	const startMessage = name ? name?.slice(0, 1).toUpperCase() + name?.slice(1) + ', мы' : 'Мы'
+const getModal = (type, title, description) => {
+	let modalTitle
+
+	if (type === 'success') {
+		modalTitle = title ? title?.slice(0, 1).toUpperCase() + title?.slice(1) + ', cпасибо за ваше сообщение!' : 'Cпасибо за ваше сообщение!'
+	} else if (type === 'error') {
+		modalTitle = `Ошибка ${title}`
+	}
 
 	return `
-		<div class="modal" id="modal">
+		<div class="modal ${type === 'error' ? '_error' : ''}" id="modal">
 			<div class="modal__btn_close"></div>
 			<div class="modal__body">
-				<h4 class="modal__title">Спасибо за ваше <br> сообщение!</h4>
-				<p class="modal__subtitle">${startMessage} перезвоним вам в ближайшее время</p>
+				<h4 class="modal__title">${modalTitle}</h4>
+				<p class="modal__description">${description}</p>
 			</div>
 		</div>
 	`
 }
 
-const hideModalSuccess = () => {
+const hideModal = () => {
 	if (!$modal) return document.querySelector('#modal')?.remove()
 
 	$modal.classList.remove('_show')
 
 	setTimeout(() => {
-		$btnClose.removeEventListener('click', hideModalSuccess)
+		$btnClose.removeEventListener('click', hideModal)
 
 		$modal.remove()
 
